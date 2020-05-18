@@ -1,0 +1,19 @@
+script
+
+   label_unit 0 0 0	general0
+   label_unit 1 0 0	general1
+
+   if I_UnitFormation general0 = horde
+      reduce_unit_strength general0 75
+   end_if
+
+   if I_UnitFormation general1 = horde
+      reduce_unit_strength general1 75
+   end_if
+
+
+select_ui_element advisor_dismiss_button
+simulate_mouse_click lclick_down
+simulate_mouse_click lclick_up
+
+end_script

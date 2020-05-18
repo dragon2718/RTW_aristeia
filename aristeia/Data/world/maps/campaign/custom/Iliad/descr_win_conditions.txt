@@ -1,0 +1,23 @@
+;macedon
+;alexander Macedon Lydia Cappadocia Syria Lybia Egypt Babylonia Media Dahae Bactria
+;take_regions 30
+;survivor Alexander
+;script world/maps/campaign/alexander/Alexander_Campaign_Outro_Script.txt
+;survivor Alexander
+;parthia
+;hold_regions Macedon Greece Lydia Paphlagonia Phrygia Cappadocia Syria Egypt Lybia Armenia Assyria Babylonia Media Parthia Susiana Persis Carmania Gedrosia Aria Bactria Sogdiana Drangiana Parapamisadale Arachosia Arabia
+;take_regions 25
+;short_campaign outlive_factions
+;macedon
+
+romans_julii
+hold_regions Pelasgis Thraike Troas
+take_regions 22
+short_campaign outlive_factions
+britons
+
+britons
+hold_regions Troas Lemnos
+take_regions 22
+short_campaign outlive_factions
+romans_julii

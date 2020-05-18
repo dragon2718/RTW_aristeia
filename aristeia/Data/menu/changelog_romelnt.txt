@@ -1,0 +1,19 @@
+Delete from file, line 2491:
+****
+		<UI piece>BattleList
+      <identifier>UIP_BATTLE_LIST_BUTTON</identifier>
+      <Parameters>
+        <x>256</x>
+        <y>380</y>
+        <width>512</width>
+        <height>38</height>
+        <menu_id>Battle_List</menu_id>
+        <UI text>UI_BATTLE_LIST
+          <font_id>arial_split_CAF</font_id>
+          <align>centre</align>
+        </UI text>
+        <tool_tip_id>UI_BATTLE_LIST_INFO</tool_tip_id>
+      </Parameters>
+      <object_id>empty_push_button</object_id>
+    </UI piece>
+ ****

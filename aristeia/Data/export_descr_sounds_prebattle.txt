@@ -1,0 +1,2 @@
+BANK: prebattle_speech
+	cultures Roman

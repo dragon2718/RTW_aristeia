@@ -1,0 +1,274 @@
+;
+;	This file contains a variety of region information, in this format:
+;	
+;	region tag
+;		settlement tag
+;		default culture tag
+;		map RGB value
+;		comma-seperated resource list
+;		triumph point value
+;		base farm level
+;
+
+;cypria regions
+
+;1 greek 6,60
+Lemnos
+	Myrina
+	romans_julii
+	Lemnioi
+	250 125 125
+	wine, olive_oil, grain, island, leistai, noncamp
+	5
+	6
+
+;2 - 32,97
+Pelasgis
+	Zerynthos
+	romans_julii
+	Pelasgiotai
+	125 250 125
+	island, iron, olive_oil, grain, wine, leistai, noncamp
+	5
+	6
+
+;3 - 39,79
+Imbros
+	Imbros
+	romans_julii
+	Imbrioi
+	125 125 250
+	dogs, island, olive_oil, grain, wine, leistai, noncamp
+	5
+	4
+
+;4 - 53,110
+Thraike
+	Ainos
+	britons
+	Thraikes
+	250 50 50
+	gold, dogs, pigs, furs, grain, hides, slaves, ebarbarian, noncamp
+	5
+	6
+
+;5 - 68,81
+Chersonesos
+	Sestos
+	britons
+	Chersonesioi
+	50 250 50
+	wild_animals, dogs, pigs, grain, hides, furs, mysian, noncamp
+	5
+	5
+
+;6 - 61,71
+Kynossema
+	Elaious
+	britons
+	Elaioutai
+	50 50 250
+	wild_animals, dogs, hides, pigs, mysian, noncamp
+	5
+	6
+
+;7 greek - 52,57
+Tenedos
+	Tenedos
+	britons
+	Tenedioi
+	250 250 125
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	5
+
+;8 rebel - 58,26
+Lesbos_Hesperia
+	Methymna
+	romans_julii
+	Methymnaioi
+	125 250 250
+	wild_animals, silver, olive_oil, dogs, pigs, island, noncamp
+	5
+	7
+
+;9 rebel - 70,14
+Lesbos_Antelia
+	Mytilene
+	britons
+	Mytilenaioi
+	250 125 250
+	wild_animals, dogs, pottery, pigs, mysian, noncamp
+	5
+	8
+
+;10 rebel - 106,16
+Teuthrania
+	Pergamon
+	britons
+	Teuthranioi
+	250 250 50
+	wild_animals, dogs, pigs, incense, anatolian, maiones, noncamp
+	5
+	6
+
+;11 - 90,33
+Kane
+	Kisthene
+	britons
+	Kistheneis
+	50 250 250
+	wild_animals, dogs, olive_oil, wine, pigs, mysian, noncamp
+	5
+	6
+
+;12 - 101,39
+Kilikia
+	Lyrnessos
+	britons
+	Kilikes
+	250 50 250
+	wild_animals, dogs, olive_oil, grain, wine, silver, pigs, mysian, noncamp
+	5
+	8
+
+;13 rebel - 125,34
+Mysia
+	Germe
+	britons
+	Germeis
+	50 125 125
+	wild_animals, dogs, pigs, timber, mysian, slaves, noncamp
+	5
+	4
+
+
+;14 - 96,46
+Hypoplakia
+	Thebe
+	britons
+	Hypoplakes
+	125 125 50
+	wild_animals, iron, dogs, timber, pigs, mysian, noncamp
+	5
+	6
+
+;15 - 76,40
+Lelegia
+	Gargara
+	britons
+	Leleges
+	125 50 125
+	wild_animals, dogs, pigs, olive_oil, grain, wine, mysian, noncamp
+	5
+	4
+
+;16 - 54,38
+Lekton
+	Chrysa
+	britons
+	Chrysatai
+	75 150 225
+	wild_animals, dogs, pigs, olive_oil, wine, mysian, noncamp
+	5
+	5
+
+;17 - 63,64
+Troas
+	Troia
+	britons
+	Troes
+	225 75 150
+	wild_animals, dogs, pottery, marble, textiles, copper, grain, wine, purple_dye, pigs, mysian, troia, noncamp
+	50
+	8
+
+;18 - 76,53
+Kebren
+	Kebren
+	britons
+	Kebrenioi
+	150 225 75
+	wild_animals, dogs, silver, olive_oil, grain, pigs, mysian, noncamp
+	5
+	9
+
+;19 - 72,75
+Dardania
+	Arisbe
+	britons
+	Dardanioi
+	75 225 150
+	wild_animals, dogs, pigs, wine, textiles, mysian, noncamp
+	5
+	6
+
+;20 - 79,84
+Bebrykia
+	Pityeia
+	britons
+	Bebrykes
+	150 75 225
+	wild_animals, slaves, iron, olive_oil, dogs, pigs, mysian, noncamp
+	5
+	8
+
+;21 - 105,65
+Malos
+	Argiza
+	britons
+	Argizioi
+	225 150 75
+	wild_animals, silver, olive_oil, wine, dogs, pigs, mysian, noncamp
+	5
+	6
+
+;22 - 88,61
+Kotylos
+	Skepsis
+	britons
+	Skepseis
+	25 100	175
+	wild_animals, dogs, olive_oil, wine, silver, grain, pigs, mysian, noncamp
+	5
+	8
+
+;23 - 123,81
+Dolionis
+	Zeleia
+	britons
+	Doliones
+	175 25 100
+	wild_animals, dogs, timber, pigs, hides, ebarbarian, noncamp
+	5
+	6
+
+;24 - 133,89
+Arktonnesos
+	Kyzikos
+	britons
+	Arktonnesioi
+	100 175 25
+	wild_animals, dogs, pigs, furs, grain, ebarbarian, noncamp
+	5
+	5
+
+;25 rebel - 122,104
+Prokonnesos
+	Prokonnesos
+	romans_julii
+	Prokonnesioi
+	25 175 100
+	wild_animals, dogs, wine, pigs, furs, island, noncamp
+	5
+	4
+
+;26 rebel - 134,2
+Maionia
+	Thyateira
+	britons
+	Maiones
+	100 25 175
+	wild_animals, dogs, pigs, timber, textiles, incense, anatolian, maiones, noncamp
+	5
+	5

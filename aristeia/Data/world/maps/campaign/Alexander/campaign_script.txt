@@ -1,0 +1,804 @@
+script
+
+
+;kill all of the unwanted characters who should be long since dead but are needed for family trees
+
+console_command kill_character "Atreus" dont_show_death_anim
+console_command kill_character "Asklepios" dont_show_death_anim
+console_command kill_character "Hippolochos" dont_show_death_anim
+
+;give traits
+
+;romans_julii
+
+console_command give_trait Agamemnon VictorOthersVirtue 3
+console_command give_trait Agamemnon Drink 2
+console_command give_trait Agamemnon Girls 1
+console_command give_trait Agamemnon Energetic 1
+console_command give_trait Agamemnon GoodAdministrator 3
+console_command give_trait Agamemnon StrategicSkill 2
+console_command give_trait Agamemnon Hero 1
+console_command give_trait Agamemnon Com2 1
+console_command give_trait Agamemnon Agamemnon 1
+
+console_command give_ancillary Agamemnon sceptre
+console_command give_ancillary Agamemnon herald
+console_command give_ancillary Agamemnon treasurer
+
+console_command give_trait Menelaos Com2 1
+console_command give_trait Menelaos TacticalSkill 3
+console_command give_trait Menelaos Strong 3
+console_command give_trait Menelaos Aesthetic 1
+console_command give_trait Menelaos Gambling 1
+console_command give_trait Menelaos Hero 1
+
+console_command give_ancillary Menelaos runner
+console_command give_ancillary Menelaos hostage
+
+console_command give_trait Orestes Anger 1
+console_command give_trait Orestes Com1 1
+console_command give_trait Orestes Hero 1
+
+console_command give_ancillary Orestes herald
+
+
+;brutii works already
+
+
+;scipii
+
+console_command give_trait Peleus PublicFaith 1
+console_command give_trait Peleus GoodAdministrator 2
+console_command give_trait Peleus Hero 1
+console_command give_trait Peleus Brave 4
+console_command give_trait Peleus Com3 1
+
+console_command give_ancillary Peleus faithful_slave
+console_command give_ancillary Peleus wise_centaur
+
+console_command give_trait Achilleus Fast 3
+console_command give_trait Achilleus Styx 1
+console_command give_trait Achilleus Sonimmortal 1
+console_command give_trait Achilleus Anger 2
+console_command give_trait Achilleus Strong 1
+console_command give_trait Achilleus Brave 2
+console_command give_trait Achilleus Hero 1
+console_command give_trait Achilleus Com4 1
+
+console_command give_ancillary Achilleus divinely_wrought_sheild
+console_command give_ancillary Achilleus upright_friend
+console_command give_ancillary Achilleus concubine
+console_command give_ancillary Achilleus divinely_wrought_armour
+
+console_command give_trait Patroklos Com2 1
+
+;macedon works already
+;romans_senate works already
+
+;egypt
+
+console_command give_trait Aias Hero 1
+console_command give_trait Aias Com2 1
+console_command give_trait Aias Brave 4
+console_command give_trait Aias Fast 1
+console_command give_trait Aias HEndurance 3
+console_command give_trait Aias Ignorance 1
+console_command give_trait Aias Strong 2
+console_command give_trait Aias BlackBileHumour 1
+
+console_command give_ancillary Aias concubine
+
+;seleucid not needed
+
+;carthage
+
+console_command give_trait Idomeneus Hero 1 
+console_command give_trait Idomeneus Com3 1 
+console_command give_trait Idomeneus GoodTrader 1
+console_command give_trait Idomeneus TacticalSkill 1
+console_command give_trait Idomeneus Pious 1
+
+console_command give_ancillary Idomeneus teacher
+console_command give_ancillary Idomeneus suppliant
+
+console_command give_trait Orsilochos Hero 1
+console_command give_trait Orsilochos Com1 1
+console_command give_trait Orsilochos GoodFarmer 1
+console_command give_trait Orsilochos Loyal 1
+
+console_command give_ancillary Orsilochos cook
+
+;parthia
+
+console_command give_trait Thersandros Just 1
+console_command give_trait Thersandros Com1 1
+console_command give_trait Thersandros BloodHumour 1
+console_command give_trait Thersandros Hero 1
+console_command give_trait Thersandros EnemyFun 1
+
+console_command give_ancillary Thersandros prophet
+
+;pontus
+
+console_command give_trait Tlepolemos Com2 1
+
+;gauls
+
+console_command give_trait Thoas Com2 1
+
+;britons
+
+console_command give_trait Priamos Hero 1
+console_command give_trait Priamos Com1 1
+console_command give_trait Priamos GoodAdministrator 3
+console_command give_trait Priamos Intelligent 1
+console_command give_trait Priamos DevoteeGovernors 2
+console_command give_trait Priamos Weak 1
+console_command give_trait Priamos GoodSiegeDefender 3
+console_command give_trait Priamos NonAuthoritarian 1
+console_command give_trait Priamos Immortal 1
+console_command give_trait Priamos Priamos 1
+
+console_command give_ancillary Priamos sceptre
+console_command give_ancillary Priamos suppliant
+console_command give_ancillary Priamos goldsmith
+console_command give_ancillary Priamos priest_of_apollo
+console_command give_ancillary Priamos prophet
+
+console_command give_trait Hektor Hero 1
+console_command give_trait Hektor Com2 1
+console_command give_trait Hektor GoodCavalryGeneral 3
+console_command give_trait Hektor HEndurance 1
+console_command give_trait Hektor TacticalSkill 2
+console_command give_trait Hektor GoodCommander 3
+console_command give_trait Hektor Pious 1
+console_command give_trait Hektor FaithfulWife 1
+console_command give_trait Hektor Priamos 1
+console_command give_trait Priamos GoodSiegeDefender 2
+
+console_command give_ancillary Hektor famous_warrior
+console_command give_ancillary Hektor runner
+console_command give_ancillary Hektor herald
+
+console_command give_trait Memnon GoodCommander 2
+
+console_command give_trait Paris Aesthetic 2
+console_command give_trait Paris Hero 1
+console_command give_trait Paris Com1 1
+console_command give_trait Paris Girls 3
+console_command give_trait Paris Coward 1
+console_command give_trait Paris Slothful 1
+console_command give_trait Paris Handsome 3
+console_command give_trait Paris ExpensiveTastes 1
+
+console_command give_ancillary Paris concubine
+console_command give_ancillary Paris famous_courtesan
+
+console_command give_trait Penthesileia NaturalMilitarySkill 3
+console_command give_trait Penthesileia Intelligent 1
+console_command give_trait Penthesileia Bloodthirsty 2
+console_command give_trait Penthesileia Hero 1
+
+console_command give_ancillary Penthesileia cook
+
+;armenia
+
+console_command give_trait Sarpedon Hero 1
+console_command give_trait Sarpedon Com2 1
+console_command give_trait Sarpedon Immortal 1
+console_command give_trait Sarpedon GoodSiegeDefender 1
+console_command give_trait Sarpedon Scout 1
+console_command give_trait Sarpedon Intelligent 1
+console_command give_trait Sarpedon GoodTrader 1
+
+console_command give_ancillary Sarpedon archery_instructor
+console_command give_ancillary Sarpedon mountain_guide
+
+console_command give_trait Glaukos Com2 1
+
+;dacia
+
+console_command give_trait Talaimenes Com2 1
+
+console_command give_trait Mesthles Com3 1
+
+console_command give_trait Antiphos Com1 1
+
+console_command give_trait Nastes Com1 1
+
+console_command give_trait Nomion Com2 1
+
+;spain
+
+console_command give_trait Troizenos Com2 1
+console_command give_trait Euphemos Com3 1
+
+campaign_wait 2
+
+if I_LocalFaction romans_julii
+	
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 70000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control romans_julii
+end_if
+if I_LocalFaction romans_brutii
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control romans_brutii
+end_if
+if I_LocalFaction romans_scipii
+
+	;add ai money
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control romans_scipii
+
+end_if
+if I_LocalFaction romans_senate
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control romans_senate
+end_if
+if I_LocalFaction egypt
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control egypt
+end_if
+if I_LocalFaction macedon
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control macedon
+end_if
+if I_LocalFaction gauls
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control gauls
+end_if
+if I_LocalFaction parthia
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control parthia
+end_if
+if I_LocalFaction seleucid
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+end_if
+if I_LocalFaction carthage
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control carthage
+end_if
+if I_LocalFaction pontus
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control pontus
+end_if
+if I_LocalFaction spain
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control spain
+end_if
+if I_LocalFaction britons
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control britons
+end_if
+if I_LocalFaction dacia
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control dacia
+end_if
+if I_LocalFaction armenia
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control armenia
+end_if
+if I_LocalFaction germans
+
+	;add ai money
+	console_command control romans_scipii
+	console_command add_money, 90000
+	console_command control gauls
+	console_command add_money, 80000
+	console_command control spain
+	console_command add_money, 60000
+	console_command control seleucid
+	console_command add_money, 90000
+	console_command control germans
+end_if
+
+campaign_wait 2
+
+
+				steal_esc_key
+	
+			;skip if esc is pressed
+			monitor_event EscPressed TrueCondition
+				;enable all input and ui again
+
+
+				filter_all_ui_commands on
+				enable_entire_ui
+				disable_shortcuts false		
+				inhibit_camera_input false
+				enable_cursor
+				show_ui
+				suspend_unscripted_advice false
+
+				;hide all of the previously reveled tiles
+				hide_all_revealed_tiles
+
+				;stop all audio
+				stop_sound_event Alexander_campaign_intro_01_tag
+				stop_sound_event Alexander_campaign_intro_02_tag
+				stop_sound_event Alexander_campaign_intro_03_tag
+				stop_sound_event Alexander_campaign_intro_04_tag
+				stop_sound_event Alexander_campaign_intro_05_tag
+				stop_sound_event Alexander_campaign_intro_06_tag
+				stop_sound_event Alexander_campaign_intro_07_tag
+				stop_sound_event Alexander_campaign_intro_08_tag
+				
+				;start 6tpy script if needed
+				;wait 3
+				;advance_advice_thread BackgroundScriptThread
+				;wait 1
+				;select_ui_element advisor_portrait_button
+				;simulate_mouse_click lclick_up
+
+				terminate_script
+			end_monitor
+
+
+				;disable all of the input and ui
+
+				disable_cursor
+				disable_shortcuts true
+				inhibit_camera_input true
+				disable_shortcuts advisor_portrait_button false
+				suspend_unscripted_advice true
+				disable_entire_ui
+				filter_all_ui_commands off
+				hide_ui
+
+;begin tour of campaign map.
+;first stop thebes
+
+campaign_wait 3
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_01		tag = Aristeia_campaign_intro_01_tag
+zoom_strat_camera 0.2
+campaign_wait 5
+zoom_strat_camera 1.0
+move_strat_camera 85, 141
+zoom_strat_camera 0.5
+reveal_tile 85, 141
+
+;mount olympus - faction specific wait time
+
+if I_LocalFaction romans_julii
+	campaign_wait 12
+end_if
+if I_LocalFaction romans_brutii
+	campaign_wait 12
+end_if
+if I_LocalFaction germans
+	campaign_wait 12
+end_if
+if I_LocalFaction romans_scipii
+	campaign_wait 12
+end_if
+if I_LocalFaction romans_senate
+	campaign_wait 12
+end_if
+if I_LocalFaction egypt
+	campaign_wait 12
+end_if
+if I_LocalFaction macedon
+	campaign_wait 12
+end_if
+if I_LocalFaction gauls
+	campaign_wait 12
+end_if
+if I_LocalFaction parthia
+	campaign_wait 12
+end_if
+if I_LocalFaction seleucid
+	campaign_wait 12
+end_if
+if I_LocalFaction carthage
+	campaign_wait 5
+end_if
+if I_LocalFaction pontus
+	campaign_wait 5
+end_if
+if I_LocalFaction spain
+	campaign_wait 5
+end_if
+if I_LocalFaction britons
+	campaign_wait 5
+end_if
+if I_LocalFaction dacia
+	campaign_wait 5
+end_if
+if I_LocalFaction armenia
+	campaign_wait 2
+end_if
+
+
+zoom_strat_camera 1.0
+campaign_wait 5
+zoom_strat_camera 1.0
+move_strat_camera 111, 95
+reveal_tile 111, 95
+zoom_strat_camera 0.5
+
+	campaign_wait 32
+
+
+zoom_strat_camera 1.0
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_02		tag = Aristeia_campaign_intro_02_tag
+
+;move to crete
+
+move_strat_camera 161, 10
+reveal_tile 161, 10
+zoom_strat_camera 0.5
+campaign_wait 12
+zoom_strat_camera 1.0
+
+;move to athens
+
+move_strat_camera 122, 86
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_03		tag = Aristeia_campaign_intro_03_tag
+reveal_tile 122, 86
+zoom_strat_camera 0.5
+campaign_wait 20
+zoom_strat_camera 1.0
+
+;to erythrai and maionia
+
+move_strat_camera 201, 95
+reveal_tile 199, 95
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_04		tag = Aristeia_campaign_intro_04_tag
+zoom_strat_camera 0.5
+campaign_wait 30
+zoom_strat_camera 1.0
+
+;to lycia
+
+move_strat_camera 266, 46
+reveal_tile 277, 39
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_05		tag = Aristeia_campaign_intro_05_tag
+zoom_strat_camera 0.5
+campaign_wait 25
+zoom_strat_camera 1.0
+
+;to thessaly
+
+move_strat_camera 79, 119
+reveal_tile 68, 129
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_06		tag = Aristeia_campaign_intro_06_tag
+zoom_strat_camera 0.5
+campaign_wait 52
+zoom_strat_camera 1.0
+
+;to pelopennesse
+
+move_strat_camera 85, 68
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_07		tag = Aristeia_campaign_intro_07_tag
+reveal_tile 96, 80
+reveal_tile 86, 59
+reveal_tile 94, 75
+zoom_strat_camera 0.5
+campaign_wait 50
+zoom_strat_camera 1.0
+
+;move camera to troy
+
+move_strat_camera 196, 136
+play_sound_event	ARISTEIA_CAMPAIGN_INTRO_SPEECH_08		tag = Aristeia_campaign_intro_08_tag
+reveal_tile 196, 136
+zoom_strat_camera 0.5
+settlement_flash_start Troia
+campaign_wait 13
+settlement_flash_stop Troia
+campaign_wait 5
+
+;move the camera to the factions starting armies
+;give the ai money
+;if I_LocalFaction britons
+;	;give money to the greeks
+;	console_command control romans_julii
+;	console_command add_money, 1000000
+;	console_command control britons
+;end_if
+
+if I_LocalFaction romans_julii
+	campaign_wait 3
+	move_strat_camera 191, 138
+	snap_strat_camera 191, 138
+	zoom_strat_camera 0.5
+	character_flash_start Agamemnon
+	campaign_wait 5
+	character_flash_stop Agamemnon
+	
+end_if
+if I_LocalFaction romans_brutii
+	campaign_wait 3
+	move_strat_camera 192, 136
+	snap_strat_camera 192, 136
+	zoom_strat_camera 0.5
+	character_flash_start Nestor
+	campaign_wait 5
+	character_flash_stop Nestor
+
+end_if
+if I_LocalFaction romans_scipii
+	campaign_wait 3
+	move_strat_camera 199, 128
+	snap_strat_camera 199, 128
+	zoom_strat_camera 0.5
+	character_flash_start Achilleus
+	campaign_wait 5
+	character_flash_stop Achilleus
+
+
+end_if
+if I_LocalFaction romans_senate
+	campaign_wait 3
+	move_strat_camera 192, 133
+	snap_strat_camera 192, 133
+	zoom_strat_camera 0.5
+	character_flash_start Diomedes
+	campaign_wait 5
+	character_flash_stop Diomedes
+
+end_if
+if I_LocalFaction egypt
+	campaign_wait 3
+	move_strat_camera 193, 131
+	snap_strat_camera 193, 131
+	zoom_strat_camera 0.5
+	character_flash_start Aias
+	campaign_wait 5
+	character_flash_stop Aias
+
+end_if
+if I_LocalFaction macedon
+	campaign_wait 3
+	move_strat_camera 192, 131
+	snap_strat_camera 192, 131
+	zoom_strat_camera 0.5
+	character_flash_start Odysseus
+	campaign_wait 5
+	character_flash_stop Odysseus
+
+end_if
+if I_LocalFaction gauls
+	campaign_wait 3
+	move_strat_camera 208, 120
+	snap_strat_camera 208, 120
+	zoom_strat_camera 0.5
+	character_flash_start Thoas
+	campaign_wait 5
+	character_flash_stop Thoas
+
+end_if
+if I_LocalFaction parthia
+	campaign_wait 3
+	move_strat_camera 213, 128
+	snap_strat_camera 213, 128
+	zoom_strat_camera 0.5
+	character_flash_start Thersandros
+	campaign_wait 5
+	character_flash_stop Thersandros
+
+
+end_if
+if I_LocalFaction seleucid
+	campaign_wait 3
+	move_strat_camera 200, 130
+	snap_strat_camera 200, 130
+	zoom_strat_camera 0.5
+	character_flash_start Machaon
+	campaign_wait 5
+	character_flash_stop Machaon
+
+
+end_if
+if I_LocalFaction carthage
+	campaign_wait 3
+	move_strat_camera 208, 129
+	snap_strat_camera 208, 129
+	zoom_strat_camera 0.5
+	character_flash_start Idomeneus
+	campaign_wait 5
+	character_flash_stop Idomeneus
+
+end_if
+if I_LocalFaction pontus
+	campaign_wait 3
+	move_strat_camera 214, 126
+	snap_strat_camera 214, 126
+	zoom_strat_camera 0.5
+	character_flash_start Tlepolemos
+	campaign_wait 5
+	character_flash_stop Tlepolemos
+
+end_if
+if I_LocalFaction spain
+	campaign_wait 3
+	move_strat_camera 215, 128
+	snap_strat_camera 215, 128
+	zoom_strat_camera 0.5
+	character_flash_start Troizenos
+	campaign_wait 5
+	character_flash_stop Troizenos
+
+end_if
+if I_LocalFaction britons
+	campaign_wait 10
+
+end_if
+if I_LocalFaction dacia
+	campaign_wait 3
+	move_strat_camera 194, 133
+	snap_strat_camera 194, 133
+	zoom_strat_camera 0.5
+	character_flash_start Mesthles
+	campaign_wait 5
+	character_flash_stop Mesthles
+
+end_if
+if I_LocalFaction armenia
+	campaign_wait 3
+	move_strat_camera 197, 131
+	snap_strat_camera 197, 131
+	zoom_strat_camera 0.5
+	character_flash_start Sarpedon
+	campaign_wait 5
+	character_flash_stop Sarpedon
+
+end_if
+if I_LocalFaction germans
+	campaign_wait 3
+	move_strat_camera 101, 39
+	snap_strat_camera 101, 39
+	zoom_strat_camera 0.5
+	character_flash_start Aigisthos
+	campaign_wait 5
+	character_flash_stop Aigisthos
+
+end_if
+
+
+;tour the map and give relevant descriptions
+
+campaign_wait 3
+
+				filter_all_ui_commands on
+				enable_entire_ui
+				disable_shortcuts false		
+				inhibit_camera_input false
+				enable_cursor
+				show_ui
+
+
+				;start 6tpy script
+				;wait 1
+				advance_advice_thread BackgroundScriptThread
+				;wait 1
+				select_ui_element advisor_portrait_button
+				simulate_mouse_click lclick_up
+
+
+end_script

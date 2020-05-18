@@ -1,0 +1,58 @@
+script
+;not used
+
+label_unit 0 0 0 general0
+label_unit 0 0 1 general1
+label_unit 0 0 2 general2
+label_unit 0 0 3 general3
+
+label_unit 1 0 0 general4
+label_unit 1 0 1 general5
+label_unit 1 0 2 general6
+label_unit 1 0 3 general7
+
+if I_UnitFormation general0 = horde
+reduce_unit_strength general0 1
+end_if
+
+
+if I_UnitFormation general1 = horde
+reduce_unit_strength general1 1
+end_if
+
+
+if I_UnitFormation general2 = horde
+reduce_unit_strength general2 1
+end_if
+
+if I_UnitFormation general3 = horde
+reduce_unit_strength general3 1
+end_if
+
+
+if I_UnitFormation general4 = horde
+reduce_unit_strength general4 1
+end_if
+
+
+if I_UnitFormation general5 = horde
+reduce_unit_strength general5 1
+end_if
+
+
+if I_UnitFormation general6 = horde
+reduce_unit_strength general6 1
+end_if
+
+
+if I_UnitFormation general7 = horde
+reduce_unit_strength general7 1
+end_if
+
+select_ui_element advisor_dismiss_button
+simulate_mouse_click lclick_down
+simulate_mouse_click lclick_up
+
+
+
+end_script

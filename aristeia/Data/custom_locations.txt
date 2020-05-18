@@ -1,0 +1,162 @@
+; custom locations , add new locations at the bottom
+
+custom_location		Cretan Shore
+{
+	location		155	13	
+	image			aristeia/data/menu/map1.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Lesbos
+{
+	location		197	116		
+	image			aristeia/data/menu/lesbos.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Anatolian Coast
+{
+	location		221	84		
+	image			aristeia/data/menu/coast.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Thrace
+{
+	location		144	177
+	image			aristeia/data/menu/thrace.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Achaia
+{
+	location		85	62		
+	image			aristeia/data/menu/achia.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Knossos
+{
+	location		161	8		
+	image			aristeia/data/menu/knoss.tga
+	sett_locked		no
+	summer			yes
+}
+
+custom_location		Ithaca
+{
+	location		36	92		
+	image			aristeia/data/menu/ithaca.tga
+	sett_locked		no
+	summer			yes
+}
+
+custom_location		Illyria
+{
+	location		20	156		
+	image			aristeia/data/menu/illyria.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Trojan Plain
+{
+	location		195	128		
+	image			aristeia/data/menu/trojan_plain.tga
+	sett_locked		no
+	summer			yes
+}
+
+custom_location		Sarmatia
+{
+	location		280	155		
+	image			aristeia/data/menu/amazonia.tga
+	sett_locked		no
+	summer			no
+}
+
+custom_location		Mountain Pass
+{
+	location		90	108		
+	image			aristeia/data/menu/mountain_pass.tga
+	sett_locked		yes
+	summer			no
+}
+
+custom_location		Xanthus
+{
+	location		196	132		
+	image			aristeia/data/menu/xanthus.tga
+	sett_locked		yes
+	summer			yes
+}
+
+;custom_location		Pontic Peaks
+;{
+;	location		204	59		
+;	image			data/menu/mountain2.tga
+;	sett_locked		yes
+;	summer			no
+;}
+;
+;custom_location		Alpine Valley
+;{
+;	location		96	96		
+;	image			data/menu/mountain3.tga
+;	sett_locked		yes
+;	summer			no
+;}
+;
+;custom_location		Tuscan Bay
+;{
+;	location		87	78		
+;	image			data/menu/coast1.tga
+;	sett_locked		no
+;	summer			no
+;
+;}
+;
+;custom_location		Greek Shore
+;{
+;	location		103	43		
+;	image			data/menu/coast2.tga
+;	sett_locked		no
+;	summer			no
+;}
+;
+;custom_location		African Coast
+;{
+;	location		86	27		
+;	image			data/menu/coast3.tga
+;	sett_locked		no
+;	summer			yes
+;}
+;
+;custom_location		Moon River
+;{
+;	location		21	71		
+;	image			data/menu/river1.tga
+;	sett_locked		yes
+;	summer			no
+;}
+;custom_location		River Jordan
+;{
+;	location		172	118		
+;	image			data/menu/river2.tga
+;	sett_locked		yes
+;	summer			no
+;}
+;custom_location		Nile Bridge
+;{
+;	location		212	53		
+;	image			data/menu/river3.tga
+;	sett_locked		yes
+;	summer			yes
+;}
+;
+;

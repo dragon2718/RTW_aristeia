@@ -1,0 +1,94 @@
+BANK: battle_events
+	cultures Egyptian,Carthaginian,Eastern,Barbarian,Greek,Roman
+			notification Allied_Army_Leader_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Allied_Army_Leader_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Allied_Army_Leader_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_General_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_General_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_General_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_King_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_King_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_King_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_Roman_Leader_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_Roman_Leader_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Enemy_Roman_Leader_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_General_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_General_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_General_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_Leader_Killed 1
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_Leader_Killed 2
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			notification Player_Leader_Killed 3
+				event
+					folder aristeia/data/sounds/effects
+					Hero_Death.mp3
+				end
+			
+	

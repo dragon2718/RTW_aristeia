@@ -1,0 +1,2215 @@
+script
+
+declare_show_me				; Used to automatically open the advisor text bubble when advance_advice_thread is called
+
+suspend_during_battle on
+suspend_unscripted_advice true
+
+;console_command toggle_perfect_spy
+
+;;;
+;;; 6-turns per year script
+;;;
+
+monitor_event ScrollAdviceRequested ScrollAdviceRequested end_game_scroll
+    terminate_script
+end_monitor
+
+
+console_command date 112
+console_command season summer
+while I_TurnNumber = 0
+	suspend_unscripted_advice true
+end_while
+
+console_command date 112
+console_command season summer
+while I_TurnNumber = 1
+	suspend_unscripted_advice true
+end_while
+
+console_command date 112
+console_command season summer
+while I_TurnNumber = 2
+	suspend_unscripted_advice true
+end_while
+
+console_command date 112
+console_command season summer
+while I_TurnNumber = 3
+	suspend_unscripted_advice true
+end_while
+
+console_command date 112
+console_command season summer
+while I_TurnNumber = 4
+	suspend_unscripted_advice true
+end_while
+
+console_command date 112
+console_command season winter
+while I_TurnNumber = 5
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season summer
+while I_TurnNumber = 6
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season summer
+while I_TurnNumber = 7
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season summer
+while I_TurnNumber = 8
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season summer
+while I_TurnNumber = 9
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season summer
+while I_TurnNumber = 10
+	suspend_unscripted_advice true
+end_while
+
+console_command date 113
+console_command season winter
+while I_TurnNumber = 11
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season summer
+while I_TurnNumber = 12
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season summer
+while I_TurnNumber = 13
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season summer
+while I_TurnNumber = 14
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season summer
+while I_TurnNumber = 15
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season summer
+while I_TurnNumber = 16
+	suspend_unscripted_advice true
+end_while
+
+console_command date 114
+console_command season winter
+while I_TurnNumber = 17
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season summer
+while I_TurnNumber = 18
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season summer
+while I_TurnNumber = 19
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season summer
+while I_TurnNumber = 20
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season summer
+while I_TurnNumber = 21
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season summer
+while I_TurnNumber = 22
+	suspend_unscripted_advice true
+end_while
+
+console_command date 115
+console_command season winter
+while I_TurnNumber = 23
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season summer
+while I_TurnNumber = 24
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season summer
+while I_TurnNumber = 25
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season summer
+while I_TurnNumber = 26
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season summer
+while I_TurnNumber = 27
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season summer
+while I_TurnNumber = 28
+	suspend_unscripted_advice true
+end_while
+
+console_command date 116
+console_command season winter
+while I_TurnNumber = 29
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season summer
+while I_TurnNumber = 30
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season summer
+while I_TurnNumber = 31
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season summer
+while I_TurnNumber = 32
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season summer
+while I_TurnNumber = 33
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season summer
+while I_TurnNumber = 34
+	suspend_unscripted_advice true
+end_while
+
+console_command date 117
+console_command season winter
+while I_TurnNumber = 35
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season summer
+while I_TurnNumber = 36
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season summer
+while I_TurnNumber = 37
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season summer
+while I_TurnNumber = 38
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season summer
+while I_TurnNumber = 39
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season summer
+while I_TurnNumber = 40
+	suspend_unscripted_advice true
+end_while
+
+console_command date 118
+console_command season winter
+while I_TurnNumber = 41
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season summer
+while I_TurnNumber = 42
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season summer
+while I_TurnNumber = 43
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season summer
+while I_TurnNumber = 44
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season summer
+while I_TurnNumber = 45
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season summer
+while I_TurnNumber = 46
+	suspend_unscripted_advice true
+end_while
+
+console_command date 119
+console_command season winter
+while I_TurnNumber = 47
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season summer
+while I_TurnNumber = 48
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season summer
+while I_TurnNumber = 49
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season summer
+while I_TurnNumber = 50
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season summer
+while I_TurnNumber = 51
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season summer
+while I_TurnNumber = 52
+	suspend_unscripted_advice true
+end_while
+
+console_command date 120
+console_command season winter
+while I_TurnNumber = 53
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season summer
+while I_TurnNumber = 54
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season summer
+while I_TurnNumber = 55
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season summer
+while I_TurnNumber = 56
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season summer
+while I_TurnNumber = 57
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season summer
+while I_TurnNumber = 58
+	suspend_unscripted_advice true
+end_while
+
+console_command date 121
+console_command season winter
+while I_TurnNumber = 59
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season summer
+while I_TurnNumber = 60
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season summer
+while I_TurnNumber = 61
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season summer
+while I_TurnNumber = 62
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season summer
+while I_TurnNumber = 63
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season summer
+while I_TurnNumber = 64
+	suspend_unscripted_advice true
+end_while
+
+console_command date 122
+console_command season winter
+while I_TurnNumber = 65
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season summer
+while I_TurnNumber = 66
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season summer
+while I_TurnNumber = 67
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season summer
+while I_TurnNumber = 68
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season summer
+while I_TurnNumber = 69
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season summer
+while I_TurnNumber = 70
+	suspend_unscripted_advice true
+end_while
+
+console_command date 123
+console_command season winter
+while I_TurnNumber = 71
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season summer
+while I_TurnNumber = 72
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season summer
+while I_TurnNumber = 73
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season summer
+while I_TurnNumber = 74
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season summer
+while I_TurnNumber = 75
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season summer
+while I_TurnNumber = 76
+	suspend_unscripted_advice true
+end_while
+
+console_command date 124
+console_command season winter
+while I_TurnNumber = 77
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season summer
+while I_TurnNumber = 78
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season summer
+while I_TurnNumber = 79
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season summer
+while I_TurnNumber = 80
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season summer
+while I_TurnNumber = 81
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season summer
+while I_TurnNumber = 82
+	suspend_unscripted_advice true
+end_while
+
+console_command date 125
+console_command season winter
+while I_TurnNumber = 83
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season summer
+while I_TurnNumber = 84
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season summer
+while I_TurnNumber = 85
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season summer
+while I_TurnNumber = 86
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season summer
+while I_TurnNumber = 87
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season summer
+while I_TurnNumber = 88
+	suspend_unscripted_advice true
+end_while
+
+console_command date 126
+console_command season winter
+while I_TurnNumber = 89
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season summer
+while I_TurnNumber = 90
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season summer
+while I_TurnNumber = 91
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season summer
+while I_TurnNumber = 92
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season summer
+while I_TurnNumber = 93
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season summer
+while I_TurnNumber = 94
+	suspend_unscripted_advice true
+end_while
+
+console_command date 127
+console_command season winter
+while I_TurnNumber = 95
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season summer
+while I_TurnNumber = 96
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season summer
+while I_TurnNumber = 97
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season summer
+while I_TurnNumber = 98
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season summer
+while I_TurnNumber = 99
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season summer
+while I_TurnNumber = 100
+	suspend_unscripted_advice true
+end_while
+
+console_command date 128
+console_command season winter
+while I_TurnNumber = 101
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season summer
+while I_TurnNumber = 102
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season summer
+while I_TurnNumber = 103
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season summer
+while I_TurnNumber = 104
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season summer
+while I_TurnNumber = 105
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season summer
+while I_TurnNumber = 106
+	suspend_unscripted_advice true
+end_while
+
+console_command date 129
+console_command season winter
+while I_TurnNumber = 107
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season summer
+while I_TurnNumber = 108
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season summer
+while I_TurnNumber = 109
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season summer
+while I_TurnNumber = 110
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season summer
+while I_TurnNumber = 111
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season summer
+while I_TurnNumber = 112
+	suspend_unscripted_advice true
+end_while
+
+console_command date 130
+console_command season winter
+while I_TurnNumber = 113
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season summer
+while I_TurnNumber = 114
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season summer
+while I_TurnNumber = 115
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season summer
+while I_TurnNumber = 116
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season summer
+while I_TurnNumber = 117
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season summer
+while I_TurnNumber = 118
+	suspend_unscripted_advice true
+end_while
+
+console_command date 131
+console_command season winter
+while I_TurnNumber = 119
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season summer
+while I_TurnNumber = 120
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season summer
+while I_TurnNumber = 121
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season summer
+while I_TurnNumber = 122
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season summer
+while I_TurnNumber = 123
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season summer
+while I_TurnNumber = 124
+	suspend_unscripted_advice true
+end_while
+
+console_command date 132
+console_command season winter
+while I_TurnNumber = 125
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season summer
+while I_TurnNumber = 126
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season summer
+while I_TurnNumber = 127
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season summer
+while I_TurnNumber = 128
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season summer
+while I_TurnNumber = 129
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season summer
+while I_TurnNumber = 130
+	suspend_unscripted_advice true
+end_while
+
+console_command date 133
+console_command season winter
+while I_TurnNumber = 131
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season summer
+while I_TurnNumber = 132
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season summer
+while I_TurnNumber = 133
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season summer
+while I_TurnNumber = 134
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season summer
+while I_TurnNumber = 135
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season summer
+while I_TurnNumber = 136
+	suspend_unscripted_advice true
+end_while
+
+console_command date 134
+console_command season winter
+while I_TurnNumber = 137
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season summer
+while I_TurnNumber = 138
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season summer
+while I_TurnNumber = 139
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season summer
+while I_TurnNumber = 140
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season summer
+while I_TurnNumber = 141
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season summer
+while I_TurnNumber = 142
+	suspend_unscripted_advice true
+end_while
+
+console_command date 135
+console_command season winter
+while I_TurnNumber = 143
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season summer
+while I_TurnNumber = 144
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season summer
+while I_TurnNumber = 145
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season summer
+while I_TurnNumber = 146
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season summer
+while I_TurnNumber = 147
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season summer
+while I_TurnNumber = 148
+	suspend_unscripted_advice true
+end_while
+
+console_command date 136
+console_command season winter
+while I_TurnNumber = 149
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season summer
+while I_TurnNumber = 150
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season summer
+while I_TurnNumber = 151
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season summer
+while I_TurnNumber = 152
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season summer
+while I_TurnNumber = 153
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season summer
+while I_TurnNumber = 154
+	suspend_unscripted_advice true
+end_while
+
+console_command date 137
+console_command season winter
+while I_TurnNumber = 155
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season summer
+while I_TurnNumber = 156
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season summer
+while I_TurnNumber = 157
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season summer
+while I_TurnNumber = 158
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season summer
+while I_TurnNumber = 159
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season summer
+while I_TurnNumber = 160
+	suspend_unscripted_advice true
+end_while
+
+console_command date 138
+console_command season winter
+while I_TurnNumber = 161
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season summer
+while I_TurnNumber = 162
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season summer
+while I_TurnNumber = 163
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season summer
+while I_TurnNumber = 164
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season summer
+while I_TurnNumber = 165
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season summer
+while I_TurnNumber = 166
+	suspend_unscripted_advice true
+end_while
+
+console_command date 139
+console_command season winter
+while I_TurnNumber = 167
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season summer
+while I_TurnNumber = 168
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season summer
+while I_TurnNumber = 169
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season summer
+while I_TurnNumber = 170
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season summer
+while I_TurnNumber = 171
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season summer
+while I_TurnNumber = 172
+	suspend_unscripted_advice true
+end_while
+
+console_command date 140
+console_command season winter
+while I_TurnNumber = 173
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season summer
+while I_TurnNumber = 174
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season summer
+while I_TurnNumber = 175
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season summer
+while I_TurnNumber = 176
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season summer
+while I_TurnNumber = 177
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season summer
+while I_TurnNumber = 178
+	suspend_unscripted_advice true
+end_while
+
+console_command date 141
+console_command season winter
+while I_TurnNumber = 179
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season summer
+while I_TurnNumber = 180
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season summer
+while I_TurnNumber = 181
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season summer
+while I_TurnNumber = 182
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season summer
+while I_TurnNumber = 183
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season summer
+while I_TurnNumber = 184
+	suspend_unscripted_advice true
+end_while
+
+console_command date 142
+console_command season winter
+while I_TurnNumber = 185
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season summer
+while I_TurnNumber = 186
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season summer
+while I_TurnNumber = 187
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season summer
+while I_TurnNumber = 188
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season summer
+while I_TurnNumber = 189
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season summer
+while I_TurnNumber = 190
+	suspend_unscripted_advice true
+end_while
+
+console_command date 143
+console_command season winter
+while I_TurnNumber = 191
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season summer
+while I_TurnNumber = 192
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season summer
+while I_TurnNumber = 193
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season summer
+while I_TurnNumber = 194
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season summer
+while I_TurnNumber = 195
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season summer
+while I_TurnNumber = 196
+	suspend_unscripted_advice true
+end_while
+
+console_command date 144
+console_command season winter
+while I_TurnNumber = 197
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season summer
+while I_TurnNumber = 198
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season summer
+while I_TurnNumber = 199
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season summer
+while I_TurnNumber = 200
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season summer
+while I_TurnNumber = 201
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season summer
+while I_TurnNumber = 202
+	suspend_unscripted_advice true
+end_while
+
+console_command date 145
+console_command season winter
+while I_TurnNumber = 203
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season summer
+while I_TurnNumber = 204
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season summer
+while I_TurnNumber = 205
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season summer
+while I_TurnNumber = 206
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season summer
+while I_TurnNumber = 207
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season summer
+while I_TurnNumber = 208
+	suspend_unscripted_advice true
+end_while
+
+console_command date 146
+console_command season winter
+while I_TurnNumber = 209
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season summer
+while I_TurnNumber = 210
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season summer
+while I_TurnNumber = 211
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season summer
+while I_TurnNumber = 212
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season summer
+while I_TurnNumber = 213
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season summer
+while I_TurnNumber = 214
+	suspend_unscripted_advice true
+end_while
+
+console_command date 147
+console_command season winter
+while I_TurnNumber = 215
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season summer
+while I_TurnNumber = 216
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season summer
+while I_TurnNumber = 217
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season summer
+while I_TurnNumber = 218
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season summer
+while I_TurnNumber = 219
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season summer
+while I_TurnNumber = 220
+	suspend_unscripted_advice true
+end_while
+
+console_command date 148
+console_command season winter
+while I_TurnNumber = 221
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season summer
+while I_TurnNumber = 222
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season summer
+while I_TurnNumber = 223
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season summer
+while I_TurnNumber = 224
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season summer
+while I_TurnNumber = 225
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season summer
+while I_TurnNumber = 226
+	suspend_unscripted_advice true
+end_while
+
+console_command date 149
+console_command season winter
+while I_TurnNumber = 227
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season summer
+while I_TurnNumber = 228
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season summer
+while I_TurnNumber = 229
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season summer
+while I_TurnNumber = 230
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season summer
+while I_TurnNumber = 231
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season summer
+while I_TurnNumber = 232
+	suspend_unscripted_advice true
+end_while
+
+console_command date 150
+console_command season winter
+while I_TurnNumber = 233
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season summer
+while I_TurnNumber = 234
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season summer
+while I_TurnNumber = 235
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season summer
+while I_TurnNumber = 236
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season summer
+while I_TurnNumber = 237
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season summer
+while I_TurnNumber = 238
+	suspend_unscripted_advice true
+end_while
+
+console_command date 151
+console_command season winter
+while I_TurnNumber = 239
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season summer
+while I_TurnNumber = 240
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season summer
+while I_TurnNumber = 241
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season summer
+while I_TurnNumber = 242
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season summer
+while I_TurnNumber = 243
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season summer
+while I_TurnNumber = 244
+	suspend_unscripted_advice true
+end_while
+
+console_command date 152
+console_command season winter
+while I_TurnNumber = 245
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season summer
+while I_TurnNumber = 246
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season summer
+while I_TurnNumber = 247
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season summer
+while I_TurnNumber = 248
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season summer
+while I_TurnNumber = 249
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season summer
+while I_TurnNumber = 250
+	suspend_unscripted_advice true
+end_while
+
+console_command date 153
+console_command season winter
+while I_TurnNumber = 251
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season summer
+while I_TurnNumber = 252
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season summer
+while I_TurnNumber = 253
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season summer
+while I_TurnNumber = 254
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season summer
+while I_TurnNumber = 255
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season summer
+while I_TurnNumber = 256
+	suspend_unscripted_advice true
+end_while
+
+console_command date 154
+console_command season winter
+while I_TurnNumber = 257
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season summer
+while I_TurnNumber = 258
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season summer
+while I_TurnNumber = 259
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season summer
+while I_TurnNumber = 260
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season summer
+while I_TurnNumber = 261
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season summer
+while I_TurnNumber = 262
+	suspend_unscripted_advice true
+end_while
+
+console_command date 155
+console_command season winter
+while I_TurnNumber = 263
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season summer
+while I_TurnNumber = 264
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season summer
+while I_TurnNumber = 265
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season summer
+while I_TurnNumber = 266
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season summer
+while I_TurnNumber = 267
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season summer
+while I_TurnNumber = 268
+	suspend_unscripted_advice true
+end_while
+
+console_command date 156
+console_command season winter
+while I_TurnNumber = 269
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season summer
+while I_TurnNumber = 270
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season summer
+while I_TurnNumber = 271
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season summer
+while I_TurnNumber = 272
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season summer
+while I_TurnNumber = 273
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season summer
+while I_TurnNumber = 274
+	suspend_unscripted_advice true
+end_while
+
+console_command date 157
+console_command season winter
+while I_TurnNumber = 275
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season summer
+while I_TurnNumber = 276
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season summer
+while I_TurnNumber = 277
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season summer
+while I_TurnNumber = 278
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season summer
+while I_TurnNumber = 279
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season summer
+while I_TurnNumber = 280
+	suspend_unscripted_advice true
+end_while
+
+console_command date 158
+console_command season winter
+while I_TurnNumber = 281
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season summer
+while I_TurnNumber = 282
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season summer
+while I_TurnNumber = 283
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season summer
+while I_TurnNumber = 284
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season summer
+while I_TurnNumber = 285
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season summer
+while I_TurnNumber = 286
+	suspend_unscripted_advice true
+end_while
+
+console_command date 159
+console_command season winter
+while I_TurnNumber = 287
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season summer
+while I_TurnNumber = 288
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season summer
+while I_TurnNumber = 289
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season summer
+while I_TurnNumber = 290
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season summer
+while I_TurnNumber = 291
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season summer
+while I_TurnNumber = 292
+	suspend_unscripted_advice true
+end_while
+
+console_command date 160
+console_command season winter
+while I_TurnNumber = 293
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season summer
+while I_TurnNumber = 294
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season summer
+while I_TurnNumber = 295
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season summer
+while I_TurnNumber = 296
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season summer
+while I_TurnNumber = 297
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season summer
+while I_TurnNumber = 298
+	suspend_unscripted_advice true
+end_while
+
+console_command date 161
+console_command season winter
+while I_TurnNumber = 299
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season summer
+while I_TurnNumber = 300
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season summer
+while I_TurnNumber = 301
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season summer
+while I_TurnNumber = 302
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season summer
+while I_TurnNumber = 303
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season summer
+while I_TurnNumber = 304
+	suspend_unscripted_advice true
+end_while
+
+console_command date 162
+console_command season winter
+while I_TurnNumber = 305
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season summer
+while I_TurnNumber = 306
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season summer
+while I_TurnNumber = 307
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season summer
+while I_TurnNumber = 308
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season summer
+while I_TurnNumber = 309
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season summer
+while I_TurnNumber = 310
+	suspend_unscripted_advice true
+end_while
+
+console_command date 163
+console_command season winter
+while I_TurnNumber = 311
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season summer
+while I_TurnNumber = 312
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season summer
+while I_TurnNumber = 313
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season summer
+while I_TurnNumber = 314
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season summer
+while I_TurnNumber = 315
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season summer
+while I_TurnNumber = 316
+	suspend_unscripted_advice true
+end_while
+
+console_command date 164
+console_command season winter
+while I_TurnNumber = 317
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season summer
+while I_TurnNumber = 318
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season summer
+while I_TurnNumber = 319
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season summer
+while I_TurnNumber = 320
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season summer
+while I_TurnNumber = 321
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season summer
+while I_TurnNumber = 322
+	suspend_unscripted_advice true
+end_while
+
+console_command date 165
+console_command season winter
+while I_TurnNumber = 323
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season summer
+while I_TurnNumber = 324
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season summer
+while I_TurnNumber = 325
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season summer
+while I_TurnNumber = 326
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season summer
+while I_TurnNumber = 327
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season summer
+while I_TurnNumber = 328
+	suspend_unscripted_advice true
+end_while
+
+console_command date 166
+console_command season winter
+while I_TurnNumber = 329
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season summer
+while I_TurnNumber = 330
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season summer
+while I_TurnNumber = 331
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season summer
+while I_TurnNumber = 332
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season summer
+while I_TurnNumber = 333
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season summer
+while I_TurnNumber = 334
+	suspend_unscripted_advice true
+end_while
+
+console_command date 167
+console_command season winter
+while I_TurnNumber = 335
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season summer
+while I_TurnNumber = 336
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season summer
+while I_TurnNumber = 337
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season summer
+while I_TurnNumber = 338
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season summer
+while I_TurnNumber = 339
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season summer
+while I_TurnNumber = 340
+	suspend_unscripted_advice true
+end_while
+
+console_command date 168
+console_command season winter
+while I_TurnNumber = 341
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season summer
+while I_TurnNumber = 342
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season summer
+while I_TurnNumber = 343
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season summer
+while I_TurnNumber = 344
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season summer
+while I_TurnNumber = 345
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season summer
+while I_TurnNumber = 346
+	suspend_unscripted_advice true
+end_while
+
+console_command date 169
+console_command season winter
+while I_TurnNumber = 347
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season summer
+while I_TurnNumber = 348
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season summer
+while I_TurnNumber = 349
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season summer
+while I_TurnNumber = 350
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season summer
+while I_TurnNumber = 351
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season summer
+while I_TurnNumber = 352
+	suspend_unscripted_advice true
+end_while
+
+console_command date 170
+console_command season winter
+while I_TurnNumber = 353
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season summer
+while I_TurnNumber = 354
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season summer
+while I_TurnNumber = 355
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season summer
+while I_TurnNumber = 356
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season summer
+while I_TurnNumber = 357
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season summer
+while I_TurnNumber = 358
+	suspend_unscripted_advice true
+end_while
+
+console_command date 171
+console_command season winter
+while I_TurnNumber = 359
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season summer
+while I_TurnNumber = 360
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season summer
+while I_TurnNumber = 361
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season summer
+while I_TurnNumber = 362
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season summer
+while I_TurnNumber = 363
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season summer
+while I_TurnNumber = 364
+	suspend_unscripted_advice true
+end_while
+
+console_command date 172
+console_command season winter
+while I_TurnNumber = 365
+	suspend_unscripted_advice true
+end_while
+
+end_script

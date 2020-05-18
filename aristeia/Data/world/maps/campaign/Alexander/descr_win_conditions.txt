@@ -1,0 +1,107 @@
+;macedon
+;alexander Macedon Lydia Cappadocia Syria Lybia Egypt Babylonia Media Dahae Bactria
+;take_regions 30
+;survivor Alexander
+;script world/maps/campaign/alexander/Alexander_Campaign_Outro_Script.txt
+;survivor Alexander
+;parthia
+;hold_regions Macedon Greece Lydia Paphlagonia Phrygia Cappadocia Syria Egypt Lybia Armenia Assyria Babylonia Media Parthia Susiana Persis Carmania Gedrosia Aria Bactria Sogdiana Drangiana Parapamisadale Arachosia Arabia
+;take_regions 25
+;short_campaign outlive_factions
+;macedon
+
+romans_brutii
+hold_regions Troas, Camp13, Ida
+take_regions 30
+short_campaign outlive_factions
+britons
+
+romans_julii
+hold_regions Troas, Camp12, Lemnos, Camp13, Phthia
+take_regions 40
+short_campaign outlive_factions
+britons
+
+romans_scipii
+hold_regions Troas, Camp14 
+take_regions 40
+short_campaign outlive_factions
+britons
+
+romans_senate
+hold_regions Troas 
+take_regions 30
+short_campaign outlive_factions
+britons
+
+macedon
+hold_regions Troas, Camp16, Kikonia, Zakynthos
+take_regions 30
+short_campaign outlive_factions
+britons
+
+egypt
+hold_regions Troas, Camp12, Ida, Naxos, Attike
+take_regions 35
+short_campaign outlive_factions
+britons
+
+seleucid
+hold_regions Troas, Camp13, Kadmeia
+take_regions 42
+short_campaign outlive_factions
+britons
+
+gauls
+hold_regions Troas, Camp14, Teuthrania, Kephallenia
+take_regions 30
+short_campaign outlive_factions
+britons
+
+parthia
+hold_regions Troas, Attike
+take_regions 30
+short_campaign outlive_factions
+britons
+
+carthage
+hold_regions Troas, Camp17, Hypoplakia, Attike, Naxos
+take_regions 40
+short_campaign outlive_factions
+britons
+
+pontus
+hold_regions Troas, Camp17, Pyrrha, Ida
+take_regions 30
+short_campaign outlive_factions
+britons
+
+armenia
+hold_regions Camp3, Camp4, Camp5, Rhodos, Karpathos, Karia_Anatolike
+take_regions 40
+short_campaign outlive_factions
+romans_julii
+
+dacia
+hold_regions Camp6, Camp7, Camp8, Lykia_Anatolike, Lemnos, Lesbos
+take_regions 30
+short_campaign outlive_factions
+romans_julii
+
+spain
+hold_regions Camp9, Camp10, Camp11, Illyria
+take_regions 40
+short_campaign outlive_factions
+seleucid
+
+britons
+hold_regions Camp2, Camp3, Camp4, Camp5, Camp6, Camp7
+take_regions 35
+short_campaign outlive_factions
+romans_julii
+
+germans
+hold_regions Oneia
+take_regions 30
+short_campaign outlive_factions
+romans_julii

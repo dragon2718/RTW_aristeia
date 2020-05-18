@@ -1,0 +1,92 @@
+
+; historical events and when they occur
+;
+; Events are followed by a category, and a label
+; labels are used as lookups into historic_events.txt for title and body strings,
+; and also as image names for the event picture
+; 
+; Currently supported categories are:
+; historic - Just generates a message
+; volcano  - triggers a volcano if there is one on the map at the position specified
+; plague   - triggers a plague in settlements at the specified positions
+; emergent_faction - triggers the emergence of the given faction.  This faction must be marked
+;	as emergent in descr_strat.txt
+;
+; event descriptions are followed by a date (year as offset from starting date, and season, summer/winter)
+; and either a list of positions, or list of regions.  Each position/region specification must appear on 
+; a seperate line below the date
+
+event	historic	espionage_in_carthage
+date	0 summer
+
+event	historic	a_new_religion
+date	2 summer
+
+event	historic	lex_aebutia
+date	3 summer
+
+event	historic	eruption_at_etna
+date	4 summer
+
+event	historic	roman_stoicism
+date	5 summer
+
+event	historic	plague_in_macedonia
+date	6 summer
+
+event	historic	stoic_philosophy
+date	7 summer
+
+event	historic	hand_pump_invented
+date	8 summer
+
+event	historic	librarian_at_alexandria
+date	9 summer
+
+event	historic	great_library_completed
+date	10 summer
+
+event	historic	lex_papira
+date	11 summer
+
+event	historic	through_a_glass_clearly
+date	12 summer
+
+event	historic	plague_in_italy
+date	13 summer
+
+event	historic	archimedes_screw
+date	14 summer
+
+event	historic	greek_logic
+date	15 summer
+
+event	historic	vestal_virgin_struck_down
+date	16 summer
+
+event	historic	star_catalogue
+date	17 summer
+
+event	historic	plague_in_alexandria
+date	18 summer
+
+event	historic	rites_of_bacchus_banned
+date	19 summer
+
+event	historic	earthquake_in_pontus
+date	20 summer
+
+event	historic	a_new_man_gaius_marius
+date	21 summer
+
+event	historic	concrete_invented
+date	22 summer
+
+event	historic	eruption_at_vesuvius
+date	30 summer
+
+event	historic	philosophy_is_foppish
+date	40 summer
+
+event	historic	astronomy_advances
+date	50 summer

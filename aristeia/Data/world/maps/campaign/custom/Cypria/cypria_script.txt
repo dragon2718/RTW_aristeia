@@ -1,0 +1,233 @@
+script
+
+;kill all of the unwanted characters who should be long since dead but are needed for family trees
+
+console_command kill_character "Atreus" dont_show_death_anim
+
+if I_LocalFaction romans_julii
+spawn_army
+    faction britons
+    character Tenes, named character, command 0, influence 0, management 0, subterfuge 0, age 40, , x 53, y 55
+    unit heros Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Akontistai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Akontistai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Akontistai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Toxotai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Toxotai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Xipherai Mysian	, exp 1 armour 1 weapon_lvl 1
+    unit Xipherai Mysian	, exp 1 armour 1 weapon_lvl 1
+    unit Xipherai Mysian	, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+    unit Aichmetai Mysian, exp 1 armour 1 weapon_lvl 1
+end
+
+end_if
+
+;give traits
+
+;romans_julii
+
+console_command give_trait Agamemnon VictorOthersVirtue 3
+console_command give_trait Agamemnon Drink 2
+console_command give_trait Agamemnon Girls 1
+console_command give_trait Agamemnon Energetic 1
+console_command give_trait Agamemnon GoodAdministrator 3
+console_command give_trait Agamemnon StrategicSkill 2
+console_command give_trait Agamemnon Hero 1
+console_command give_trait Agamemnon Com2 1
+console_command give_trait Agamemnon Agamemnon 1
+
+console_command give_ancillary Agamemnon sceptre
+console_command give_ancillary Agamemnon herald
+console_command give_ancillary Agamemnon treasurer
+
+console_command give_trait Menelaos Com2 1
+console_command give_trait Menelaos TacticalSkill 3
+console_command give_trait Menelaos Strong 3
+console_command give_trait Menelaos Aesthetic 1
+console_command give_trait Menelaos Gambling 1
+console_command give_trait Menelaos Hero 1
+
+console_command give_ancillary Menelaos runner
+console_command give_ancillary Menelaos hostage
+
+
+;brutii works already
+
+
+;scipii
+
+console_command give_trait Achilleus Fast 3
+console_command give_trait Achilleus Styx 1
+console_command give_trait Achilleus Sonimmortal 1
+console_command give_trait Achilleus Anger 2
+console_command give_trait Achilleus Strong 1
+console_command give_trait Achilleus Brave 2
+console_command give_trait Achilleus Hero 1
+console_command give_trait Achilleus Com4 1
+
+console_command give_ancillary Achilleus divinely_wrought_sheild
+console_command give_ancillary Achilleus upright_friend
+console_command give_ancillary Achilleus concubine
+console_command give_ancillary Achilleus divinely_wrought_armour
+
+console_command give_trait Patroklos Com2 1
+
+;macedon works already
+;romans_senate works already
+
+;egypt
+
+console_command give_trait Aias Hero 1
+console_command give_trait Aias Com2 1
+console_command give_trait Aias Brave 4
+console_command give_trait Aias Fast 1
+console_command give_trait Aias HEndurance 3
+console_command give_trait Aias Ignorance 1
+console_command give_trait Aias Strong 2
+console_command give_trait Aias BlackBileHumour 1
+
+console_command give_ancillary Aias concubine
+
+;seleucid not needed
+
+;carthage
+
+console_command give_trait Idomeneus Hero 1 
+console_command give_trait Idomeneus Com3 1 
+console_command give_trait Idomeneus GoodTrader 1
+console_command give_trait Idomeneus TacticalSkill 1
+console_command give_trait Idomeneus Pious 1
+
+console_command give_ancillary Idomeneus teacher
+console_command give_ancillary Idomeneus suppliant
+
+;parthia
+
+console_command give_trait Thersandros Just 1
+console_command give_trait Thersandros Com1 1
+console_command give_trait Thersandros BloodHumour 1
+console_command give_trait Thersandros Hero 1
+console_command give_trait Thersandros EnemyFun 1
+
+console_command give_ancillary Thersandros prophet
+
+;pontus
+
+console_command give_trait Tlepolemos Com2 1
+
+;gauls
+
+console_command give_trait Thoas Com2 1
+
+;britons
+
+console_command give_trait Priamos Hero 1
+console_command give_trait Priamos Com1 1
+console_command give_trait Priamos GoodAdministrator 3
+console_command give_trait Priamos Intelligent 1
+console_command give_trait Priamos DevoteeGovernors 2
+console_command give_trait Priamos Weak 1
+console_command give_trait Priamos GoodSiegeDefender 2
+console_command give_trait Priamos NonAuthoritarian 1
+console_command give_trait Priamos Immortal 1
+console_command give_trait Priamos Priamos 1
+
+console_command give_ancillary Priamos sceptre
+console_command give_ancillary Priamos suppliant
+console_command give_ancillary Priamos goldsmith
+console_command give_ancillary Priamos priest_of_apollo
+console_command give_ancillary Priamos prophet
+
+console_command give_trait Hektor Hero 1
+console_command give_trait Hektor Com2 1
+console_command give_trait Hektor GoodCavalryGeneral 3
+console_command give_trait Hektor HEndurance 1
+console_command give_trait Hektor TacticalSkill 2
+console_command give_trait Hektor GoodCommander 3
+console_command give_trait Hektor Pious 1
+console_command give_trait Hektor FaithfulWife 1
+console_command give_trait Hektor Priamos 1
+
+console_command give_ancillary Hektor famous_warrior
+console_command give_ancillary Hektor runner
+console_command give_ancillary Hektor herald
+
+console_command give_trait Paris Aesthetic 2
+console_command give_trait Paris Hero 1
+console_command give_trait Paris Com1 1
+console_command give_trait Paris Girls 3
+console_command give_trait Paris Coward 1
+console_command give_trait Paris Slothful 1
+console_command give_trait Paris Handsome 3
+console_command give_trait Paris ExpensiveTastes 1
+
+console_command give_ancillary Paris concubine
+console_command give_ancillary Paris famous_courtesan
+
+;armenia
+
+console_command give_trait Sarpedon Hero 1
+console_command give_trait Sarpedon Com2 1
+console_command give_trait Sarpedon Immortal 1
+console_command give_trait Sarpedon GoodSiegeDefender 1
+console_command give_trait Sarpedon Scout 1
+console_command give_trait Sarpedon Intelligent 1
+console_command give_trait Sarpedon GoodTrader 1
+
+console_command give_ancillary Sarpedon archery_instructor
+console_command give_ancillary Sarpedon mountain_guide
+
+console_command give_trait Glaukos Com2 1
+
+;dacia
+
+console_command give_trait Mesthles Com3 1
+
+console_command give_trait Antiphos Com1 1
+
+console_command give_trait Nastes Com1 1
+
+;give the ai money so it doesn't just STOP in the middle of a game.
+
+campaign_wait 4
+
+if I_LocalFaction britons
+	;give money to the greeks
+	console_command control romans_julii
+	console_command add_money, 4000000
+	console_command control britons
+end_if
+
+if I_LocalFaction romans_julii
+	;give money to the trojans
+	console_command control britons
+	console_command add_money, 150000
+	console_command control romans_julii	
+
+end_if
+
+campaign_wait 3
+
+				filter_all_ui_commands on
+				enable_entire_ui
+				disable_shortcuts false		
+				inhibit_camera_input false
+				enable_cursor
+				show_ui
+
+
+				;start 6tpy script
+				;wait 1
+				advance_advice_thread CypriaBackgroundScriptThread
+				;wait 1
+				select_ui_element advisor_portrait_button
+				simulate_mouse_click lclick_up
+
+end_script

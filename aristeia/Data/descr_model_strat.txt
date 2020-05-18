@@ -1,0 +1,860 @@
+;;	
+;	this file contains the model linkages for both strategy map and battlefield; it gets 
+;	parsed on application startup but is not otherwise referred to. the data format is thus:
+;
+;	;						indicates a comment ;-)
+;							
+;	type					indicates a new model type
+;
+;								must be followed by id name string
+;
+;	skeleton				indicates which skeleton should be used for these models
+;
+;								must be followed by id name string (cf descr_skeleton.txt)
+;
+;	indiv_range				indicates at what point we start rendering men individually even if 
+;								we can 'group render'
+;
+;								must be followed by an integer (whole number) range in metres
+;
+;								group render means the whole unit will be rendered using one 
+;								model, individual render means the soldiers will be	tested 
+;								individually for which model lod to use (slower) 
+;
+;	(models)				there must be at least one; the model_ keywords indicate a new model in
+;								the lod series; each must be followed by a filename and either the
+;								lod range in metres or the word 'max' for maximum range... all lods
+;								must be in order, from shortest distance (highest detail) to furthest
+;								distance. The model_ keywords are:
+;
+;			model_flexi_m		essentially a flexi model but has a small number of weighted 
+;								vertices, such as Will's high-detail carthaginian infantryman 
+;								with the weighted shoulder verts 
+;			
+;			model_flexi_c		a flexi model which contains per-vertex colours, for example 
+;								for colouring the different Roman faction assassins
+;
+;			model_flexi			plain vanilla flexi model, which is a single-skinned mesh with 
+;								normals and texture coordinates
+;
+;			shadow_model_flexi	as model_flexi but used to create the shadow volume	
+;
+;	model_mesh				(optional) range only for using animated mesh frames for the model
+;
+;	model_sprite			(optional) sprite model for this model type 
+;
+;								if the first item is a distance (integer number in m), a new 
+;								sprite animation set will be generated for this model; if it is 
+;								anything else, it must be a type name from this file which has a 
+;								valid sprite entry *and* was processed before this type entry
+;
+;	model_tri				(optional) indicates that this model can be represented by a single 
+;								triangle
+;
+;								must be followed by a range (integer number in metres), and three 
+;								floating point numbers in the range 0.0f - 1.0f which indicate 
+;								colours red,green,blue to use for the triangle
+;
+
+
+;strat map only characters
+ignore_registry
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;SPIES, ASSASSINS AND DIPLOMATS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				diplomat
+skeleton			strat_diplomat
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_strat/textures/diplomat_julii.tga
+texture				romans_brutii, aristeia/data/models_strat/textures/diplomat_brutii.tga
+texture				romans_scipii, aristeia/data/models_strat/textures/diplomat_black.tga
+texture				romans_senate, aristeia/data/models_strat/textures/diplomat_senate.tga
+texture				macedon, aristeia/data/models_strat/textures/diplomat_black.tga
+texture				egypt, aristeia/data/models_strat/textures/diplomat_egypt.tga
+texture				seleucid, aristeia/data/models_strat/textures/diplomat_seleucid.tga
+texture				carthage, aristeia/data/models_strat/textures/diplomat_carthage.tga
+texture				parthia, aristeia/data/models_strat/textures/diplomat_parthia.tga
+texture				pontus, aristeia/data/models_strat/textures/diplomat_pontus.tga
+texture				gauls, aristeia/data/models_strat/textures/diplomat_gaul.tga
+texture				germans, data/models_strat/textures/diplomat_german.tga
+texture				britons, aristeia/data/models_strat/textures/diplomat_trojan.tga
+texture				armenia, aristeia/data/models_strat/textures/diplomat_armenia.tga
+texture				dacia, aristeia/data/models_strat/textures/diplomat_dacia.tga
+texture				greek_cities, data/models_strat/textures/diplomat_greek.tga
+texture				numidia, data/models_strat/textures/diplomat_numidia.tga
+texture				scythia, data/models_strat/textures/diplomat_scythia.tga
+texture				spain, aristeia/data/models_strat/textures/diplomat_spain.tga
+texture				thrace, data/models_strat/textures/diplomat_thrace.tga
+texture				slave, aristeia/data/models_strat/textures/diplomat_slave.tga
+model_flexi_m		data/models_strat/diplomat.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_diplomat.cas, max
+
+
+type				spy
+skeleton			strat_spy
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_strat/textures/th.tga
+texture				romans_brutii, aristeia/data/models_strat/textures/th.tga
+texture				romans_scipii, aristeia/data/models_strat/textures/th.tga
+texture				romans_senate, aristeia/data/models_strat/textures/th.tga
+texture				macedon, aristeia/data/models_strat/textures/th.tga
+texture				egypt, aristeia/data/models_strat/textures/th.tga
+texture				seleucid, aristeia/data/models_strat/textures/th.tga
+texture				carthage, aristeia/data/models_strat/textures/th.tga
+texture				parthia, aristeia/data/models_strat/textures/th.tga
+texture				pontus, aristeia/data/models_strat/textures/th.tga
+texture				gauls, aristeia/data/models_strat/textures/th.tga
+texture				germans, aristeia/data/models_strat/textures/th.tga
+texture				britons, aristeia/data/models_strat/textures/th.tga
+texture				armenia, aristeia/data/models_strat/textures/th.tga
+texture				dacia, aristeia/data/models_strat/textures/th.tga
+texture				greek_cities, aristeia/data/models_strat/textures/th.tga
+texture				numidia, aristeia/data/models_strat/textures/th.tga
+texture				scythia, aristeia/data/models_strat/textures/th.tga
+texture				spain, aristeia/data/models_strat/textures/th.tga
+texture				thrace, aristeia/data/models_strat/textures/th.tga
+texture				slave, aristeia/data/models_strat/textures/th.tga
+
+model_flexi			aristeia/data/models_strat/th.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+;;TEMPORARY;;
+
+type				assassin
+skeleton			strat_assassin
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_strat/textures/scout_julii.tga
+texture				romans_brutii, aristeia/data/models_strat/textures/scout_brutii.tga
+texture				romans_scipii, aristeia/data/models_strat/textures/scout_black.tga
+texture				romans_senate, aristeia/data/models_strat/textures/scout_senate.tga
+texture				macedon, aristeia/data/models_strat/textures/scout_black.tga
+texture				egypt, aristeia/data/models_strat/textures/scout_egypt.tga
+texture				seleucid, aristeia/data/models_strat/textures/scout_seleucid.tga
+texture				carthage, aristeia/data/models_strat/textures/scout_carthage.tga
+texture				parthia, aristeia/data/models_strat/textures/scout_parthia.tga
+texture				pontus, aristeia/data/models_strat/textures/scout_pontus.tga
+texture				gauls, aristeia/data/models_strat/textures/scout_gaul.tga
+texture				germans, data/models_strat/textures/assassin_german.tga
+texture				britons, aristeia/data/models_strat/textures/scout_trojan.tga
+texture				armenia, aristeia/data/models_strat/textures/scout_armenia.tga
+texture				dacia, aristeia/data/models_strat/textures/scout_dacia.tga
+texture				greek_cities, data/models_strat/textures/assassin_greek.tga
+texture				numidia, data/models_strat/textures/assassin_numidia.tga
+texture				scythia, data/models_strat/textures/assassin_scythia.tga
+texture				spain, data/models_strat/textures/assassin_spain.tga
+texture				thrace, data/models_strat/textures/assassin_thrace.tga
+texture				slave, aristeia/data/models_strat/textures/scout_white.tga
+
+model_flexi			aristeia/data/models_strat/scout.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;BARB GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_barb_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				gauls, data/models_strat/textures/officer_barb_general_gaul.tga
+texture				germans, data/models_strat/textures/officer_barb_general_german.tga
+texture				britons, data/models_strat/textures/officer_barb_general_briton.tga
+texture				dacia, data/models_strat/textures/officer_barb_general_dacian.tga
+texture				scythia, data/models_strat/textures/officer_barb_general_scythian.tga
+texture				spain, data/models_strat/textures/officer_barb_general_spain_128.tga
+model_flexi_m		data/models_unit/officer_barb_general_high.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				sm_barb_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				gauls, data/models_strat/textures/unit_strat_map_captain_gaul.tga
+texture				germans, data/models_strat/textures/unit_strat_map_captain_german.tga
+texture				britons, data/models_strat/textures/unit_strat_map_captain_briton.tga
+texture				dacia, data/models_strat/textures/unit_strat_map_captain_dacia.tga
+texture				scythia, data/models_strat/textures/unit_strat_map_captain_scythia.tga
+texture				spain, data/models_strat/textures/unit_strat_map_captain_iberia.tga
+model_flexi_m		data/models_strat/barb_strat_map_captain.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;CARTHAGINIAN GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_carthage_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				carthage, data/models_strat/textures/officer_carthage_general_carthage.tga
+texture				numidia, data/models_strat/textures/officer_carthage_general_numidia.tga
+texture				spain, data/models_strat/textures/officer_carthage_general_spain.tga
+model_flexi_m		data/models_unit/officer_carthage_general_high.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+type				sm_carthage_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				carthage, data/models_strat/textures/unit_carthage_infantry.tga
+texture				numidia, data/models_strat/textures/unit_carthage_infantry_numidia.tga
+texture				spain, data/models_strat/textures/unit_carthage_infantry_spain.tga
+model_flexi_m		data/models_strat/carthage_strat_captain.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;EASTERN GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_eastern_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				parthia, data/models_unit/textures/officer_eastern_general_parthia.TGA
+texture				pontus, data/models_unit/textures/officer_eastern_general_pontus.TGA
+texture				armenia, data/models_unit/textures/officer_eastern_general_armenia.TGA
+model_flexi_m		data/models_unit/officer_eastern_general_high.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+type				sm_eastern_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				parthia, data/models_strat/textures/unit_eastern_crew_parthia.tga
+texture				pontus, data/models_strat/textures/unit_eastern_crew_pontus.tga
+texture				armenia, data/models_strat/textures/unit_eastern_crew_armenia.tga
+model_flexi			data/models_strat/strat_eastern_lesser_general.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;EGYPTIAN GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_egypt_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				egypt, data/models_unit/textures/unit_egyption_elite_guard.tga
+model_flexi_m		data/models_strat/strat_egyptian_general.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				sm_egypt_lesser_general
+skeleton			strat_named_with_army
+indiv_range			40
+texture				egypt, data/models_unit/textures/unit_egyption_cleruch.tga
+model_flexi_m		data/models_strat/strat_egyptian_lesser_general.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_axe.cas, max
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;GREEK GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_greek_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				macedon, data/models_unit/textures/officer_greek_general_macedon.tga
+texture				seleucid, data/models_unit/textures/officer_greek_general_seleucid.tga
+texture				greek_cities, data/models_unit/textures/officer_greek_general_greece.tga
+texture				thrace, data/models_unit/textures/officer_greek_general_thrace.tga
+model_flexi_m		data/models_unit/officer_greek_general_high.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				sm_greek_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				macedon, data/models_unit/textures/unit_greek_militia_hoplite_macedon.tga
+texture				seleucid, data/models_unit/textures/unit_greek_militia_hoplite_seleucid.tga
+texture				greek_cities, data/models_unit/textures/unit_greek_militia_hoplite_greek.tga
+texture				thrace, data/models_unit/textures/unit_greek_militia_hoplite_thrace.tga
+model_flexi_m		data/models_strat/strat_greek_lesser_general.CAS, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ROMAN GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_roman_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_julii, data/models_strat/textures/officer_roman_general_julii.tga
+texture_no_move		romans_julii, data/models_strat/textures/officer_roman_general_julii_marble.tga
+texture				romans_brutii, data/models_strat/textures/officer_roman_general_brutii.tga
+texture				romans_scipii, data/models_strat/textures/officer_roman_general_scipii.tga
+texture				romans_senate, data/models_strat/textures/officer_roman_general_senate.tga
+model_flexi_m		data/models_unit/officer_roman_general_high.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				sm_roman_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture_no_move		romans_julii, data/models_strat/textures/officer_roman_general_julii_marble.tga
+texture				romans_julii, data/models_unit/textures/unit_roman_legionary_II_julii.tga
+texture				romans_brutii, data/models_unit/textures/unit_roman_legionary_II_brutii.tga
+texture				romans_scipii, data/models_unit/textures/unit_roman_legionary_II_scipii.tga
+texture				romans_senate, data/models_unit/textures/unit_roman_legionary_II_senate.tga
+model_flexi_m		data/models_strat/strat_roman_lesser_general.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;REBEL GENERALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				sm_rebel_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				slave, data/models_unit/textures/unit_rebel_greater_general.tga
+model_flexi_m		data/models_unit/unit_rebel_greater_general_high.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				sm_rebel_lesser_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture			slave, data/models_unit/textures/unit_greek_peasant_slave.tga
+model_flexi		data/models_unit/unit_roman_peasant_high.cas
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;ADMIRALS
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				julii_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				romans_julii, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				brutii_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				romans_brutii, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				scipii_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				romans_scipii, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				senate_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				romans_senate, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				macedon_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				macedon, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				carthage_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				carthage, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				parthia_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				parthia, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				egypt_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				egypt, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				seleucid_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				seleucid, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				pontus_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				pontus, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				gaul_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				gauls, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				german_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				germans, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				briton_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				britons, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				armenia_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				armenia, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				dacia_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				dacia, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				greek_cities_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				greek_cities, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				numidia_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				numidia, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				scythia_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				scythia, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				spain_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				spain, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				thrace_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				thrace, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+type				slave_admiral
+skeleton			strat_navy
+indiv_range			40
+texture				slave, aristeia/data/models_strat/textures/navy_aristeia.tga
+model_flexi			aristeia/data/models_strat/AristeiaShip.cas, max
+shadow_model_flexi	data/models_strat/navy_roman_shadow.cas, max
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+type				pontus_named
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+model_flexi			data/models_strat/character_pontus.cas, max
+
+type				pontus_general
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+model_flexi			data/models_strat/general_pontus.cas, max
+
+
+type				ARTW_Menelaos
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_unit/textures/menelaos_texture.tga
+model_flexi_m		aristeia/data/models_unit/menelaos.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Agamemnon
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_unit/textures/agamemnon_texture.tga
+model_flexi_m		aristeia/data/models_unit/agamemnon.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Diomedes
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_senate, aristeia/data/models_unit/textures/diomedes_texture.tga
+texture				romans_julii, aristeia/data/models_unit/textures/diomedes_texture.tga
+model_flexi_m		aristeia/data/models_unit/diomedes.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Orestes
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_julii, aristeia/data/models_unit/textures/orestes.tga
+model_flexi_m		aristeia/data/models_unit/orestes_strat.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Nikostratos
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_julii, data/models_unit/textures/unit_barb_infantry_gaul.tga
+model_flexi_m		data/models_unit/unit_barb_peasant_lowest.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Nestor
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_brutii, aristeia/data/models_unit/textures/nestor.tga
+texture				romans_julii, aristeia/data/models_unit/textures/nestor.tga
+model_flexi_m		aristeia/data/models_unit/nestor.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Peleus
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_scipii, aristeia/data/models_unit/textures/peleus.tga
+model_flexi		aristeia/data/models_unit/peleus.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Achilleus
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_scipii, aristeia/data/models_unit/textures/achilles_strat.tga
+texture				romans_julii, aristeia/data/models_unit/textures/achilles_strat.tga
+model_flexi_m		aristeia/data/models_unit/ach_strat.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Patroklos
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				romans_scipii, aristeia/data/models_unit/textures/patrocles.tga
+texture				romans_julii, aristeia/data/models_unit/textures/patrocles.tga
+model_flexi		aristeia/data/models_unit/patrocles_strat.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Odysseus
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				macedon, aristeia/data/models_unit/textures/odysseus.tga
+texture				romans_julii, aristeia/data/models_unit/textures/odysseus.tga
+model_flexi_m		aristeia/data/models_unit/odysseus.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Aias
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				egypt, aristeia/data/models_unit/textures/aias.tga
+texture				romans_julii, aristeia/data/models_unit/textures/aias.tga
+model_flexi_m		aristeia/data/models_unit/aias.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Idomeneus
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				carthage, aristeia/data/models_unit/textures/idomeneus.tga
+texture				romans_julii, aristeia/data/models_unit/textures/idomeneus.tga
+model_flexi_m		aristeia/data/models_unit/idomeneus.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Priamos
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				britons, aristeia/data/models_unit/textures/Priam.tga
+model_flexi_m		aristeia/data/models_unit/Priam.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Hektor
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				britons, aristeia/data/models_unit/textures/hector.tga
+model_flexi_m		aristeia/data/models_unit/hector.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Paris
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				britons, aristeia/data/models_unit/textures/paris.tga
+model_flexi_m		aristeia/data/models_unit/paris.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Aineias
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				britons, aristeia/data/models_unit/textures/aeneas.tga
+model_flexi_m		aristeia/data/models_unit/aeneas.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Sarpedon
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				armenia, aristeia/data/models_unit/textures/sarpedon.tga
+texture				britons, aristeia/data/models_unit/textures/sarpedon.tga
+model_flexi_m		aristeia/data/models_unit/sarpedon.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Hyllos
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture				thrace, data/models_unit/textures/unit_barb_infantry_gaul.tga
+model_flexi_m		data/models_unit/unit_barb_peasant_lowest.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_SWAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_julii, aristeia/data/models_unit/textures/hero_atreus.tga
+texture 	 romans_brutii, aristeia/data/models_unit/textures/hero_neleus.tga
+texture 	 macedon, aristeia/data/models_unit/textures/hero_ithaca.tga
+model_flexi		aristeia/data/models_unit/sw_hero.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_SWAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_julii, aristeia/data/models_unit/textures/Aichmetai_SWAchaean_atreus.tga
+texture 	 romans_brutii, aristeia/data/models_unit/textures/Aichmetai_SWAchaean_neleus.tga
+texture 	 macedon, aristeia/data/models_unit/textures/Aichmetai_SWAchaean_ithaca.tga
+texture 	 germans, aristeia/data/models_unit/textures/Aichmetai_SWAchaean_atreus.tga
+model_flexi		aristeia/data/models_unit/Aichmetai_SWAchaean.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_SEAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_senate, aristeia/data/models_unit/textures/hero_argos.tga
+texture 	 egypt, aristeia/data/models_unit/textures/salamis_hero.tga
+texture 	 parthia, aristeia/data/models_unit/textures/hero_thebes.tga
+model_flexi		aristeia/data/models_unit/se_strat_hero.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_SEAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_senate, aristeia/data/models_unit/textures/Aichmetai_SEAchaean_argos.tga
+texture 	 egypt, aristeia/data/models_unit/textures/Aichmetai_SEAchaean_salamis.tga
+texture 	 parthia, aristeia/data/models_unit/textures/Aichmetai_SEAchaean_thebes.tga
+model_flexi		aristeia/data/models_unit/Aichmetai_SEAchaean.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_NAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_scipii, aristeia/data/models_unit/textures/heros_NAchean_peleus.tga
+texture 	 seleucid, aristeia/data/models_unit/textures/heros_NAchean_thessaly.tga
+texture 	 gauls, aristeia/data/models_unit/textures/heros_NAchean_kalydon.tga
+model_flexi		aristeia/data/models_unit/heros_NAchean.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_NAchean
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 romans_scipii, aristeia/data/models_unit/textures/Aichmetai_NAchaean_peleus.tga
+texture 	 seleucid, aristeia/data/models_unit/textures/Aichmetai_NAchaean_thessaly.tga
+texture 	 gauls, aristeia/data/models_unit/textures/Aichmetai_NAchaean_kalydon.tga
+model_flexi		aristeia/data/models_unit/Aichmetai_NAchaean.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+type				ARTW_EBarbarian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 spain, aristeia/data/models_unit/textures/thracian_champion.tga
+texture 	 britons, aristeia/data/models_unit/textures/thracian_champion.tga
+texture 	 greek_cities, data/models_unit/textures/unit_barb_infantry_gaul.tga
+model_flexi		aristeia/data/models_unit/thrace_general.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_EBarbarian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 spain, aristeia/data/models_unit/textures/Xipherai_EBarbarian.tga
+texture 	 greek_cities, data/models_unit/textures/unit_barb_infantry_gaul.tga
+model_flexi		aristeia/data/models_unit/Xipherai_EBarbarian.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_WBarbarian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 scythia, data/models_unit/textures/unit_barb_infantry_gaul.tga
+texture 	 thrace, data/models_unit/textures/unit_barb_infantry_gaul.tga
+model_flexi		data/models_unit/unit_barb_peasant_lowest.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+type				ARTW_Islander
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 carthage, aristeia/data/models_unit/textures/heros_islander_minoan.tga
+texture 	 pontus, aristeia/data/models_unit/textures/heros_islander_rhodes.tga
+texture 	 slave, aristeia/data/models_unit/textures/heros_islander_slave.tga
+model_flexi		aristeia/data/models_unit/heros_islander.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_Islander
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 carthage, aristeia/data/models_unit/textures/Aichmetai_Islanders_minoan.tga
+texture 	 pontus, aristeia/data/models_unit/textures/Aichmetai_Islanders_rhodes.tga
+texture 	 slave, aristeia/data/models_unit/textures/Aichmetai_Islanders_white.tga
+model_flexi		aristeia/data/models_unit/Aichmetai_Islanders.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Mysian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 britons, aristeia/data/models_unit/textures/trojan_hero.tga
+model_flexi		aristeia/data/models_unit/trojan_hero.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_Mysian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 britons, aristeia/data/models_unit/textures/trojan_spearmen.tga
+model_flexi		aristeia/data/models_unit/trojan_spearmen.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+
+type				ARTW_Anatolian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 armenia, aristeia/data/models_unit/textures/heros_Anatolian_lycia.tga
+texture 	 dacia, aristeia/data/models_unit/textures/heros_Anatolian_lydia.tga
+texture 	 britons, aristeia/data/models_unit/textures/heros_Anatolian_lydia.tga
+model_flexi		aristeia/data/models_unit/heros_Anatolian.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Captain_Anatolian
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 armenia, aristeia/data/models_unit/textures/Aichmetai_Anatolian_lycia.tga
+texture 	 dacia, aristeia/data/models_unit/textures/Aichmetai_Anatolian_lydia.tga
+model_flexi		aristeia/data/models_strat/Anatolian_Captain.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Amazon
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 britons, aristeia/data/models_unit/textures/amazon_hero.tga
+texture 	 slave, aristeia/data/models_unit/textures/amazon_hero.tga
+model_flexi		aristeia/data/models_unit/amazon_hero.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Memnon
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 britons, aristeia/data/models_unit/textures/memnon1.tga
+texture 	 slave, aristeia/data/models_unit/textures/memnon1.tga
+model_flexi		aristeia/data/models_unit/memnon1.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Thyestes
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 germans, aristeia/data/models_unit/textures/thyestes1.tga
+model_flexi		aristeia/data/models_unit/thyestes1.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_Aegisthus
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 germans, aristeia/data/models_unit/textures/Aegisthus.tga
+model_flexi		aristeia/data/models_unit/Aegisthus.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max
+
+type				ARTW_CYC
+skeleton			strat_named_with_army
+scale				0.7
+indiv_range			40
+texture 	 slave, aristeia/data/models_unit/textures/cyc.tga
+texture 	 merc, aristeia/data/models_unit/textures/cyc.tga
+model_flexi		aristeia/data/models_unit/cyc.cas, max
+shadow_model_flexi	data/models_strat/shadow_model_sword.cas, max

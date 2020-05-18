@@ -1,0 +1,1110 @@
+rebel_type			Illyrioi
+category			peasant_revolt
+chance				0
+description			Illyrioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pelasgiotai
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Thraikes
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Elaioutai
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Tenedioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Methymnaioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Mytilenaioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Leleges
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Chrysatai
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kebrenioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Dardanioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Argizioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Skepseis
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Arktonnesioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Prokonnesioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Imbrioi
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Dasseratai
+category			peasant_revolt
+chance				0
+description			Dasseratai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Parauaioi
+category			peasant_revolt
+chance				0
+description			Parauaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Chaones
+category			peasant_revolt
+chance				0
+description			Chaones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Molossoi
+category			peasant_revolt
+chance				0
+description			Molossoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phaiakes
+category			peasant_revolt
+chance				0
+description			Phaiakes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Thesprotes
+category			peasant_revolt
+chance				0
+description			Thesprotes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Akarnanioi
+category			peasant_revolt
+chance				0
+description			Akarnanioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Aitoloi
+category			peasant_revolt
+chance				0
+description			Aitoloi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lapithai
+category			peasant_revolt
+chance				0
+description			Lapithai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pieres
+category			peasant_revolt
+chance				0
+description			Pieres
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pelasgiotai
+category			peasant_revolt
+chance				0
+description			Pelasgiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Magnesioi
+category			peasant_revolt
+chance				0
+description			Magnesioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Thessaloi
+category			peasant_revolt
+chance				0
+description			Thessaloi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Ainianoi
+category			peasant_revolt
+chance				0
+description			Ainianoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phthiotai
+category			peasant_revolt
+chance				0
+description			Phthiotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phokes
+category			peasant_revolt
+chance				0
+description			Phokes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Histiaioi
+category			peasant_revolt
+chance				0
+description			Histiaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Thebaioi
+category			peasant_revolt
+chance				0
+description			Thebaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kerinthioi
+category			peasant_revolt
+chance				0
+description			Kerinthioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Karystioi
+category			peasant_revolt
+chance				0
+description			Karystioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Athenaioi
+category			peasant_revolt
+chance				0
+description			Athenaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Megareis
+category			peasant_revolt
+chance				0
+description			Megareis
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Achaioi
+category			peasant_revolt
+chance				0
+description			Achaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Eleioi
+category			peasant_revolt
+chance				0
+description			Eleioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Arkades
+category			peasant_revolt
+chance				0
+description			Arkades
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pisatai
+category			peasant_revolt
+chance				0
+description			Pisatai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Triphylioi
+category			peasant_revolt
+chance				0
+description			Triphylioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Tegeatai
+category			peasant_revolt
+chance				0
+description			Tegeatai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Troizenioi
+category			peasant_revolt
+chance				0
+description			Troizenioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Salaminioi
+category			peasant_revolt
+chance				0
+description			Salaminioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Argeioi
+category			peasant_revolt
+chance				0
+description			Argeioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kynourioi
+category			peasant_revolt
+chance				0
+description			Kynourioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lakones
+category			peasant_revolt
+chance				0
+description			Lakones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pylioi
+category			peasant_revolt
+chance				0
+description			Pylioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Ithakoi
+category			peasant_revolt
+chance				0
+description			Ithakoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Zakynthioi
+category			peasant_revolt
+chance				0
+description			Zakynthioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kytherioi
+category			peasant_revolt
+chance				0
+description			Kytherioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Melioi
+category			peasant_revolt
+chance				0
+description			Melioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Delioi
+category			peasant_revolt
+chance				0
+description			Delioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Naxioi
+category			peasant_revolt
+chance				0
+description			Naxioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Andrioi
+category			peasant_revolt
+chance				0
+description			Andrioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Chioi
+category			peasant_revolt
+chance				0
+description			Chioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Samioi
+category			peasant_revolt
+chance				0
+description			Samioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lesbioi
+category			peasant_revolt
+chance				0
+description			Lesbioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lemnioi
+category			peasant_revolt
+chance				0
+description			Lemnioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Olynthioi
+category			peasant_revolt
+chance				0
+description			Olynthioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Emathes
+category			peasant_revolt
+chance				0
+description			Emathes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Elimeotai
+category			peasant_revolt
+chance				0
+description			Elimeotai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Orestai
+category			peasant_revolt
+chance				0
+description			Orestai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lynkestai
+category			peasant_revolt
+chance				0
+description			Lynkestai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Triballoi
+category			peasant_revolt
+chance				0
+description			Triballoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Krestones
+category			peasant_revolt
+chance				0
+description			Krestones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Bisaltes
+category			peasant_revolt
+chance				0
+description			Bisaltes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Bessoi
+category			peasant_revolt
+chance				0
+description			Bessoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Thasioi
+category			peasant_revolt
+chance				0
+description			Thasioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kikones
+category			peasant_revolt
+chance				0
+description			Kikones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Odrysai
+category			peasant_revolt
+chance				0
+description			Odrysai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Apsinthes
+category			peasant_revolt
+chance				0
+description			Apsinthes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Perinthioi
+category			peasant_revolt
+chance				0
+description			Perinthioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Salmydessioi
+category			peasant_revolt
+chance				0
+description			Salmydessioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Byzantioi
+category			peasant_revolt
+chance				0
+description			Byzantioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Paphlagones
+category			peasant_revolt
+chance				0
+description			Paphlagones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kioi
+category			peasant_revolt
+chance				0
+description			Kioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Doliones
+category			peasant_revolt
+chance				0
+description			Doliones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Bebrykes
+category			peasant_revolt
+chance				0
+description			Bebrykes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Troes
+category			peasant_revolt
+chance				0
+description			Troes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Hypoplakes
+category			peasant_revolt
+chance				0
+description			Hypoplakes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Mysoi
+category			peasant_revolt
+chance				0
+description			Mysoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kilikes
+category			peasant_revolt
+chance				0
+description			Kilikes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Teuthranioi
+category			peasant_revolt
+chance				0
+description			Teuthranioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phrikones
+category			peasant_revolt
+chance				0
+description			Phrikones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Maiones
+category			peasant_revolt
+chance				0
+description			Maiones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Iones
+category			peasant_revolt
+chance				0
+description			Iones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Knidioi
+category			peasant_revolt
+chance				0
+description			Knidioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kaunioi
+category			peasant_revolt
+chance				0
+description			Kaunioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lykioi
+category			peasant_revolt
+chance				0
+description			Lykioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kabalioi
+category			peasant_revolt
+chance				0
+description			Kabalioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Pisidai
+category			peasant_revolt
+chance				0
+description			Pisidai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Ankyraioi
+category			peasant_revolt
+chance				0
+description			Ankyraioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phryges
+category			peasant_revolt
+chance				0
+description			Phryges
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Rhodioi
+category			peasant_revolt
+chance				0
+description			Rhodioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kydoniatai
+category			peasant_revolt
+chance				0
+description			Kydoniatai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Knossioi
+category			peasant_revolt
+chance				0
+description			Knossioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Phaistioi
+category			peasant_revolt
+chance				0
+description			Phaistioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Eteokretai
+category			peasant_revolt
+chance				0
+description			Eteokretai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Leukadioi
+category			peasant_revolt
+chance				0
+description			Leukadioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Minyai
+category			peasant_revolt
+chance				0
+description			Minyai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kephallenioi
+category			peasant_revolt
+chance				0
+description			Kephallenioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Aiginetai
+category			peasant_revolt
+chance				0
+description			Aiginetai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Styratai
+category			peasant_revolt
+chance				0
+description			Styratai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Lokroi
+category			peasant_revolt
+chance				0
+description			Lokroi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kalydonioi
+category			peasant_revolt
+chance				0
+description			Kalydonioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Athamanes
+category			peasant_revolt
+chance				0
+description			Athamanes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Dolopes
+category			peasant_revolt
+chance				0
+description			Dolopes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Tymphaioi
+category			peasant_revolt
+chance				0
+description			Tymphaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Boiotikoi
+category			peasant_revolt
+chance				0
+description			Boiotikoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Eordaioi
+category			peasant_revolt
+chance				0
+description			Eordaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Penestai
+category			peasant_revolt
+chance				0
+description			Penestai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Argestaioi
+category			peasant_revolt
+chance				0
+description			Argestaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Mendaioi
+category			peasant_revolt
+chance				0
+description			Mendaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Toronaioi
+category			peasant_revolt
+chance				0
+description			Toronaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Sintes
+category			peasant_revolt
+chance				0
+description			Sintes
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Edones
+category			peasant_revolt
+chance				0
+description			Edones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Abderitai
+category			peasant_revolt
+chance				0
+description			Abderitai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kaines
+category			peasant_revolt
+chance				0
+description			Kaines
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Chersonesioi
+category			peasant_revolt
+chance				0
+description			Chersonesioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Bithynoi
+category			peasant_revolt
+chance				0
+description			Bithynoi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Mygdones
+category			peasant_revolt
+chance				0
+description			Mygdones
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kistheneis
+category			peasant_revolt
+chance				0
+description			Kistheneis
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Germeis
+category			peasant_revolt
+chance				0
+description			Germeis
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Elaiatai
+category			peasant_revolt
+chance				0
+description			Elaiatai
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Prieneis
+category			peasant_revolt
+chance				0
+description			Prieneis
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Iasioi
+category			peasant_revolt
+chance				0
+description			Iasioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Kares
+category			peasant_revolt
+chance				20
+description			Kares
+unit				Carian Light
+unit				Carian Light
+unit				Carian Guards
+
+rebel_type			Koioi
+category			peasant_revolt
+chance				0
+description			Koioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Parioi
+category			peasant_revolt
+chance				0
+description			Parioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Imbrioi
+category			peasant_revolt
+chance				0
+description			Imbrioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Oropioi
+category			peasant_revolt
+chance				0
+description			Oropioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Sammonioi
+category			peasant_revolt
+chance				0
+description			Sammonioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Karpathioi
+category			peasant_revolt
+chance				0
+description			Potidaioi
+unit				Akontistai SEAchaean
+unit				Aichmetai Islanders
+unit				Aichmetai Islanders
+
+rebel_type			Mykenaioi
+category			peasant_revolt
+chance				55
+description			gladiator_uprising
+unit				Aichmetai SWAchaean
+unit				Aichmetai SWAchaean
+unit				Aichmetai SWAchaean
+unit				Aichmetai SWAchaean
+unit				Aichmetai SWAchaean
+unit				Aichmetai SWAchaean
+unit				Xipherai SWAchaean
+unit				Xipherai SWAchaean
+unit				Xipherai SWAchaean
+unit				Akontistai SEAchaean
+unit				Toxotai SWAchaean
+unit				Toxotai SWAchaean
+
+rebel_type			pirates
+category			pirates
+chance				40
+description			pirates
+unit				naval pirate ships

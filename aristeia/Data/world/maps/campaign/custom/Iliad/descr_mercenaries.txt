@@ -1,0 +1,28 @@
+pool Ethiopian
+	regions Maionia
+	unit Tolmetai,			exp 2 cost 280 replenish 0.06 - 0.19 max 3 initial 1
+	unit eth Light,			exp 1 cost 170 replenish 0.06 - 0.19 max 3 initial 1
+	unit eth Heavy,			exp 1 cost 240 replenish 0.06 - 0.19 max 2 initial 1
+	unit eth archer,			exp 1 cost 210 replenish 0.06 - 0.19 max 2 initial 1
+
+pool Amazon
+	regions Dolionis Arktonnesos
+	unit Amazonon Ekdromoi,			exp 1 cost 270 replenish 0.06 - 0.19 max 3 initial 1
+	unit Amazonon Hippotoxotai,			exp 1 cost 330 replenish 0.05 - 0.19 max 2 initial 1
+	unit Hyperboreioi,			exp 1 cost 310 replenish 0.05 - 0.19 max 2 initial 1
+	unit Akontistai EBarbarian,			exp 1 cost 200 replenish 0.06 - 0.19 max 3 initial 1
+	unit Tolmetai,			exp 2 cost 280 replenish 0.06 - 0.19 max 3 initial 1
+
+pool Northern
+	regions Prokonnesos Thraike Chersonesos
+	unit Akontistai EBarbarian,			exp 1 cost 200 replenish 0.06 - 0.19 max 3 initial 1
+	unit Tolmetai,			exp 2 cost 270 replenish 0.06 - 0.19 max 3 initial 1
+
+pool Pirate
+	regions Lemnos Pelasgis Imbros Kynossema Tenedos Lesbos_Hesperia Lesbos_Antelia
+	unit Leistai,			exp 1 cost 300 replenish 0.06 - 0.19 max 3 initial 1
+	unit Tolmetai,			exp 2 cost 250 replenish 0.06 - 0.19 max 3 initial 1
+
+pool Adventurer
+	regions Teuthrania Kane Kilikia Mysia Hypoplakia Lelegia Lekton Kebren Troas Dardania Bebrykia Malos Kotylos
+	unit Tolmetai,			exp 2 cost 260 replenish 0.06 - 0.19 max 3 initial 1

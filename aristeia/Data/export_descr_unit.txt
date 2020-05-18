@@ -1,0 +1,4578 @@
+;
+; RTW Unit Details spreadsheet-generated unit descriptions
+;
+ 
+;Data entries are as follows
+; Type          The internal name of the unit. Note this not necessarily the same as the on screen name
+; dictionary        The tag used to look up the on screen name
+;
+;Category and class define the rough type of the unit. They're used for setting some
+;default attributes and for determining where units go in formation amongst other things
+; category      infantry, cavalry, siege, handler, ship or non_combatant
+; class         light, heavy, missile or spearmen
+;
+; voice_type        Used to determine the type of voice used by the unit
+;
+; soldier       Name of the soldier model to use (from descr_models_battle.txt)
+;               followed by the number of ordinary soldiers in the unit
+;               followed by the number of extras (pigs dogs, elephants, chariots artillery pieces etc attached to the unit)
+;               followed by the collision mass of the men. 1.0 is normal. Only applies to infantry
+; officer       Name of officer model. There may be up to 0-3 officer lines per unit
+; ship          Type of ship used if applicable
+; engine        Type of siege engine used by unit
+; animal        The type of non ridden on animals used by the unit
+; mount         Type of animal or vehicle ridden on
+;
+; mount_effect  Factors to add when in combat against enemy units that have the specified mounts
+;               Up to three factors may be specified, which may be classes of mount, or specific types
+;
+; attributes    A miscellanious list of attributes and abilities the unit may have. Including
+;               sea_faring = can board ships
+;               hide_forest, hide_improved_forest, hide_long_grass, hide_anywhere   = defines where the unit can hide
+;               can_sap = Can dig tunnels under walls
+;               frighten_foot, frighten_mounted = Cause fear to certain nearby unit types
+;               can_run_amok = Unit may go out of control when riders lose control of animals
+;               general_unit = The unit can be used for a named character's bodyguard
+;               cantabrian_circle = The unit has this special ability
+;               no_custom = The unit may not be selected in custom battles
+;               command = The unit carries a legionary eagle, and gives bonuses to nearby units
+;               mercenary_unit = The unit is s mercenary unit available to all factions
+;
+; formation     soldier spacing (in metres) side to side, then front to back for close formation
+;               followed by the same measurements in loose formation.
+;               followed by the default number of ranks for the unit
+;               followed by the formations possible for the unit. One or two of
+;               square, horde, phalanx, testudo, or wedge
+;
+; stat_health   Hit points of man, followed by hit points of mount or attached animal (if applicable)
+;               Ridden horses and camels do not have separate hit points
+;
+;Details of unit's primary weapon. If the unit has a missile weapon it must be the primary
+; stat_pri      From left to right
+;               attack factor
+;               attack bonus factor if charging
+;               missile type fired (no if not a missile weapon type)
+;               range of missile
+;               amount of missile ammunition per man
+;               Weapon type = melee, thrown, missile, or siege_missile
+;               Tech type = simple, other, blade, archery or siege
+;               Damage type = piercing, blunt, slashing or fire. (I don't think this is used anymore)
+;               Sound type when weapon hits = none, knife, mace, axe, sword, or spear
+;               Min delay between attacks (in 1/10th of a second)
+; stat_pri_attr
+;               primary weapon attributes any or all of
+;                   ap = armour piercing. Only counts half of target's armour
+;                   bp = body piercing. Missile can pass through men and hit those behind
+;                   spear = Used for long spears. Gives bonuses fighting cavalry, and penalties against infantry
+;                   long_pike = Use very long pikes. Phalanx capable units only
+;                   short_pike = Use shorter than normal spears. Phalanx capable units only
+;                   prec = Missile weapon is only thrown just before charging into combat
+;                   thrown = The missile type if thrown rather than fired
+;                   launching = attack may throw target men into the air
+;                   area = attack affects an area, not just one man
+;
+;Details of secondary weapons. If the unit rides on, or has attached animals or vehicles
+;then the secondary weapon details refer to their attacks. If the unit has missile weapons
+;the secondary weapon will be the one used for melee
+;If the unit has a primary melee weapon, it may have a secondary side arm
+; stat_sec      As per stat_pri     (a value of no means no secondary weapon)
+; stat_sec_attr As per stat_pri_attr
+;
+; stat_pri_armour   Details of the man's defences
+;                   armour factor
+;                   defensive skill factor (not used when shot at)
+;                   shield factor (only used for attacks from the front of left)
+;                   sound type when hit = flesh, leather, or metal
+;
+; stat_sec_armour   Details of animal's or vehicle's defenses (note riden horses do not have a separate defence)
+;                   As per stat_pri_armour, except that the shield entry is ommited
+;
+; stat_heat         Extra fatigue suffered by the unit in hot climates
+;
+; stat_ground       Combat modifiers on different ground types. From left to right
+;                   scrub, sand, forest, snow
+; stat_mental       The base morale level, followed by discipline and training
+;                   discipline may be normal, low, disciplined or imperuous. Impetuous units may charge without orders
+;                   training determines how tidy the unit's formation is
+;
+; stat_charge_distance Distance from the enemy that the unit will begin charging
+; stat_fire_delay   Ectra delay over that imposed by animation, hetween volleys
+;
+; stat_food         No longer used
+; stat_cost         Number of turns to build,
+;                   Cost of unit to construct
+;                   Cost of upkeep
+;                   Cost of upgrading weapons
+;                   Cost of upgrading armour
+;                   Cost for custom battles
+; stat_ownership    List of factions and cultures that may have this unit
+
+type	Argyroteuchai
+dictionary	Argyroteuchai
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Argyroteuchai, 60, 0, 0.9
+officer		 Argyroteuchai
+mount_effect     horse +2, chariot +3, elephant +6
+attributes       sea_faring, hide_forest, command
+formation        1.0, 1.1, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  11, 10, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground   0, 0, -1, -1
+stat_mental   16, disciplined, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 120, 40, 40, 400
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+ 
+type	rebel bodyguard
+dictionary	rebel_bodyguard
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 rebel_bodyguard, 20, 0, 0.9
+mount_effect     horse +2, chariot +3, elephant +5
+attributes       sea_faring, hide_forest, command, very_hardy, general_unit
+formation        1.0, 1.1, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 9, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  11, 11, 9, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground   0, 0, -1, -1
+stat_mental   17, disciplined, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 440, 200, 40, 40, 440
+ownership 	 slave
+
+type	thy loyalists
+dictionary	thy_loyalists
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 rebel_bodyguard, 50, 0, 0.9
+mount_effect     horse +2, chariot +3, elephant +1
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.0, 1.1, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 9, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 7, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground   0, 0, -1, -1
+stat_mental   16, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 210, 86, 40, 40, 210
+ownership 	 germans
+
+type             base peasant
+dictionary       base_peasant      ; Peasants
+category         infantry
+class            light
+voice_type       Light_1
+soldier          base_peasant, 60, 0, 0.7
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 6, horde
+stat_health      1, 0
+stat_pri         3, 1, no, 0, 0, melee, simple, piercing, mace, 25 ,0.73
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 3, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 120, 100, 20, 20, 120
+ownership        eastern, slave, roman, greek, barbarian, carthage, spain, numidia, parthia
+
+type             base bodyguard
+dictionary       base_bodyguard      ; Peasants
+category         infantry
+class            light
+voice_type       Light_1
+soldier          base_bodyguard, 6, 0, 0.7
+attributes       sea_faring, hide_forest
+formation        1.2, 1.8, 2.4, 2.4, 6, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, mace, 25 ,0.73
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      20, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 120, 100, 20, 20, 120
+ownership        slave
+ 
+type             naval biremes
+dictionary       naval_bireme      ; Bireme
+category         ship
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 20, 0, 1
+ship             light warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         6, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  2, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 660, 100, 70, 100, 660
+ownership        eastern, slave, roman, greek, barbarian, carthage, spain, numidia, parthia
+ 
+ 
+type             naval triremes
+dictionary       naval_trireme      ; Trireme
+category         ship
+class            heavy
+voice_type       Medium_1
+soldier          base_peasant, 30, 0, 1
+ship             light warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         8, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  3, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 760, 150, 100, 150, 960
+ownership        eastern, slave, roman, greek, barbarian, carthage, spain, numidia, parthia
+ 
+ 
+type             naval quinquiremes
+dictionary       naval_quinquireme      ; Quinquireme
+category         ship
+class            heavy
+voice_type       Medium_1
+soldier          base_peasant, 50, 0, 1
+ship             heavy warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         10, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  5, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        2, 1150, 250, 170, 250, 1650
+ownership        roman, greek, carthaginian, eastern, egyptian
+ 
+ 
+type             naval corvus quinquireme
+dictionary       naval_corvus      ; Corvus Quinquireme
+category         ship
+class            heavy
+voice_type       Medium_1
+soldier          base_peasant, 50, 0, 1
+ship             heavy warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         14, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  4, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        2, 1230, 250, 180, 270, 1770
+ownership        roman, greek, carthaginian, eastern, egyptian
+ 
+ 
+type             naval deceres
+dictionary       naval_decere      ; Decere
+category         ship
+class            heavy
+voice_type       Medium_1
+soldier          base_peasant, 60, 0, 1
+ship             flagship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         16, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  8, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        3, 1450, 300, 250, 370, 2430
+ownership        roman, greek, carthaginian, eastern, egyptian
+ 
+ 
+type             naval boats
+dictionary       naval_boats      ; Boats
+category         ship
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 15, 0, 1
+ship             light warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         6, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  1, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 540, 70, 60, 90, 540
+ownership        barbarian
+ 
+ 
+type             naval large boats
+dictionary       naval_large_boats      ; Large Boats
+category         ship
+class            heavy
+voice_type       Medium_1
+soldier          base_peasant, 30, 0, 1
+ship             heavy warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         8, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  3, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 760, 150, 100, 150, 960
+ownership        barbarian
+ 
+ 
+type             naval pirate ships
+dictionary       naval_pirates      ; Pirate Ships
+category         ship
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 25, 0, 1
+ship             light warship
+attributes       sea_faring
+formation        1.2, 1.8, 2.4, 2.4, 3, square
+stat_health      1, 0
+stat_pri         7, 0, no, 0, 0, melee, blade, slashing, none, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  2, 5, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground      0, 0, 0, 0
+stat_mental      8, normal, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 700, 120, 80, 120, 780
+ownership        slave
+ 
+ 
+type             barbarian civ peasant
+dictionary       barbarian_civ_peasant      ; Barbarian Tribesmen
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground      2, -2, 3, 2
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        barbarian
+ 
+ 
+type             barbarian female peasant
+dictionary       barbarian_female_peasant      ; Barbarian Tribesmen
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          barb_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground      2, -2, 3, 2
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        barbarian
+ 
+ 
+type             carthaginian civ peasant
+dictionary       carthaginian_civ_peasant      ; Carthaginian Civilians
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        carthage
+ 
+ 
+type             carthaginian female peasant
+dictionary       carthaginian_female_peasant      ; Carthaginian Civilians
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          greek_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        carthage
+ 
+ 
+type             eastern civ peasant
+dictionary       eastern_civ_peasant      ; Eastern Workers
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        eastern
+ 
+ 
+type             eastern female peasant
+dictionary       eastern_female_peasant      ; Eastern Workers
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          east_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        eastern
+ 
+ 
+type             egyptian civ peasant
+dictionary       egyptian_civ_peasant      ; Egyptian Workers
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        egyptian
+ 
+ 
+type             egyptian female peasant
+dictionary       egyptian_female_peasant      ; Egyptian Workers
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          egypt_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground      2, 1, 0, -1
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        egyptian
+ 
+ 
+type             greek civ peasant
+dictionary       greek_civ_peasant      ; Greek Citizens
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground      2, 0, 0, 0
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        greek
+ 
+ 
+type             greek female peasant
+dictionary       greek_female_peasant      ; Greek Citizens
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          greek_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground      2, 0, 0, 0
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        greek
+ 
+ 
+type             roman civ peasant
+dictionary       roman_civ_peasant      ; Roman Civilians
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          base_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground      2, 0, 0, 0
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        roman
+ 
+ 
+type             roman female peasant
+dictionary       roman_female_peasant      ; Roman Civilians
+category         non_combatant
+class            light
+voice_type       Medium_1
+soldier          roman_female_peasant, 300, 0, 0.7
+attributes       sea_faring, hide_forest, can_sap, no_custom
+formation        1.2, 1.8, 2.4, 2.4, 3, horde
+stat_health      1, 0
+stat_pri         1, 0, no, 0, 0, melee, simple, piercing, knife, 25 ,1
+stat_pri_attr    no
+stat_sec         0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr    no
+stat_pri_armour  0, 1, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground      2, 0, 0, 0
+stat_mental      0, low, untrained
+stat_charge_dist 30
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        1, 250, 510, 30, 40, 250
+ownership        roman
+
+type	Aichmetai SEAchaean
+dictionary	Aichmetai_SEAchaean
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_SEAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.0, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, -1, -1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 250, 70, 20, 20, 250
+ownership 	 romans_julii, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave, parthia
+
+type	Aichmetai SEAchaean2
+dictionary	Aichmetai_SEAchaean2
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_SEAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.0, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, -1, -1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 250, 70, 20, 20, 250
+ownership 	 romans_senate, egypt, parthia, slave
+
+
+type	Aichmetai SWAchaean
+dictionary	Aichmetai_SWAchaean
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_SWAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.0, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, -1, -1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 70, 22, 22, 260
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Aichmetai SWAchaean2
+dictionary	Aichmetai_SWAchaean2
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_SWAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.0, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, -1, -1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 70, 22, 22, 260
+ownership 	 romans_julii, romans_brutii, macedon, germans, slave
+
+
+type	Aichmetai NAchaean
+dictionary	Aichmetai_NAchaean
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_NAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_improved_forest, hide_long_grass, no_custom
+formation        1.1, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 245, 68, 21, 21, 245
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Aichmetai NAchaean2
+dictionary	Aichmetai_NAchaean2
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_NAchaean, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_improved_forest, hide_long_grass
+formation        1.1, 1.2, 2.7, 2.7, 5, square
+stat_health      1, 0
+stat_pri 	 7, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 245, 68, 21, 21, 245
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+
+type	Aichmetai Islanders
+dictionary	Aichmetai_Islanders
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Islanders, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, -2
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 210, 70, 20, 20, 210
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Aichmetai Islanders2
+dictionary	Aichmetai_Islanders2
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Islanders, 60, 0, 0.8
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, -2
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 210, 70, 20, 20, 210
+ownership 	 carthage, pontus, slave
+
+
+type	Aichmetai Mysian
+dictionary	Aichmetai_Mysian
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Mysian, 60, 0, 0.7
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.0, 1.2, 2.6, 2.6, 5, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 8, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, -1
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 70, 20, 20, 260
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Aichmetai Mysian2
+dictionary	Aichmetai_Mysian2
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Mysian, 60, 0, 0.7
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.0, 1.2, 2.6, 2.6, 5, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 8, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, -1
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 70, 20, 20, 260
+ownership 	  britons, slave
+
+
+type	Aichmetai Anatolian
+dictionary	Aichmetai_Anatolian
+category	infantry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Anatolian, 60, 0, 0.5
+mount_effect     elephant +10, chariot +6
+attributes       sea_faring, hide_forest, hide_long_grass, no_custom
+formation        1.0, 1.2, 2.6, 2.6, 5, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,1.0
+stat_pri_attr 	 no
+stat_sec 	 0, 4, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 6, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2.2, 1.2, 0, -1
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 240, 70, 23, 23, 240
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Aichmetai Anatolian2
+dictionary	Aichmetai_Anatolian2
+category	infantry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Aichmetai_Anatolian, 60, 0, 0.5
+mount_effect     elephant +10, chariot +6
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.0, 1.2, 2.6, 2.6, 5, square
+stat_health      1, 0
+stat_pri 	 6, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,1.0
+stat_pri_attr 	 no
+stat_sec 	 0, 4, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 6, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2.2, 1.2, 0, -1
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 240, 70, 23, 23, 240
+ownership 	 dacia, armenia, slave
+
+
+type	Xipherai SEAchaean
+dictionary	Xipherai_SEAchaean
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_SEAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, no_custom
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   11, impetuous, untrained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 270, 75, 30, 30, 270
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Xipherai SEAchaean2
+dictionary	Xipherai_SEAchaean2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_SEAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   11, impetuous, untrained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 270, 75, 30, 30, 270
+ownership 	 romans_senate, egypt, parthia, slave
+
+
+type	Xipherai SWAchaean
+dictionary	Xipherai_SWAchaean
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_SWAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, no_custom
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   12, impetuous, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 280, 75, 30, 30, 280
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Xipherai SWAchaean2
+dictionary	Xipherai_SWAchaean2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_SWAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   12, impetuous, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 280, 75, 30, 30, 280
+ownership 	 romans_julii, romans_brutii, macedon, germans, slave
+
+
+
+type	Xipherai NAchaean
+dictionary	Xipherai_NAchaean
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_NAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_improved_forest, hide_long_grass, no_custom
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 7, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1.5
+stat_ground   1, 1, -1, -1
+stat_mental   11, impetuous, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 75, 27, 27, 260
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Xipherai NAchaean2
+dictionary	Xipherai_NAchaean2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_NAchaean, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_improved_forest, hide_long_grass
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 7, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1.5
+stat_ground   1, 1, -1, -1
+stat_mental   11, impetuous, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 75, 27, 27, 260
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+
+type	Xipherai Anatolian
+dictionary	Xipherai_Anatolian
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Anatolian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, no_custom
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 2, -1, -2
+stat_mental   11, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 80, 25, 25, 260
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Xipherai Anatolian2
+dictionary	Xipherai_Anatolian2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Anatolian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 2, -1, -2
+stat_mental   11, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 80, 25, 25, 260
+ownership 	 dacia, armenia, slave
+
+
+
+type	Xipherai Mysian
+dictionary	Xipherai_Mysian
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Mysian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, no_custom
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 7, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, 0
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 280, 80, 27, 27, 280
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Xipherai Mysian2
+dictionary	Xipherai_Mysian2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Mysian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 7, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 1, 0, 0
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 280, 80, 27, 27, 280
+ownership 	 britons, slave
+
+
+
+type	Xipherai Islander
+dictionary	Xipherai_Islander
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Islander, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, no_custom
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 6, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 6, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   2, 1, -1, -1.5
+stat_mental   12, impetuous, untrained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 250, 76, 23, 23, 250
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Xipherai Islander2
+dictionary	Xipherai_Islander2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_Islander, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest
+formation        1.1, 1.0, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 6, no, 0, 0, melee, blade, slashing, sword, 15 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 6, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   2, 1, -1, -1.5
+stat_mental   12, impetuous, untrained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 250, 76, 23, 23, 250
+ownership 	 carthage, pontus, slave
+
+
+type	Xipherai EBarbarian
+dictionary	Xipherai_EBarbarian
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_EBarbarian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_improved_forest, hide_long_grass, no_custom
+formation        1.2, 1.2, 2.7, 2.7, 4, square
+stat_health      1, 0
+stat_pri 	 8, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   0, 0, 2, 3
+stat_mental   12, impetuous, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 230, 80, 20, 20, 230
+ownership 	 romans_julii, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave, parthia
+
+type	Xipherai EBarbarian2
+dictionary	Xipherai_EBarbarian2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Xipherai_EBarbarian, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_improved_forest, hide_long_grass
+formation        1.2, 1.2, 2.7, 2.7, 4, square
+stat_health      1, 0
+stat_pri 	 8, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   0, 0, 2, 3
+stat_mental   12, impetuous, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 230, 80, 20, 20, 230
+ownership 	 spain, slave
+
+
+type	Mainades
+dictionary	Mainades
+category	infantry
+class 	 light
+voice_type 	 Female_1
+soldier 	 Mainades, 50, 0, 0.8
+attributes       sea_faring, hide_improved_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 12, 5, no, 0, 0, melee, simple, blunt, axe, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 12, 5, no, 0, 0, melee, simple, blunt, axe, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   14, berserker, untrained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 300, 40, 20, 20, 300
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Mainades2
+dictionary	Mainades2
+category	infantry
+class 	 light
+voice_type 	 Female_1
+soldier 	 Mainades2, 50, 0, 0.8
+attributes       sea_faring, hide_improved_forest, hide_long_grass, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 13, 5, no, 0, 0, melee, simple, blunt, axe, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 13, 5, no, 0, 0, melee, simple, blunt, axe, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  7, 6, 0, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   14, berserker, untrained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 300, 40, 20, 20, 300
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Akontistai SEAchaean
+dictionary	Akontistai_SEAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_SEAchaean, 40, 0, 0.5
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_sec_attr 	 thrown
+stat_pri_armour  5, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   0, 0, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Akontistai SEAchaean2
+dictionary	Akontistai_SEAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_SEAchaean, 40, 0, 0.5
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_sec_attr 	 thrown
+stat_pri_armour  5, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   0, 0, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 romans_senate, egypt, parthia, slave
+
+
+type	Akontistai SWAchaean
+dictionary	Akontistai_SWAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_SWAchaean, 40, 0, 0.5
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 3, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   0, 0, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Akontistai SWAchaean2
+dictionary	Akontistai_SWAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_SWAchaean, 40, 0, 0.5
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 3, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   0, 0, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 romans_julii, romans_brutii, macedon, slave, germans
+
+
+type	Akontistai NAchaean
+dictionary	Akontistai_NAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_NAchaean, 40, 0, 0.6
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_improved_forest, hide_long_grass, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   11, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 175, 50, 20, 20, 175
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Akontistai NAchaean2
+dictionary	Akontistai_NAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_NAchaean, 40, 0, 0.6
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_improved_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 1, 1
+stat_mental   11, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 175, 50, 20, 20, 175
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+
+type	Akontistai Anatolian
+dictionary	Akontistai_Anatolian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Anatolian, 40, 0, 0.5
+mount_effect     horse +2, chariot +4
+attributes       sea_faring, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 2, javelin, 50, 8, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 1, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 6, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 2, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 32
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 160, 50, 20, 20, 160
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Akontistai Anatolian2
+dictionary	Akontistai_Anatolian2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Anatolian, 40, 0, 0.5
+mount_effect     horse +2, chariot +4
+attributes       sea_faring
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 2, javelin, 50, 8, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 3, 1, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 6, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   2, 2, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 32
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 160, 50, 20, 20, 160
+ownership 	 dacia, armenia, slave
+
+
+type	Akontistai Mysian2
+dictionary	Akontistai_Mysian2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Mysian, 45, 0, 0.6
+mount_effect     horse +3, chariot +4
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, javelin, 48, 6, thrown, archery, piercing, spear, 25 ,0.5
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 3, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 6, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   2, 1, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 32
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 britons, slave
+
+type	Akontistai Mysian
+dictionary	Akontistai_Mysian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Mysian, 45, 0, 0.6
+mount_effect     horse +3, chariot +4
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, javelin, 48, 6, thrown, archery, piercing, spear, 25 ,0.5
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 3, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 6, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   2, 1, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 32
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 50, 20, 20, 170
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Akontistai Islander
+dictionary	Akontistai_Islander
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Islander, 45, 0, 0.5
+mount_effect     horse +3, chariot +4
+attributes       sea_faring, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 4, javelin, 50, 6, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 3, no, 0, 0, melee, simple, blunt, mace, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -2
+stat_ground   2.4, 2.4, -1, -2
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 150, 55, 20, 20, 150
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Akontistai Islander2
+dictionary	Akontistai_Islander2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_Islander, 45, 0, 0.5
+mount_effect     horse +3, chariot +4
+attributes       sea_faring
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 4, javelin, 50, 6, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 3, no, 0, 0, melee, simple, blunt, mace, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -2
+stat_ground   2.4, 2.4, -1, -2
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 150, 55, 20, 20, 150
+ownership 	 carthage, pontus, slave
+
+
+type	Akontistai EBarbarian
+dictionary	Akontistai_EBarbarian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Akontistai_EBarbarian, 40, 0, 0.6
+mount_effect     horse +3, chariot +4
+attributes       sea_faring, hide_improved_forest, hide_long_grass, mercenary_unit
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 5, javelin, 50, 6, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 5, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   -1, 0, 2, 2
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 160, 57, 20, 20, 160
+ownership 	 romans_julii, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave, parthia
+
+type	Sphendonetai SEAchaean
+dictionary	Sphendonetai_SEAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_SEAchaean, 50, 0, 0.4
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 1, stone, 84, 65, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 2, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  3, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, -1, -1
+stat_mental   10, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Sphendonetai SWAchaean
+dictionary	Sphendonetai_SWAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_SWAchaean, 50, 0, 0.4
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 2, stone, 80, 65, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 2, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1.4
+stat_ground   0, 0, -1, -1
+stat_mental   10, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Sphendonetai SWAchaean2
+dictionary	Sphendonetai_SWAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_SWAchaean, 50, 0, 0.4
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 2, stone, 80, 65, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 2, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1.4
+stat_ground   0, 0, -1, -1
+stat_mental   10, normal, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_julii, parthia, romans_brutii, macedon, romans_senate, egypt, slave, germans
+
+
+type	Sphendonetai NAchaean
+dictionary	Sphendonetai_NAchaean
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Sphendonetai_NAchaean, 50, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 1, stone, 80, 45, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 3, 1, no, 0, 0, melee, simple, piercing, knife, 15 ,0.7
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 2, 1
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Sphendonetai NAchaean2
+dictionary	Sphendonetai_NAchaean2
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Sphendonetai_NAchaean, 50, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 1, stone, 80, 45, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 3, 1, no, 0, 0, melee, simple, piercing, knife, 15 ,0.7
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   0, 0, 2, 1
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+
+type	Sphendonetai Mysian
+dictionary	Sphendonetai_Mysian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_Mysian, 50, 0, 0.5
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 3, stone, 85, 40, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   1, 0, -1, -2
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 140, 60, 20, 20, 140
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Sphendonetai Mysian2
+dictionary	Sphendonetai_Mysian2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_Mysian, 50, 0, 0.5
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 4, 3, stone, 85, 40, missile, archery, blunt, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 3, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  6, 6, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        -0.5
+stat_ground   1, 0, -1, -2
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 140, 60, 20, 20, 140
+ownership 	 britons, slave
+
+
+type	Sphendonetai Islander
+dictionary	Sphendonetai_Islander
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_Islander, 50, 0, 0.5
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, stone, 89, 45, missile, archery, blunt, none, 15 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  3, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   1, 0, -1, -2
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Sphendonetai Islander2
+dictionary	Sphendonetai_Islander2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Sphendonetai_Islander, 50, 0, 0.5
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 3, stone, 89, 45, missile, archery, blunt, none, 15 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, knife, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  3, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        -1
+stat_ground   1, 0, -1, -2
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 120, 60, 20, 20, 120
+ownership 	 carthage, pontus, slave
+
+
+type	Toxotai SEAchaean
+dictionary	Toxotai_SEAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_SEAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 1, arrow, 110, 25, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   10, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 40, 40, 190
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Toxotai SEAchaean2
+dictionary	Toxotai_SEAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_SEAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 1, arrow, 110, 25, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   10, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 40, 40, 190
+ownership 	 parthia, romans_senate, egypt, slave
+
+
+type	Toxotai SWAchaean
+dictionary	Toxotai_SWAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_SWAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 1, arrow, 110, 27, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 40, 40, 190
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Toxotai SWAchaean2
+dictionary	Toxotai_SWAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_SWAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 1, arrow, 110, 27, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 40, 40, 190
+ownership 	 romans_julii, romans_brutii, macedon, slave, germans
+
+
+type	Toxotai NAchaean2
+dictionary	Toxotai_NAchaean2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_NAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground   0, 0, 2, 2
+stat_mental   11, normal, trained
+stat_charge_dist 33
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 210, 70, 45, 45, 210
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+type	Toxotai NAchaean
+dictionary	Toxotai_NAchaean
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_NAchaean, 40, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        2
+stat_ground   0, 0, 2, 2
+stat_mental   11, normal, trained
+stat_charge_dist 33
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 210, 70, 45, 45, 210
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Toxotai Anatolian
+dictionary	Toxotai_Anatolian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Anatolian, 50, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 1, arrow, 122, 25, missile, archery, piercing, none, 20 ,0.8
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 2, -1, -1
+stat_mental   11, normal, trained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 200, 75, 40, 40, 200
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Toxotai Anatolian2
+dictionary	Toxotai_Anatolian2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Anatolian, 50, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 1, arrow, 122, 25, missile, archery, piercing, none, 20 ,0.8
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  6, 5, 5, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 2, -1, -1
+stat_mental   11, normal, trained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 200, 75, 40, 40, 200
+ownership 	 dacia, armenia, slave
+
+
+type	Toxotai Mysian
+dictionary	Toxotai_Mysian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Mysian, 50, 0, 0.6
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 1, arrow, 121, 30, missile, archery, piercing, none, 22 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 5, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 0, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 1, 0, -1
+stat_mental   11, normal, trained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 220, 75, 40, 40, 220
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Toxotai Mysian2
+dictionary	Toxotai_Mysian2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Mysian, 50, 0, 0.6
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 1, arrow, 121, 30, missile, archery, piercing, none, 22 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 5, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  5, 5, 0, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 1, 0, -1
+stat_mental   11, normal, trained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 220, 75, 40, 40, 220
+ownership 	 britons, slave
+
+
+type	Toxotai Islander
+dictionary	Toxotai_Islander
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Islander, 40, 0, 0.5
+attributes       sea_faring, hide_forest, no_custom
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 5, 4, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  3, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 2, 0, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 30, 30, 190
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Toxotai Islander2
+dictionary	Toxotai_Islander2
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_Islander, 40, 0, 0.5
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 5, 4, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  3, 5, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 2, 0, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 190, 70, 30, 30, 190
+ownership 	 carthage, pontus, slave
+
+
+type	Toxotai EBarbarian
+dictionary	Toxotai_EBarbarian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Toxotai_EBarbarian, 50, 0, 0.5
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 5, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no, ap
+stat_sec 	 6, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 3, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   1, 1, 2, 2
+stat_mental   10, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 75, 30, 30, 170
+ownership 	 romans_julii, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave, parthia
+
+type	Harmata SEAchaean
+dictionary	Harmata_SEAchaean
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_SEAchaean, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 12, 4, javelin, 60, 10, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 8, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 340, 40, 40, 600
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Harmata SEAchaean2
+dictionary	Harmata_SEAchaean2
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_SEAchaean, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 12, 4, javelin, 60, 10, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 8, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 340, 40, 40, 600
+ownership 	 parthia, romans_senate, egypt, slave
+
+
+type	Harmata SWAchaean
+dictionary	Harmata_SWAchaean
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_SWAchaean, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 10, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 8, 4, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 340, 40, 40, 600
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Harmata SWAchaean2
+dictionary	Harmata_SWAchaean2
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_SWAchaean, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 10, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 8, 4, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 340, 40, 40, 600
+ownership 	 romans_julii, romans_brutii, macedon, slave, germans
+
+
+type	Harmata NAchaean
+dictionary	Harmata_NAchaean
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_NAchaean, 28, 14, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 11, 5, javelin, 56, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -1, 1
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 610, 350, 40, 40, 610
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Harmata NAchaean2
+dictionary	Harmata_NAchaean2
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_NAchaean, 28, 14, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 12, 5, javelin, 56, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -1, 1
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 610, 350, 40, 40, 610
+ownership 	 romans_scipii, seleucid, gauls, slave
+
+
+type	Harmata Anatolian
+dictionary	Harmata_Anatolian
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_Anatolian, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 15, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 330, 40, 40, 600
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Harmata Anatolian2
+dictionary	Harmata_Anatolian2
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_Anatolian, 24, 12, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +2, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 15, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 600, 330, 40, 40, 600
+ownership 	 dacia, armenia, slave
+
+
+type	Harmata Mysian
+dictionary	Harmata_Mysian
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_Mysian, 22, 10, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +3, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 9, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 620, 320, 42, 42, 620
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Harmata Mysian2
+dictionary	Harmata_Mysian2
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Harmata_Mysian, 22, 10, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +3, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 13, 4, javelin, 60, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 9, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -2
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 620, 320, 42, 42, 620
+ownership 	 britons, slave
+
+
+type	Harmata Islander
+dictionary	Harmata_Islander
+category	cavalry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Harmata_Islander, 22, 10, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +4, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle, no_custom
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 12, 5, javelin, 56, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -3
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 620, 310, 42, 42, 620
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Harmata Islander2
+dictionary	Harmata_Islander2
+category	cavalry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Harmata_Islander, 22, 10, 1
+mount 	 barbarian heavy chariot
+mount_effect     horse +4, elephant -10
+attributes       sea_faring, hide_forest,  frighten_foot, cantabrian_circle
+formation        8.5, 10, 15, 16, 2, square
+stat_health      1, 5
+stat_pri 	 12, 5, javelin, 56, 11, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 3, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 6, 7, metal
+stat_sec_armour  6, 6, flesh
+stat_heat        1
+stat_ground   2, 1, -3, -3
+stat_mental   13, normal, trained
+stat_charge_dist 50
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 620, 310, 42, 42, 620
+ownership 	 carthage, pontus, slave
+
+
+type	Panchalkoi NAchean
+dictionary	Panchalkoi_NAchean
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Panchalkoi_NAchean, 60, 0, 1.0
+attributes       sea_faring
+formation        0.9, 1.1, 2.5, 2.5, 3, square
+stat_health      1, 0
+stat_pri 	 8, 5, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   1, 1, -0.5, 0
+stat_mental   13, normal, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 350, 120, 20, 20, 350
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, carthage, pontus
+
+type	Panchalkoi SWAchean
+dictionary	Panchalkoi_SWAchean
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Panchalkoi_SWAchean, 60, 0, 1.1
+attributes       sea_faring
+formation        0.9, 1.1, 2.5, 2.5, 3, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 9, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   1, 1, -0.5, 0
+stat_mental   13, normal, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 350, 120, 20, 20, 350
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, carthage, pontus
+
+type	Panchalkoi SEAchean
+dictionary	Panchalkoi_SEAchean
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Panchalkoi_SEAchean, 60, 0, 1.0
+attributes       sea_faring
+formation        0.9, 1.1, 2.5, 2.5, 3, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 9, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   1, 1, -0.5, 0
+stat_mental   13, normal, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 350, 120, 20, 20, 350
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, carthage, pontus
+
+type	Rhomphaiophoroi East
+dictionary	Rhomphaiophoroi_East
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Rhomphaiophoroi, 60, 0, 0.8
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.5, 1.5, 2.9, 2.9, 3, square
+stat_health      1, 0
+stat_pri 	 8, 6, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_pri_attr 	 ap
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 4, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   0, -1, 1, 3
+stat_mental   12, berserker, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 370, 85, 20, 20, 370
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+type	Hippakontistai Mysian
+dictionary	Hippakontistai_Mysian
+category	cavalry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Hippakontistai_Mysian, 60, 0, 0.5
+mount 	 light horse
+mount_effect     chariot +2
+attributes       sea_faring, hide_forest
+formation        2.5, 2.5, 2.7, 2.7, 4, square
+stat_health      1, 1
+stat_pri 	 9, 3, javelin, 50, 6, thrown, archery, piercing, spear, 15 ,0.8
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 1, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, leather
+stat_sec_armour  2, 2, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   12, normal, untrained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 410, 170, 20, 20, 410
+ownership 	 britons
+
+type	Hippakontistai Anatolian
+dictionary	Hippakontistai_Anatolian
+category	cavalry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Hippakontistai_Anatolian, 60, 0, 0.7
+mount 	 light horse
+mount_effect     chariot +2
+attributes       sea_faring, hide_forest
+formation        2.5, 2.5, 2.7, 2.7, 4, square
+stat_health      1, 1
+stat_pri 	 9, 4, javelin, 50, 7, thrown, archery, piercing, spear, 15 ,0.8
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 1, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, leather
+stat_sec_armour  2, 2, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   12, normal, untrained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 400, 170, 20, 20, 400
+ownership 	 dacia, armenia
+
+type	Hippakontistai EBarbarian
+dictionary	Hippakontistai_EBarbarian
+category	cavalry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Hippakontistai_EBarbarian, 60, 0, 0.7
+mount 	 light horse
+mount_effect     chariot +2
+attributes       sea_faring, hide_forest
+formation        2.5, 2.5, 2.7, 2.7, 4, square
+stat_health      1, 1
+stat_pri 	 9, 3, javelin, 50, 7, thrown, archery, piercing, spear, 15 ,0.8
+stat_pri_attr 	 thrown, ap
+stat_sec 	 4, 1, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  4, 5, 5, leather
+stat_sec_armour  2, 2, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   11, normal, untrained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 400, 170, 20, 20, 400
+ownership 	 spain
+
+
+type	Myrmidones
+dictionary	Myrmidones
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Myrmidones, 60, 0, 0.9
+officer		 Myrmidones
+mount_effect     chariot +2, elephant +6
+attributes       sea_faring, hide_forest, command, frighten_foot, frighten_mounted
+formation        1.3, 1.3, 2.8, 2.8, 4, square, testudo
+stat_health      1, 0
+stat_pri 	 8, 6, javelin, 45, 3, thrown, archery, piercing, spear, 15 ,0.9
+stat_pri_attr 	 prec, ap
+stat_sec 	 12, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.6
+stat_sec_attr 	 no
+stat_pri_armour  9, 10, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   17, disciplined, highly_trained
+stat_charge_dist 37
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   4, 500, 150, 33, 33, 500
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+type	Spartoi
+dictionary	Spartoi
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Spartoi, 60, 0, 0.9
+mount_effect     chariot +2
+attributes       sea_faring, hide_forest, frighten_foot, frighten_mounted
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 10, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 7, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   16, disciplined, highly_trained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   4, 470, 150, 30, 30, 470
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+type	Hieroi Pelekyphoroi
+dictionary	Hieroi_Pelekyphoroi
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Hieroi_Pelekyphoroi, 60, 0, 0.8
+mount_effect     chariot -2
+attributes       sea_faring, hide_forest, frighten_foot
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 6, no, 0, 0, melee, simple, piercing, axe, 15 ,1
+stat_pri_attr 	 ap
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 0, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, -1
+stat_mental   15, impetuous, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 450, 111, 28, 28, 450
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+
+type	Labryphoroi
+dictionary	Labryphoroi
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Labryphoroi, 60, 0, 0.8
+mount_effect     chariot -2
+attributes       sea_faring, hide_forest, frighten_foot
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, simple, piercing, axe, 15 ,1
+stat_pri_attr 	 ap
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 0, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, -1
+stat_mental   14, impetuous, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 450, 110, 28, 28, 450
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Ithakesioi Epibatai
+dictionary	Ithakesioi_Epibatai
+category	infantry
+class 	 missile
+voice_type 	 Heavy_1
+soldier 	 Ithakesioi_Epibatai, 60, 0, 0.9
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 11, 1, arrow, 125, 35, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 ap
+stat_sec 	 7, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  7, 8, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, -1, -1
+stat_mental   14, normal, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 380, 120, 27, 27, 380
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+type	Phraretritai Apollonioi
+dictionary	Phraretritai_Apollonioi
+category	infantry
+class 	 missile
+voice_type 	 Heavy_1
+soldier 	 Phraretritai_Apollonioi, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 12, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 ap
+stat_sec 	 6, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 0, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, -2, -3
+stat_mental   13, normal, highly_trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 135, 29, 29, 400
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus
+
+type	Leistai
+dictionary	Leistai
+category	infantry
+class 	 light
+voice_type 	 Medium_1
+soldier 	 Leistai, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hide_long_grass
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 13, 5, javelin, 60, 9, thrown, archery, piercing, spear, 25 ,0.9
+stat_pri_attr 	 ap, thrown
+stat_sec 	 7, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  8, 7, 0, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, -2, -4
+stat_mental   11, impetuous, untrained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 300, 100, 25, 25, 300
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Thessalioi Hippakontistai
+dictionary	Thessalioi_Hippakontistai
+category	cavalry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Thessalioi_Hippakontistai, 60, 0, 0.8
+mount 	 light horse
+attributes       sea_faring
+formation        1.5, 4, 3, 6, 4, square
+stat_health      1, 1
+stat_pri 	 9, 4, javelin, 50, 6, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 7, 4, no, 0, 0, melee, simple, piercing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  2, 2, flesh
+stat_heat        2
+stat_ground   1, 1, 0, 1
+stat_mental   12, normal, trained
+stat_charge_dist 45
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 350, 200, 20, 20, 350
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Tolmetai
+dictionary	Tolmetai
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Tolmetai, 60, 0, 0.8
+attributes       sea_faring, hide_forest, mercenary_unit
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 7, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 1, 0, 1
+stat_mental   12, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 260, 120, 30, 30, 260
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Amazonon Ekdromoi
+dictionary	Amazonon_Ekdromoi
+category	infantry
+class 	 missile
+voice_type 	 Female_1
+soldier 	 Amazonon_Ekdromoi, 60, 0, 0.7
+attributes       sea_faring, hide_forest, mercenary_unit
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 11, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 ap
+stat_sec 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 7, metal
+stat_sec_armour  1, 1, flesh
+stat_heat        1
+stat_ground   2, 1, 0, -1
+stat_mental   12, normal, trained
+stat_charge_dist 33
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 270, 90, 30, 30, 270
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Amazonon Hippotoxotai
+dictionary	Amazonon_Hippotoxotai
+category	cavalry
+class 	 missile
+voice_type 	 Female_1
+soldier 	 Amazonon_Hippotoxotai, 60, 0, 0.7
+mount 	 light horse
+attributes       sea_faring, hide_forest, mercenary_unit
+formation        1.5, 4, 3, 6, 4, square
+stat_health      1, 1
+stat_pri 	 12, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 ap
+stat_sec 	 6, 2, no, 0, 0, melee, simple, piercing, spear, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 7, flesh
+stat_sec_armour  2, 2, flesh
+stat_heat        1
+stat_ground   2, 1, -1, -1
+stat_mental   11, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 330, 170, 20, 20, 330
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Hyperboreioi
+dictionary	Hyperboreioi
+category	cavalry
+class 	 missile
+voice_type 	 Medium_1
+soldier 	 Hyperboreioi, 60, 0, 0.8
+mount 	 light horse
+attributes       sea_faring, hide_forest
+formation        1.5, 4, 3, 6, 4, square
+stat_health      1, 1
+stat_pri 	 12, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 ap
+stat_sec 	 6, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 1, flesh
+stat_sec_armour  2, 2, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 480, 250, 20, 20, 480
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type             heros SWAchean
+dictionary       heros_SWAchean
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_SWAchean
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_julii, romans_brutii, germans, macedon
+
+type             heros SEAchean
+dictionary       heros_SEAchean
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_SEAchean
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_senate, egypt, parthia, romans_julii
+
+type             heros NAchean
+dictionary       heros_NAchean
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_NAchean
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_scipii, seleucid, gauls, romans_julii
+
+type             heros Mysian
+dictionary       heros_Mysian
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_Mysian
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,horde
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             heros EBarbarian
+dictionary       heros_EBarbarian
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_EBarbarian
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        spain, greek_cities, britons
+
+type             heros Islander
+dictionary       heros_Islander
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_Islander
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        carthage, pontus, romans_julii, slave
+
+type             heros Anatolian
+dictionary       heros_Anatolian
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_Anatolian
+mount_effect     chariot +3, horse +3, elephant -3
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area, bp
+stat_sec         11, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        armenia, dacia, britons
+
+type             heros Amazon
+dictionary       heros_Amazon
+category         cavalry
+class            heavy
+voice_type       Female_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Heros_Amazon
+mount_effect     chariot +3, horse +3, elephant +7
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons, slave
+
+
+type             hero menelaos
+dictionary       hero_menelaos
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Menelaos
+mount_effect     chariot +3, horse +3, elephant +7
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 32, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      31,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_julii
+
+type             hero diomedes
+dictionary       hero_diomedes
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Diomedes
+mount_effect     chariot +3, horse +3, elephant +9
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 11
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 25, leather
+stat_sec_armour  40, 35, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      31,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_senate, romans_julii
+
+type             hero agamemnon
+dictionary       hero_agamemnon
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Agamemnon
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 9
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_julii
+
+type             hero orestes
+dictionary       hero_orestes
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Orestes
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 9
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    area, ap
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_julii
+
+type             hero Nestor
+dictionary       hero_Nestor
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Nestor
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      29,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_brutii, romans_julii
+
+type             hero Thyestes
+dictionary       hero_Thyestes
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Thyestes
+mount_effect     chariot +3, horse +3, elephant +4
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 31, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        germans
+
+type             hero Aegisthus
+dictionary       hero_Aegisthus
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Aegisthus
+mount_effect     chariot +3, horse +3, elephant +4
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 12
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 31, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        germans
+
+type             hero Peleus
+dictionary       hero_Peleus
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Peleus
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 31, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_scipii
+
+type             hero Achilleus
+dictionary       hero_Achilleus
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Achilleus
+mount_effect     chariot +3, horse +3, elephant +12
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 13
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         16, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 36, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      32,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_scipii, romans_julii
+
+type             hero Memnon
+dictionary       hero_Memnon
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Memnon
+mount_effect     chariot +3, horse +3, elephant +9
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 12
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         16, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 36, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      32,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             hero Patroklos
+dictionary       hero_Patroklos
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Patroklos
+mount_effect     chariot +3, horse +3, elephant +8
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 11
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 35, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        romans_scipii, romans_julii
+
+type             hero Odysseus
+dictionary       hero_Odysseus
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Odysseus
+mount_effect     chariot +3, horse +3, elephant +9
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 11
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 32, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      31,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        macedon, romans_julii
+
+type             hero Aias
+dictionary       hero_Aias
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Aias
+mount_effect     chariot +3, horse +3, elephant +10
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 11
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 33, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      31,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        egypt, romans_julii
+
+type             hero Idomeneus
+dictionary       hero_Idomeneus
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Idomeneus
+mount_effect     chariot +3, horse +3, elephant +8
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  30, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        carthage, romans_julii
+
+type             hero Priamos
+dictionary       hero_Priamos
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Priamos
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 8
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 27, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             hero Hektor
+dictionary       hero_Hektor
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Hektor
+mount_effect     chariot +3, horse +3, elephant +12
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 12
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20,20, 20, leather
+stat_sec_armour  40, 37, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      32,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             hero Paris
+dictionary       hero_Paris
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Paris
+mount_effect     chariot +3, horse +3, elephant +6
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 9
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area, bp
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 30, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      26,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             hero Aineias
+dictionary       hero_Aineias
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Aineias
+mount_effect     chariot +3, horse +3, elephant +9
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 31, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        britons
+
+type             hero Sarpedon
+dictionary       hero_Sarpedon
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_Sarpedon
+mount_effect     chariot +3, horse +3, elephant +7
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         15, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area
+stat_sec         14, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  20, 20, 20, leather
+stat_sec_armour  40, 32, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 0
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        armenia, britons
+
+type	Minoan Guard
+dictionary	Minoan_Guard
+category	infantry
+class 	 light
+voice_type 	 Medium_1
+soldier 	 Minoan_Guard, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.0, 1.1, 2.4, 2.4, 5, square
+stat_health      1, 0
+stat_pri 	 7, 5, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  6, 8, 3, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   2, 2, 0, -1
+stat_mental   13, normal, trained
+stat_charge_dist 33
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 220, 86, 27, 27, 220
+ownership 	 carthage
+
+type	Minoan Guard Elite
+dictionary	Minoan_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Minoan_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.6, 2.6, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, trained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 110, 30, 30, 400
+ownership 	 carthage
+
+type	Rhodes Guard
+dictionary	Rhodes_Guard
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Rhodes_Guard, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.0, 1.1, 2.6, 2.6, 5, square
+stat_health      1, 0
+stat_pri 	 6, 5, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0.5
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 33
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 220, 78, 25, 25, 220
+ownership 	 pontus
+
+type	Rhodes Guard Elite
+dictionary	Rhodes_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Rhodes_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, -0.5
+stat_mental   14, normal, trained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 120, 30, 30, 400
+ownership 	 pontus
+
+type	Trojan Guard Elite
+dictionary	Trojan_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Trojan_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 13 ,0.7
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, highly_trained
+stat_charge_dist 37
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 410, 140, 34, 34, 410
+ownership 	 britons
+
+type	Troy Guard
+dictionary	Troy_Guard
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Troy_Guard, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 5, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  10, 10, 0, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 210, 84, 20, 20, 210
+ownership 	 britons
+
+type	Lydia Guard
+dictionary	Lydia_Guards
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Lydia_Guards, 60, 0, 0.8
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, blade, piercing, axe, 17 ,1
+stat_pri_attr 	 ap
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 0, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   12, impetuous, trained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 230, 80, 30, 30, 230
+ownership 	 dacia
+
+type	Lycia Guard Elite
+dictionary	Lycia_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Heavy_1
+soldier 	 Lycia_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, impetuous, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 110, 40, 40, 400
+ownership 	 armenia
+
+type	Lydia Guard Elite
+dictionary	Lydia_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Lydia_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 17 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 120, 30, 30, 400
+ownership 	 dacia
+
+type	Lycia Guard
+dictionary	Lycia_Guard
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Lycia_Guard, 60, 0, 0.7
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 1, arrow, 120, 30, missile, archery, piercing, none, 25 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 5, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 6, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, -0.5, -0.5
+stat_mental   12, normal, trained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 230, 97, 30, 30, 230
+ownership 	 armenia
+
+type	Salamis Guards
+dictionary	Salamis_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Salamis_Guards, 60, 0, 0.8
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 85, 24, 24, 200
+ownership 	 egypt
+
+type	Argos Guards
+dictionary	Argos_Guards
+category	infantry
+class 	 light
+voice_type 	 Medium_1
+soldier 	 Argos_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 romans_senate
+
+type	Thess Guard
+dictionary	Thess_Guard
+category	infantry
+class 	 light
+voice_type 	 Medium_1
+soldier 	 Thess_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 seleucid
+
+type	Atreus Guards
+dictionary	Atreus_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Atreus_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 romans_julii
+
+type	Ithaca Guards
+dictionary	Ithaca_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Ithaca_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 86, 25, 25, 200
+ownership 	 macedon
+
+type	Phthia Guards
+dictionary	Phthia_Guards
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Phthia_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, javelin, 50, 2, thrown, archery, piercing, spear, 20 ,1
+stat_pri_attr 	 prec
+stat_sec 	 6, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  5, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 220, 92, 27, 27, 220
+ownership 	 romans_scipii
+
+type	Thebes Guards
+dictionary	Thebes_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Thebes_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 parthia
+
+type	Kalydon Guards
+dictionary	Kalydon_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Kalydon_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 gauls
+
+type	Pylos Guards
+dictionary	Pylos_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Pylos_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 200, 90, 25, 25, 200
+ownership 	 romans_brutii
+
+type	Northern Guard Elite
+dictionary	Northern_Guard_Elite
+category	infantry
+class 	 heavy
+voice_type 	 Medium_1
+soldier 	 Northern_Guard_Elite, 60, 0, 0.9
+attributes       sea_faring, hide_forest, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 17 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, metal
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, trained
+stat_charge_dist 38
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 180, 30, 30, 400
+ownership 	 romans_scipii, gauls, seleucid
+
+type             cyclops
+dictionary       cyclops
+category         cavalry
+class            heavy
+voice_type       Heavy_1
+soldier          ARTW_Dummy, 6, 1, 1
+mount            ARTW_CYC
+mount_effect     chariot +3, horse +3, elephant +20
+attributes       sea_faring, very_hardy, general_unit, command, frighten_mounted, frighten_foot
+formation        1.3, 2, 2.6, 4, 4,square
+stat_health      4, 10
+stat_pri         16, 7, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_pri_attr    ap, area, bp
+stat_sec         12, 6, no, 0, 0, melee, other, piercing, none, 25 , 0.1
+stat_sec_attr    ap, area
+stat_pri_armour  10, 10, 10, leather
+stat_sec_armour  40, 15, flesh
+stat_heat        3
+stat_ground      1, 0, 0, 0
+stat_mental      30,impetuous,trained
+stat_charge_dist 35
+stat_fire_delay  0
+stat_food        60, 300
+stat_cost        6, 1000, 200, 100, 100, 1000
+ownership        slave
+
+type	Illyrian
+dictionary	Illyrian
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 Illyrian, 40, 0, 0.5
+mount_effect     horse +2, chariot +3
+attributes       sea_faring, hide_anywhere, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, javelin, 50, 7, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown
+stat_sec 	 6, 2, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_sec_attr 	 thrown
+stat_pri_armour  8, 8, 8, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   0, 0, -1, -1
+stat_mental   11, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 270, 150, 20, 20, 270
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	SW Elite Guards
+dictionary	SW_Elite_Guards
+category	infantry
+class 	 heavy
+voice_type 	 Light_1
+soldier 	 SW_Elite_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 12, 5, javelin, 50, 2, thrown, archery, piercing, spear, 20 ,1
+stat_pri_attr 	 thrown, prec
+stat_sec 	 8, 3, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 180, 30, 30, 400
+ownership 	 romans_julii, romans_brutii, macedon, germans
+
+
+type	SE Elite Guards
+dictionary	SE_Elite_Guards
+category	infantry
+class 	 heavy
+voice_type 	 Light_1
+soldier 	 SE_Elite_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 4, no, 0, 0, melee, simple, piercing, spear, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  8, 8, 8, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   14, normal, trained
+stat_charge_dist 40
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   3, 400, 180, 30, 30, 400
+ownership 	 romans_senate, egypt, parthia
+
+type	Skeleton
+dictionary	Skeleton
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 Skeleton, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, mercenary_unit, no_custom
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 12, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 9, 9, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   12, impetuous, untrained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 470, 175, 30, 30, 470
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Carian Guards
+dictionary	Carian_Guards
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Carian_Guards, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  9, 8, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, 0, 0
+stat_mental   13, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   2, 360, 110, 25, 25, 360
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	Carian Light
+dictionary	Carian_Light
+category	infantry
+class 	 spearmen
+voice_type 	 Medium_1
+soldier 	 Carian_Light, 60, 0, 0.7
+attributes       sea_faring, hide_forest, hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 7, 3, no, 0, 0, melee, simple, piercing, spear, 25 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  7, 7, 7, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   12, normal, trained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 160, 60, 25, 25, 160
+ownership 	 dacia, armenia, slave
+
+type	eth Light
+dictionary	eth_light
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 eth_Light, 60, 0, 0.6
+mount_effect     horse +3, chariot +4
+attributes       sea_faring, hide_forest, hide_long_grass, mercenary_unit
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 6, 5, javelin, 52, 6, thrown, archery, piercing, spear, 25 ,1
+stat_pri_attr 	 thrown, ap
+stat_sec 	 6, 3, no, 0, 0, melee, simple, piercing, spear, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  2, 7, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        3
+stat_ground   1, 2, 0, -1
+stat_mental   12, normal, untrained
+stat_charge_dist 30
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 170, 62, 20, 20, 170
+ownership 	 romans_julii, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave, parthia
+
+
+type	eth Heavy
+dictionary	eth_Heavy
+category	infantry
+class 	 light
+voice_type 	 Light_1
+soldier 	 eth_Heavy, 60, 0, 0.7
+mount_effect     horse +1, chariot +1
+attributes       sea_faring, hide_forest, mercenary_unit
+formation        1.1, 1.0, 2.5, 2.5, 4, square
+stat_health      1, 0
+stat_pri 	 8, 5, no, 0, 0, melee, blade, slashing, axe, 15 ,0.8
+stat_pri_attr 	 no
+stat_sec 	 0, 0, no, 0, 0, no, no, no, none, 25 ,1
+stat_sec_attr 	 no
+stat_pri_armour  4, 8, 6, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        0
+stat_ground   1, 1, -1, -1
+stat_mental   12, impetuous, untrained
+stat_charge_dist 36
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 240, 70, 30, 30, 240
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+type	eth archer
+dictionary	eth_archer
+category	infantry
+class 	 missile
+voice_type 	 Light_1
+soldier 	 eth_archer, 60, 0, 0.6
+attributes       sea_faring, hide_forest, mercenary_unit
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 8, 1, arrow, 130, 25, missile, archery, piercing, none, 25 ,1
+stat_pri_attr 	 no, ap
+stat_sec 	 4, 2, no, 0, 0, melee, simple, piercing, sword, 15 ,0.9
+stat_sec_attr 	 no
+stat_pri_armour  2, 7, 5, flesh
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   1, 1, 0, 0
+stat_mental   12, normal, untrained
+stat_charge_dist 34
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 210, 80, 40, 40, 210
+ownership 	 romans_julii, parthia, romans_brutii, macedon, germans, romans_senate, egypt, romans_scipii, seleucid, gauls, scythia, thrace, britons, dacia, numidia, armenia, spain, greek_cities, carthage, pontus, slave
+
+
+type	Loyalists
+dictionary	Loyalists
+category	infantry
+class 	 light
+voice_type 	 Medium_1
+soldier 	 Loyalists, 60, 0, 0.7
+attributes       sea_faring, hide_anywhere, very_hardy
+formation        1.2, 1.2, 2.4, 2.4, 4, square
+stat_health      1, 0
+stat_pri 	 21, 4, javelin, 60, 1, thrown, archery, piercing, spear, 25 ,0.9
+stat_pri_attr 	 ap, thrown, prec
+stat_sec 	 8, 4, no, 0, 0, melee, blade, slashing, sword, 15 ,0.8
+stat_sec_attr 	 no
+stat_pri_armour  2, 12, 3, leather
+stat_sec_armour  0, 0, flesh
+stat_heat        1
+stat_ground   2, 1, -2, -4
+stat_mental   16, impetuous, trained
+stat_charge_dist 35
+stat_fire_delay   0
+stat_food   60, 300
+stat_cost   1, 300, 45, 25, 25, 300
+ownership 	 germans

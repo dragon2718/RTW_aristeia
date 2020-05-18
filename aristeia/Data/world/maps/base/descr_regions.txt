@@ -1,0 +1,1293 @@
+;
+;	This file contains a variety of region information, in this format:
+;	
+;	region tag
+;		settlement tag
+;		default culture tag
+;		map RGB value
+;		comma-seperated resource list
+;		triumph point value
+;		base farm level
+;
+
+;1
+Illyria
+	Arnissa
+	spain
+	Illyrioi
+	168 45 45
+	camels, ebarbarian, illyrioi, noncamp
+	5
+	6
+
+Dasseratis
+	Lychnidos
+	spain
+	Dasseratai
+	71 45 168
+	camels, ebarbarian, poimenes, noncamp
+	5
+	6
+
+;3
+Parauaia
+	Omphalion
+	spain
+	Parauaioi
+	167 168 45
+	camels, nachean, noncamp
+	5
+	6
+
+Chaonia
+	Bouthroton
+	gauls
+	Chaones
+	74 168 45
+	camels, nachean, kynes, noncamp
+	5
+	6
+
+;5
+Molossia
+	Dodone
+	gauls
+	Molossoi
+	152 62 7
+	camels, nachean, kynes, noncamp
+	5
+	6
+
+Scherie
+	Phaiakia
+	macedon
+	Phaiakes
+	168 45 149
+	camels, nachean, noncamp
+	5
+	6
+
+;7
+Thesprotia
+	Ambrakia
+	gauls
+	Thesprotes
+	152 7 126
+	camels, nachean, kynes, noncamp
+	5
+	6
+
+Akarnania
+	Thyreion
+	gauls
+	Akarnanioi
+	7 116 152
+	camels, nachean, noncamp
+	5
+	6
+
+;9
+Aitolia
+	Oichalia
+	gauls
+	Aitoloi
+	92 46 208
+	camels, nachean, noncamp
+	5
+	6
+
+;11
+Hestiaiotis
+	Trikka
+	seleucid
+	Thessaloi
+	26 214 185
+	camels, nachean, thessaloi, noncamp
+	5
+	6
+
+Perrhaibia
+	Gyrton
+	seleucid
+	Lapithai
+	214 26 123
+	camels, nachean, thessaloi, noncamp
+	5
+	6
+
+;13
+Pieria
+	Dion
+	seleucid
+	Pieres
+	214 106 26
+	camels, nachean, noncamp
+	5
+	6
+
+;;next
+
+Pelasgiotis
+	Meliboia
+	romans_scipii
+	Pelasgiotai
+	26 214 30
+	camels, nachean, noncamp
+	5
+	6
+
+;15
+Magnesia
+	Iolkos
+	romans_scipii
+	Magnesioi
+	214 84 67
+	camels, nachean, noncamp
+	5
+	6
+
+Thessaliotis
+	Pherai
+	romans_scipii
+	Thessaloi
+	5 85 65
+	camels, nachean, thessaloi, noncamp
+	5
+	6
+
+;17
+Ainiania
+	Lamia
+	romans_scipii
+	Ainianoi
+	85 5 33
+	camels, nachean, noncamp
+	5
+	6
+
+;18
+Phthia
+	Alope
+	romans_scipii
+	Phthiotai
+	5 85 24
+	camels, nachean, myrmidones, noncamp
+	5
+	6
+
+;19
+Lokris_Opountis
+	Opous
+	parthia
+	Lokroi
+	82 85 5
+	camels, seachean, noncamp
+	5
+	6
+
+;20
+Phokis
+	Pytho
+	gauls
+	Phokes
+	184 189 53
+	camels, nachean, noncamp
+	5
+	6
+
+;21
+Histiaiotis
+	Histiaia
+	parthia
+	Histiaioi
+	205 47 74
+	camels, seachean, noncamp
+	5
+	6
+
+;22
+Kadmeia
+	Thebai
+	parthia	
+	Thebaioi
+	66 173 12
+	camels, seachean, spartoi, noncamp
+	5
+	6
+
+Diakria
+	Kerinthos
+	parthia
+	Kerinthioi
+	66 127 106
+	camels, seachean, noncamp
+	5
+	6
+
+;24
+Geraistos
+	Karystos
+	parthia
+	Karystioi
+	248 225 8
+	camels, seachean, noncamp
+	5
+	6
+
+Attike
+	Athenai
+	romans_julii
+	Athenaioi
+	192 135 20
+	camels, seachean, noncamp
+	5
+	6
+
+;26
+Megaris
+	Megara
+	romans_julii
+	Megareis
+	249 37 6
+	camels, seachean, noncamp
+	5
+	6
+
+Achaia
+	Hyperesia
+	romans_julii
+	Achaioi
+	228 135 56
+	camels, swachean, noncamp
+	5
+	6
+
+;28
+Elis
+	Elis
+	romans_brutii
+	Eleioi
+	67 35 6
+	camels, swachean, noncamp
+	5
+	6
+
+Arkadia
+	Mantineia
+	romans_senate
+	Arkades
+	179 8 6
+	camels, swachean, noncamp
+	5
+	6
+
+;30
+Pisatis
+	Pisa
+	romans_brutii
+	Pisatai
+	0 19 60
+	camels, swachean, noncamp
+	5
+	6
+
+Triphylia
+	Dorion
+	romans_brutii
+	Triphylioi
+	255 105 0
+	camels, swachean, noncamp
+	5
+	6
+
+;32
+Tegeatis
+	Tegea
+	romans_senate
+	Tegeatai
+	68 196 108
+	camels, swachean, noncamp, kyth
+	5
+	6
+
+Oneia
+	Mykenai
+	egypt
+	Mykenaioi
+	26 232 116
+	camels, swachean, noncamp, kyth
+	5
+	6
+
+;34
+Akte
+	Troizen
+	romans_senate
+	Troizenioi
+	92 149 64
+	camels, swachean, noncamp
+	5
+	6
+
+Salamis
+	Salamis
+	egypt
+	Salaminioi
+	83 124 25
+	camels, seachean, noncamp
+	5
+	6
+
+;36
+Argolis
+	Argos
+	romans_senate
+	Argeioi
+	249 186 0
+	camels, swachean, noncamp
+	5
+	6
+
+Kynouria
+	Prasiai
+	romans_senate
+	Kynourioi
+	158 50 5
+	camels, swachean, noncamp, kyth
+	5
+	6
+
+;38
+Lakonike
+	Sparte
+	romans_julii
+	Lakones
+	180 124 108
+	camels, swachean, noncamp, kyth
+	5
+	6
+
+Messenia
+	Pylos
+	romans_brutii
+	Pylioi
+	7 79 108
+	camels, swachean, noncamp
+	5
+	6
+
+;40
+Ithake
+	Pale
+	macedon
+	Ithakoi
+	39 243 20
+	camels, swachean, ithakesioi, noncamp
+	5
+	6
+
+Zakynthos
+	Zakynthos
+	macedon
+	Zakynthioi
+	234 143 20
+	camels, swachean, ithakesioi, noncamp
+	5
+	6
+
+;42
+Kythera
+	Kythera
+	romans_julii
+	Kytherioi
+	176 69 184
+	camels, kyth, noncamp
+	5
+	6
+
+;isles
+
+Melos
+	Melos
+	egypt
+	Melioi
+	88 145 20
+	camels, island, leistai, noncamp
+	5
+	6
+
+;44
+Naxos
+	Naxos
+	carthage
+	Naxioi
+	177 98 25
+	camels, island, leistai, noncamp
+	5
+	6
+
+;46
+Andros
+	Andros
+	egypt
+	Andrioi
+	58 34 204
+	camels, island, leistai, noncamp
+	5
+	6
+
+Chios
+	Delphinion
+	carthage
+	Chioi
+	65 255 141
+	camels, island, leistai, noncamp
+	5
+	6
+
+;48
+Samos
+	Samos
+	carthage
+	Samioi
+	203 135 125
+	camels, island, leistai, noncamp
+	5
+	6
+
+Lesbos
+	Mytilene
+	carthage
+	Lesbioi
+	126 26 164
+	camels, island, noncamp
+	5
+	6
+
+;50
+Lemnos
+	Myrina
+	carthage
+	Lemnioi
+	0 26 216
+	camels, island, leistai, noncamp
+	5
+	6
+
+Chalkidike
+	Olynthos
+	spain
+	Olynthioi
+	7 152 126
+	gold, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;52
+Emathia
+	Amydon
+	spain
+	Emathes
+	94 26 165
+	wild_animals, dogs, pigs, ebarbarian, paiones, noncamp
+	5
+	2
+
+;new
+Elimeotis
+	Elimea
+	seleucid
+	Elimeotai
+	79 194 54
+	wild_animals, dogs, pigs, ebarbarian, poimenes, noncamp
+	5
+	2
+
+;54
+Orestis
+	Keletron
+	seleucid
+	Orestai
+	241 233 28
+	wild_animals, dogs, pigs, ebarbarian, poimenes, noncamp
+	5
+	2
+
+Lynkestis
+	Styberra
+	spain
+	Lynkestai
+	222 13 20
+	wild_animals, dogs, pigs, ebarbarian, poimenes, noncamp
+	5
+	2
+
+Krestonia
+	Kalindoia
+	spain
+	Krestones
+	31 224 11
+	wild_animals, dogs, pigs, ebarbarian, paiones, noncamp
+	5
+	2
+
+;58
+Bisaltia
+	Krenides
+	spain
+	Bisaltes
+	239 13 54
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;60
+Thasos
+	Thasos
+	spain
+	Thasioi
+	81 22 0
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+Kikonia
+	Ismaros
+	spain
+	Kikones
+	154 237 137
+	wild_animals, dogs, pigs, ebarbarian, kikones, noncamp
+	5
+	2
+
+Apsinthia
+	Ainos
+	spain
+	Apsinthes
+	9 214 30
+	wild_animals, dogs, pigs, ebarbarian, kikones, noncamp
+	5
+	2
+
+;64
+Chersonesos
+	Sestos
+	egypt
+	Chersonesioi
+	7 81 129
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Samaia
+	Perinthos
+	spain
+	Perinthioi
+	9 99 161
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;68
+
+Thynia
+	Byzantion
+	romans_scipii
+	Byzantioi
+	207 240 55
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;70
+Olympos
+	Kios
+	britons
+	Kioi
+	19 99 62
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+Dolionis
+	Zeleia
+	britons
+	Doliones
+	9 44 193
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;72
+Bebrykia
+	Pityeia
+	britons
+	Bebrykes
+	207 198 63
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Troas
+	Troia
+	britons
+	Troes
+	239 39 107
+	wild_animals, dogs, pigs, mysian, troia, noncamp
+	5
+	2
+
+;74
+Hypoplakia
+	Thebe
+	britons
+	Hypoplakes
+	9 179 16
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Mysia
+	Mandrai
+	britons
+	Mysoi
+	223 179 16
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+;76
+Kilikia
+	Lyrnessos
+	britons
+	Kilikes
+	229 13 12
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Teuthrania
+	Pergamon
+	britons
+	Teuthranioi
+	81 7 0
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+;78
+Phrikonis
+	Larisa
+	dacia
+	Phrikones
+	177 121 25
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Maionia_Boreia
+	Thyateira
+	dacia
+	Maiones
+	59 202 16
+	wild_animals, dogs, pigs, anatolian, maiones, noncamp
+	5
+	2
+
+;80
+Maionia_Notia
+	Hyde
+	dacia
+	Maiones
+	252 0 56
+	wild_animals, dogs, pigs, anatolian, maiones, noncamp
+	5
+	2
+
+Ionia_Boreia
+	Erythrai
+	dacia
+	Iones
+	77 100 128
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+;82
+Ionia_Notia
+	Miletos
+	dacia
+	Iones
+	21 26 135
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+;84
+Karia_Paralia
+	Halikarnassos
+	dacia
+	Kares
+	200 133 16
+	wild_animals, dogs, pigs, anatolian, kares, noncamp
+	5
+	2
+
+Pentapolis
+	Knidos
+	pontus
+	Knidioi
+	169 115 255
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+;86
+Indos
+	Kaunos
+	dacia
+	Kaunioi
+	25 169 16
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+;87
+Lykia_Hesperia
+	Telmessos
+	armenia
+	Lykioi
+	10 26 207
+	wild_animals, dogs, pigs, anatolian, lykioi, noncamp
+	5
+	2
+
+;89 (no 88)
+Lykia_Anatolike
+	Xanthos
+	armenia
+	Lykioi
+	231 0 142
+	wild_animals, dogs, pigs, anatolian, lykioi, noncamp
+	5
+	2
+
+
+;92
+Dindymos
+	Ankyra
+	dacia
+	Ankyraioi
+	18 30 159
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+
+
+;94
+Rhodos
+	Ialysos
+	pontus
+	Rhodioi
+	189 35 0
+	wild_animals, dogs, pigs, island, noncamp
+	5
+	2
+
+;crete
+
+Leuka
+	Kydonia
+	carthage
+	Kydoniatai
+	151 25 5
+	wild_animals, dogs, pigs, island, kretai, leistai, noncamp
+	5
+	2
+
+;96
+Ida
+	Knossos
+	carthage
+	Knossioi
+	207 42 148
+	wild_animals, dogs, pigs, island, kretai, noncamp
+	5
+	2
+
+Lyssos
+	Phaistos
+	carthage
+	Phaistioi
+	220 217 0
+	wild_animals, dogs, pigs, island, kretai, noncamp
+	5
+	2
+
+;98
+Eteokrete
+	Lyktos
+	carthage
+	Eteokretai
+	32 193 116
+	wild_animals, dogs, pigs, island, kretai, noncamp
+	5
+	2
+
+;late additions
+
+Leukas
+	Leukas
+	romans_scipii
+	Leukadioi
+	184 13 18
+	wild_animals, dogs, pigs, nachean, noncamp
+	5
+	2
+
+Minya
+	Orchomenos
+	parthia
+	Minyai
+	17 32 196
+	wild_animals, dogs, pigs, seachean, spartoi, noncamp
+	5
+	2
+
+Kephallenia
+	Same
+	macedon
+	Kephallenioi
+	206 225 96
+	wild_animals, dogs, pigs, swachean, ithakesioi, noncamp
+	5
+	2
+
+;n1
+Aigina
+	Aigina
+	romans_scipii
+	Aiginetai
+	208 61 172
+	wild_animals, dogs, pigs, seachean, myrmidones, noncamp
+	5
+	2
+
+Dryopis
+	Styra
+	parthia
+	Styratai
+	192 73 66
+	wild_animals, dogs, pigs, seachean, noncamp
+	5
+	2
+;n4
+Lokris_Ozolis
+	Oiantheia
+	gauls
+	Lokroi
+	9 73 72
+	wild_animals, dogs, pigs, nachean, noncamp
+	5
+	2
+
+Arakynthos_Oros
+	Kalydon
+	gauls
+	Kalydonioi
+	17 152 7
+	wild_animals, dogs, pigs, nachean, noncamp
+	5
+	2
+;n6
+Athamania
+	Argithea
+	gauls
+	Athamanes
+	216 58 58
+	wild_animals, dogs, pigs, nachean, thessaloi, noncamp
+	5
+	2
+
+Dolopia
+	Kypaira
+	seleucid
+	Dolopes
+	43 159 48
+	wild_animals, dogs, pigs, nachean, noncamp
+	5
+	2
+;n8
+Tymphaia
+	Aiginion
+	seleucid
+	Tymphaioi
+	212 207 57
+	wild_animals, dogs, pigs, nachean, noncamp
+	5
+	2
+
+Boios_Oros
+	Pelion
+	spain
+	Boiotikoi
+	33 9 110
+	wild_animals, dogs, pigs, ebarbarian, illyrioi, poimenes, noncamp
+	5
+	2
+;n10
+Eordaia
+	Edessa
+	spain
+	Eordaioi
+	48 135 36
+	wild_animals, dogs, pigs, ebarbarian, paiones, noncamp
+	5
+	2
+
+
+Mygdonia_Thraikia
+	Arethousa
+	spain
+	Mygdones
+	174 158 11
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+;n14
+Pallene
+	Mende
+	spain
+	Mendaioi
+	69 101 174
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+Sithonia
+	Torone
+	spain
+	Toronaioi
+	199 101 42
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+;n16
+Sintike
+	Sintia
+	spain
+	Sintes
+	189 8 21
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+Edonia
+	Galepsos
+	spain
+	Edones
+	31 186 189
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+;n18
+Sapaike
+	Abdera
+	spain
+	Abderitai
+	53 199 8
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+Kainike
+	Kypsela
+	spain
+	Kaines
+	167 186 10
+	wild_animals, dogs, pigs, ebarbarian, kikones, noncamp
+	5
+	2
+;n20
+Hieron_Oros
+	Serrheion_Teichos
+	spain
+	Chersonesioi
+	200 11 185
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+;n22
+Mygdonia_Phrygia
+	Daskyleion
+	britons
+	Mygdones
+	115 64 23
+	wild_animals, dogs, pigs, ebarbarian, noncamp
+	5
+	2
+
+Pyrrha
+	Kisthene
+	britons
+	Kistheneis
+	29 115 23
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+;n24
+Temnon_Oros
+	Germe
+	britons
+	Germeis
+	23 115 97
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+
+Kane
+	Elaia
+	britons
+	Elaiatai
+	135 177 35
+	wild_animals, dogs, pigs, mysian, noncamp
+	5
+	2
+;n26
+Mykale_Oros
+	Priene
+	dacia
+	Prieneis
+	212 158 73
+	wild_animals, dogs, pigs, anatolian, noncamp
+	5
+	2
+;n28
+Maionia_Maiandria
+	Tralleis
+	dacia
+	Maiones
+	46 124 164
+	wild_animals, dogs, pigs, anatolian, maiones, noncamp
+	5
+	2
+
+Karia_Hesperia
+	Alabanda
+	dacia
+	Kares
+	52 172 55
+	wild_animals, dogs, pigs, anatolian, kares, noncamp
+	5
+	2
+;n30
+Grion_Oros
+	Iasos
+	dacia
+	Iasioi
+	38 72 198
+	wild_animals, dogs, pigs, anatolian, kares, noncamp
+	5
+	2
+
+Karia_Anatolike
+	Labraunda
+	dacia
+	Kares
+	89 26 17
+	wild_animals, dogs, pigs, anatolian, kares, noncamp
+	5
+	2
+;n32
+Kos
+	Kos
+	carthage
+	Koioi
+	198 38 95
+	wild_animals, dogs, pigs, island, leistai, noncamp
+	5
+	2
+
+;n34
+Cyclopes
+	Cyclopes
+	carthage
+	Parioi
+	161 38 28
+	wild_animals, dogs, pigs, island, leistai
+	5
+	2
+
+;n37
+Oropia
+	Oropos
+	parthia
+	Oropioi
+	28 189 146
+	wild_animals, dogs, pigs, seachean, noncamp
+	5
+	2
+
+Sammonion
+	Itanos
+	carthage
+	Sammonioi
+	183 43 22
+	wild_animals, dogs, pigs, island, leistai, noncamp
+	5
+	2
+;n40
+Karpathos
+	Potidaion
+	pontus
+	Karpathioi
+	87 146 61
+	wild_animals, dogs, pigs, island, leistai, noncamp
+	5
+	2
+
+Camp1
+	Camp1
+	spain
+	Troes
+	44 55 66
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp2
+	Camp2
+	spain
+	Troes
+	33 44 55
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp3
+	Camp3
+	spain
+	Troes
+	11 22 33
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp4
+	Camp4
+	spain
+	Troes
+	55 66 77
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp5
+	Camp5
+	spain
+	Troes
+	88 77 66
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp6
+	Camp6
+	spain
+	Troes
+	55 65 55
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp7
+	Camp7
+	spain
+	Troes
+	99 88 99
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp8
+	Camp8
+	spain
+	Troes
+	22 33 22
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp9
+	Camp9
+	spain
+	Kilikes
+	33 22 33
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp10
+	Camp10
+	spain
+	Hypoplakes
+	66 77 88
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp11
+	Camp11
+	spain
+	Kistheneis
+	99 11 55
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp12
+	Camp12
+	spain
+	Troes
+	77 77 11
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp13
+	Camp13
+	spain
+	Troes
+	88 99 88
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp14
+	Camp14
+	spain
+	Troes
+	111 111 11
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+
+Camp16
+	Camp16
+	spain
+	Troes
+	77 77 177
+	wild_animals, dogs, pigs, camph
+	5
+	2
+
+Camp17
+	Camp17
+	spain
+	Kilikes
+	99 11 99
+	wild_animals, dogs, pigs, camph
+	5
+	2
