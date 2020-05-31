@@ -1942,6 +1942,7 @@ despotic_law_name
 core_building_name
 caravans_name
 taverns_name
+hinterland_battleforge_name
 temple_of_battle_pantheon
 temple_of_battle_pantheon_desc
 temple_of_battle_pantheon_desc_short
