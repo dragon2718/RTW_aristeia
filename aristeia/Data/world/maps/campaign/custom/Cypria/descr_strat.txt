@@ -204,7 +204,7 @@ ancillaries sceptre, herald, treasurer
 army
 unit		heros SWAchean				exp 1 armour 0 weapon_lvl 0
 
-character	Agamemnon, named character, heir, command 0, influence 0, management 0, subterfuge 0, age 38, , x 6, y 60, portrait agamemnon, strat_model ARTW_Agamemnon, battle_model ARTW_Dummy 
+character	Agamemnon, named character, heir, command 0, influence 0, management 0, subterfuge 0, age 38, , x 6, y 60, portrait agamemnon, strat_model ARTW_Agamemnon, battle_model hero_agamemnon 
 traits Hero 1
 army
 unit		hero agamemnon				exp 2 armour 0 weapon_lvl 0
@@ -228,7 +228,7 @@ unit		Sphendonetai SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata SWAchaean				exp 0 armour 0 weapon_lvl 0
 
-character	Menelaos, named character, command 0, influence 0, management 0, subterfuge 0, age 35, , x 6, y 61 portrait menelaos, strat_model ARTW_Menelaos, battle_model ARTW_Dummy 
+character	Menelaos, named character, command 0, influence 0, management 0, subterfuge 0, age 35, , x 6, y 61 portrait menelaos, strat_model ARTW_Menelaos, battle_model hero_menelaos 
 traits Hero 1
 army
 unit		hero menelaos				exp 2 armour 0 weapon_lvl 0
@@ -251,7 +251,7 @@ unit		Sphendonetai SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata SWAchaean				exp 0 armour 0 weapon_lvl 0
 
-character sub_faction romans_julii, Nestor, named character, command 2, influence 0, management 0, subterfuge 0, age 72, , x 61, y 22 portrait nestor, strat_model ARTW_Nestor, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Nestor, named character, command 2, influence 0, management 0, subterfuge 0, age 72, , x 61, y 22 portrait nestor, strat_model ARTW_Nestor, battle_model hero_Nestor 
 traits GoodCommander 1, InspiringSpeaker 3, Factionleader 1 , Intelligent 3, PhilosophySkill 3, Hero 1, Immortal 1
 ancillaries scribe, charioteer
 army
@@ -315,7 +315,7 @@ unit		Akontistai SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata SWAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Sphendonetai SWAchaean				exp 1 armour 0 weapon_lvl 0
 
-character sub_faction romans_julii, Idomeneus, named character, command 0, influence 0, management 0, subterfuge 0, age 38, , x 60, y 25, portrait Idomeneus, strat_model ARTW_Idomeneus, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Idomeneus, named character, command 0, influence 0, management 0, subterfuge 0, age 38, , x 60, y 25, portrait Idomeneus, strat_model ARTW_Idomeneus, battle_model hero_Idomeneus 
 traits Hero 1
 army
 unit		hero Idomeneus				exp 1 armour 0 weapon_lvl 0
@@ -431,7 +431,7 @@ unit		Toxotai NAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean					exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean				exp 0 armour 1 weapon_lvl 0
 
-character sub_faction romans_julii, Achilleus, named character, command 2, influence 0, management 0, subterfuge 0, age 27, , x 52, y 54 portrait achilleus, strat_model ARTW_Achilleus, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Achilleus, named character, command 2, influence 0, management 0, subterfuge 0, age 27, , x 52, y 54 portrait achilleus, strat_model ARTW_Achilleus, battle_model hero_Achilleus 
 traits Hero 1
 army
 unit		hero Achilleus				exp 2 armour 0 weapon_lvl 0
@@ -455,7 +455,7 @@ unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 
-character sub_faction romans_julii, Patroklos, named character, command 2, influence 0, management 0, subterfuge 0, age 24, , x 50, y 56 portrait patroklos, strat_model ARTW_Patroklos, battle_model ARTW_Dummy  
+character sub_faction romans_julii, Patroklos, named character, command 2, influence 0, management 0, subterfuge 0, age 24, , x 50, y 56 portrait patroklos, strat_model ARTW_Patroklos, battle_model hero_Patroklos  
 traits Arse 1, Brave 3, BadAttacker 1, Hero 1 
 ancillaries armourer
 army
@@ -477,7 +477,7 @@ unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 unit		Harmata NAchaean				exp 0 armour 0 weapon_lvl 0
 
-character sub_faction romans_julii, Diomedes, named character, command 3, influence 0, management 0, subterfuge 0, age 35, , x 50, y 57, portrait diomedes, strat_model ARTW_Diomedes, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Diomedes, named character, command 3, influence 0, management 0, subterfuge 0, age 35, , x 50, y 57, portrait diomedes, strat_model ARTW_Diomedes, battle_model hero_diomedes 
 traits Brave 4, VictorOthersVirtue 3, Upright 1, Factionleader 1 , HaleAndHearty 1, Hero 1
 ancillaries squire, sceptre
 army
@@ -500,7 +500,7 @@ unit		Harmata SEAchaean				exp 0 armour 1 weapon_lvl 0
 unit		Harmata SEAchaean				exp 0 armour 1 weapon_lvl 0
 unit		Harmata SEAchaean				exp 0 armour 1 weapon_lvl 0
 
-character sub_faction romans_julii, Aias, named character, command 2, influence 0, management 0, subterfuge 0, age 30, , x 51, y 57, portrait aias, strat_model ARTW_Aias, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Aias, named character, command 2, influence 0, management 0, subterfuge 0, age 30, , x 51, y 57, portrait aias, strat_model ARTW_Aias, battle_model hero_Aias 
 traits Hero 1
 army
 unit		hero Aias				exp 1 armour 1 weapon_lvl 0
@@ -573,7 +573,7 @@ unit		Toxotai Islander				exp 0 armour 0 weapon_lvl 0
 unit		Toxotai Islander				exp 0 armour 0 weapon_lvl 0
 unit		Harmata Islander				exp 0 armour 0 weapon_lvl 0
 
-character sub_faction romans_julii, Odysseus, named character, command 4, influence 0, management 0, subterfuge 0, age 34, , x 38, y 77, portrait odysseus, strat_model ARTW_Odysseus, battle_model ARTW_Dummy 
+character sub_faction romans_julii, Odysseus, named character, command 4, influence 0, management 0, subterfuge 0, age 34, , x 38, y 77, portrait odysseus, strat_model ARTW_Odysseus, battle_model hero_Odysseus 
 traits GoodCommander 3 , DevoteeGovernors 3 , Factionleader 1 , Intelligent 1 , Liar 2 , GoodSiegeAttacker 2, Noctophilia 1, Hero 1, Xenophilia 3 
 ancillaries nurse, pet_dog
 army
@@ -1179,7 +1179,7 @@ settlement
 	}
 }
 
-character	Priamos, named character, leader, command 0, influence 0, management 0, subterfuge 0, age 61, , x 63, y 64 portrait priamos, strat_model ARTW_Priamos, battle_model ARTW_Dummy 
+character	Priamos, named character, leader, command 0, influence 0, management 0, subterfuge 0, age 61, , x 63, y 64 portrait priamos, strat_model ARTW_Priamos, battle_model hero_Priamos 
 traits Hero 1
 army
 unit		hero Priamos				exp 1 armour 0 weapon_lvl 0
@@ -1203,7 +1203,7 @@ unit		Harmata Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Harmata Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Harmata Mysian				exp 0 armour 0 weapon_lvl 0
 
-character	Hektor, named character, heir, command 0, influence 0, management 0, subterfuge 0, age 36, , x 70, y 65 portrait hektor, strat_model ARTW_Hektor, battle_model ARTW_Dummy
+character	Hektor, named character, heir, command 0, influence 0, management 0, subterfuge 0, age 36, , x 70, y 65 portrait hektor, strat_model ARTW_Hektor, battle_model hero_Hektor
 traits Hero 1
 army
 unit		hero Hektor				exp 3 armour 1 weapon_lvl 0
@@ -1261,7 +1261,7 @@ unit		Aichmetai Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Toxotai Mysian				exp 1 armour 1 weapon_lvl 0
 unit		Toxotai Mysian				exp 2 armour 1 weapon_lvl 0
 
-character	Paris, named character, command 0, influence 0, management 0, subterfuge 0, age 28, , x 76, y 53 portrait paris, strat_model ARTW_Paris, battle_model ARTW_Dummy
+character	Paris, named character, command 0, influence 0, management 0, subterfuge 0, age 28, , x 76, y 53 portrait paris, strat_model ARTW_Paris, battle_model hero_Paris
 traits Hero 1
 army
 unit		hero Paris				exp 0 armour 0 weapon_lvl 0
@@ -1323,7 +1323,7 @@ army
 unit		heros Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Akontistai Mysian				exp 1 armour 0 weapon_lvl 0
 
-character sub_faction britons, Aineias, named character, command 3, influence 0, management 0, subterfuge 0, age 28, , x 79, y 84 portrait aeneas, strat_model ARTW_Aineias, battle_model ARTW_Dummy
+character sub_faction britons, Aineias, named character, command 3, influence 0, management 0, subterfuge 0, age 28, , x 79, y 84 portrait aeneas, strat_model ARTW_Aineias, battle_model hero_Aineias
 traits Sonimmortal 1 , Pious 1 , Brave 1 , GoodCommander 1, Generous 1, Hero 1 
 ancillaries mountain_guide, mentor
 army
@@ -1332,7 +1332,7 @@ unit		Akontistai Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Aichmetai Mysian				exp 0 armour 0 weapon_lvl 0
 unit		Aichmetai Mysian				exp 0 armour 0 weapon_lvl 0
 
-character sub_faction britons, Sarpedon, named character, command 0, influence 0, management 0, subterfuge 0, age 38, , x 90, y 33, portrait sarpedon, strat_model ARTW_Sarpedon, battle_model ARTW_Dummy 
+character sub_faction britons, Sarpedon, named character, command 0, influence 0, management 0, subterfuge 0, age 38, , x 90, y 33, portrait sarpedon, strat_model ARTW_Sarpedon, battle_model hero_Sarpedon 
 traits GoodSiegeDefender 1 , Scout 1 , Intelligent 1, GoodTrader 1, Hero 1, Immortal 1 
 ancillaries archery_instructor, mountain_guide
 army
