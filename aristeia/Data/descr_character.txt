@@ -52,121 +52,121 @@ wage_base		200
 faction			romans_julii
 dictionary		15
 strat_model		ARTW_SWAchean
-battle_model	dummy_general
+battle_model	heros_SWAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			romans_brutii
 dictionary		15
 strat_model		ARTW_SWAchean
-battle_model	dummy_general
+battle_model	heros_SWAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			romans_scipii
 dictionary		15
 strat_model		ARTW_NAchean
-battle_model	dummy_general
+battle_model	heros_NAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			romans_senate
 dictionary		15
 strat_model		ARTW_SEAchean
-battle_model	dummy_general
+battle_model	heros_SEAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			macedon
 dictionary		2
 strat_model		ARTW_SWAchean
-battle_model	dummy_general
+battle_model	heros_SWAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			egypt
 dictionary		2
 strat_model		ARTW_SEAchean
-battle_model	dummy_general
+battle_model	heros_SEAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			seleucid
 dictionary		2
 strat_model		ARTW_NAchean
-battle_model	dummy_general
+battle_model	heros_NAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			carthage
 dictionary		1
 strat_model		ARTW_Islander
-battle_model	dummy_general
+battle_model	heros_Islander
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			parthia
 dictionary		2
 strat_model		ARTW_SEAchean
-battle_model	dummy_general
+battle_model	heros_SEAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			pontus
 dictionary		2
 strat_model		ARTW_Islander
-battle_model	dummy_general
+battle_model	heros_Islander
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			gauls
 dictionary		2
 strat_model		ARTW_NAchean
-battle_model	dummy_general
+battle_model	heros_NAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			germans
 dictionary		2
 strat_model		ARTW_SWAchean
-battle_model	dummy_general
+battle_model	heros_SWAchean
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			britons
 dictionary		2
 strat_model		ARTW_Mysian
-battle_model	dummy_general
+battle_model	heros_Mysian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			armenia
 dictionary		2
 strat_model		ARTW_Anatolian
-battle_model	dummy_general
+battle_model	heros_Anatolian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			dacia
 dictionary		2
 strat_model		ARTW_Anatolian
-battle_model	dummy_general
+battle_model	heros_Anatolian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			greek_cities
 dictionary		2
 strat_model		ARTW_EBarbarian
-battle_model	dummy_general
+battle_model	heros_EBarbarian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			numidia
 dictionary		2
 strat_model		ARTW_Anatolian
-battle_model	dummy_general
+battle_model	heros_Anatolian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			scythia
 dictionary		2
-strat_model		ARTW_WBarbarian
-battle_model	dummy_general
+strat_model		ARTW_EBarbarian
+battle_model	heros_EBarbarian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			spain
 dictionary		2
 strat_model		ARTW_EBarbarian
-battle_model	dummy_general
+battle_model	heros_EBarbarian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			thrace
 dictionary		2
-strat_model		ARTW_WBarbarian
-battle_model	dummy_general
+strat_model		ARTW_EBarbarian
+battle_model	heros_EBarbarian
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			slave
@@ -290,22 +290,22 @@ battle_equip	gladius, chainmail shirt helmet and rectangular shield
 faction			greek_cities
 dictionary		2
 strat_card		data/ui/barbarian/agents/card_general_celt.tga
-strat_model		sm_greek_lesser_general
-battle_model	dummy_general
+strat_model		ARTW_Captain_EBarbarian
+battle_model	captain_BAR
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			numidia
 dictionary		2
 strat_card		data/ui/barbarian/agents/card_general_celt.tga
-strat_model		sm_carthage_lesser_general
-battle_model	dummy_general
+strat_model		ARTW_Captain_Anatolian
+battle_model	captain_ANA
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			scythia
 dictionary		2
 strat_card		data/ui/barbarian/agents/card_general_celt.tga
-strat_model		sm_barb_lesser_general
-battle_model	dummy_general
+strat_model		ARTW_Captain_EBarbarian
+battle_model	captain_BAR
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			spain
@@ -318,8 +318,8 @@ battle_equip	gladius, chainmail shirt helmet and rectangular shield
 faction			thrace
 dictionary		2
 strat_card		data/ui/barbarian/agents/card_general_celt.tga
-strat_model		sm_greek_lesser_general
-battle_model	dummy_general
+strat_model		ARTW_Captain_EBarbarian
+battle_model	captain_BAR
 battle_equip	gladius, chainmail shirt helmet and rectangular shield
 
 faction			slave
