@@ -1,0 +1,23 @@
+plan
+
+{
+
+floor	roman_ruins_underlay.CAS	
+
+
+	borders	border_limits_64m_diameter.CAS
+
+sacred_archway_group,		-26,	-2.50,	0,	0
+barbarian_lith,		-30,	22,	0,	0
+barbarian_lith,		-4,	-21,	90,	0
+barbarian_lith,		19,	4,	0,	0
+bush_A,		29,	-18,	90,	0
+bush_A,	-22.00,	6.99,	46.00,	0.00
+tree_A,	-40.54,	16.35,	0.00,	0.00
+tree_B,	-48.11,	2.11,	15.00,	0.00
+bush_A,	-41.39,	-24.67,	43.00,	0.00
+tree_A,	45.30,	6.72,	0.00,	0.00
+bush_A,		24,	16,	90,	0
+
+
+	}

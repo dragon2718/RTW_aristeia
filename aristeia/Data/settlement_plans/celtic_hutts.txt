@@ -1,0 +1,34 @@
+plan
+
+{
+
+floor	roman_ruins_underlay.CAS	
+
+
+	borders	border_limits_64m_diameter.CAS
+
+barb_fenceA,	0.00,	0.00,	-56,	0
+barbarian_long_house,	20.00,	0.00,	-35.00,	0.00
+stove,			6,	0,	0,	0
+barbarian_round_house_small,		-25.00,	-25.00,	135.00,	0.00
+barbarian_round_house_small,		25.00,	25.00,	-45.00,	0.00
+barbarian_round_house_small,		0.00,	-35.00,	180.00,	0.00
+barbarian_round_house_large,		-24.00,	29.00,	35.00,	0.00
+barbarian_round_house_large,		-28.00,	-5.00,	125.00,	0.00
+barbarian_round_house_small,		4.00,	35.00,	0.00,	0.00
+barbarian_lith,		40,	40,	0,	0
+barbarian_lith,		-2,	-5,	0,	0
+pile_of_logs,		-4,	-21,	90,	0
+pile_of_logs,		-5,	-15,	0,	0
+tree_A,	45.30,	6.72,	0.00,	0.00
+tree_B,	-48.11,	2.11,	15.00,	0.00
+tree_A,	-40.54,	16.35,	0.00,	0.00
+tree_B,	15.00,	-15.00,	15.00,	0.00
+bush_A,	-22.00,	6.99,	46.00,	0.00
+bush_A,		-30,	38,	0,	0
+bush_A,		29,	-18,	90,	0
+bush_A,	-41.39,	-24.67,	43.00,	0.00
+bush_A,		24,	16,	90,	0
+
+
+	}

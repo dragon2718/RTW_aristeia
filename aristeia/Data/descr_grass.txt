@@ -44,56 +44,65 @@
 
 climate semi_arid
 {
-	texture					aristeia/data/textures/Promegrasssteppe.tga
+	texture					aristeia/data/textures/semi_arid.tga
 	spacing					0.5	
-	present_in_winter		false
-
-
-
+	present_in_winter		true
 	ground_type grass_short
 	{
-		avg_height			0.75			
-		width				1.2				
-		density				60
+		avg_height			0.8			
+		width				2.0				
+		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type grass_long
-	{
-		avg_height			1.55			
-		width				1.0				
-		density				70
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type scrub_dense
-	{
-		avg_height			1.25			
-		width				1.0				
-		density				30
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v2				0.18			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.75			
+		avg_height			1.0			
 		width				2.0				
+		density				50
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				1.0
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type mud
+	{
+		avg_height			0.8			
+		width				2.0				
+		density				60
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type scrub_dense
+	{
+		avg_height			1.2			
+		width				1.8				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type grass_long
+	{
+		avg_height			0.2			
+		width				1.0				
+		density				70
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.5
 		colour				0,0,0
 		correction			0.1
 	}
@@ -101,41 +110,41 @@ climate semi_arid
 
 climate swamp
 {
-	texture					aristeia/data/textures/PromegrassPaludi.tga
+	texture					aristeia/data/textures/swamp.tga
 	spacing					0.5	
-	present_in_winter		false
+	present_in_winter		true
 
-	ground_type   swamp
+	ground_type swamp
 	{
-		avg_height			1.75			
-		width				1.2				
-		density				40
+		avg_height			1.0			
+		width				2.0				
+		density				60
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type  mud
 	{
-		avg_height			1.5			
-		width				1.0				
+		avg_height			1.1			
+		width				2.0				
 		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
+		tex_v1				0.2			
+		tex_v2				0.38			
 		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type mud_road
+	ground_type forest_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
+		avg_height			0.6			
+		width				2.0				
+		density				40
+		tex_v1				0.4			
+		tex_v2				0.58			
 		falloff				1.0
 		colour				0,0,0
 		correction			0.1
@@ -143,119 +152,110 @@ climate swamp
 
 	ground_type sand
 	{
-		avg_height			1.0			
+		avg_height			0.8			
 		width				2.0				
-		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		density				60
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
-
-
 
 	ground_type grass_short
 	{
-		avg_height			0.75			
-		width				1.2				
-		density				60
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type grass_long
-	{
-		avg_height			1.5			
-		width				1.0				
-		density				70
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type scrub_dense
-	{
-		avg_height			1.25			
-		width				1.0				
-		density				30
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type forest_dense
-	{
-		avg_height			0.75			
+		avg_height			1.3			
 		width				2.0				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
 }
 
-
-
 climate rocky_desert
 {
-	texture					aristeia/data/textures/Promegrassarida.tga
+	texture					aristeia/data/textures/rocky_desert.tga
 	spacing					0.5	
-	present_in_winter		false
+	present_in_winter		        true
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
-		density				40
+		avg_height			0.6			
+		width				2.2				
+		density				15
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type grass_long
-	{
-		avg_height			1.5			
-		width				1.0				
-		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v2				0.23			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.6			
+		width				2.2				
+		density				15
+		tex_v1				0.25			
+		tex_v2				0.6			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type forest_dense
+	ground_type grass_long
 	{
-		avg_height			0.5			
-		width				2.0				
+		avg_height			0.6			
+		width				1.8				
+		density				15
+		tex_v1				0.6			
+		tex_v2				0.98			
+		falloff				0.5
+		colour				0,0,0
+		correction			0.1
+	}
+}
+
+climate sandy_desert
+{
+	texture					aristeia/data/textures/sandy_desert.tga
+	spacing					0.5	
+	present_in_winter		        false
+
+	ground_type grass_short
+	{
+		avg_height			0.1			
+		width				2.2				
 		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v2				0.23			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type scrub_dense
+	{
+		avg_height			0.1			
+		width				2.2				
+		density				60
+		tex_v1				0.25			
+		tex_v2				0.6			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type grass_long
+	{
+		avg_height			0.1			
+		width				1.8				
+		density				40
+		tex_v1				0.6			
+		tex_v2				0.98			
+		falloff				0.5
 		colour				0,0,0
 		correction			0.1
 	}
@@ -263,54 +263,66 @@ climate rocky_desert
 
 climate test_climate
 {
-	texture					aristeia/data/textures/Promegrasssteppe.tga
+	texture					aristeia/data/textures/mediterranean.tga
 	spacing					0.5	
 	present_in_winter		true
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
+		avg_height			0.6			
+		width				2.0				
 		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type  mud
+	{
+		avg_height			1.0			
+		width				2.0				
+		density				50
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type grass_long
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.3			
+		width				2.0				
+		density				60
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.3			
+		width				2.0				
+		density				40
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
-		width				2.0				
+		avg_height			1.1			
+		width				1.8				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.5
 		colour				0,0,0
 		correction			0.1
 	}
@@ -318,110 +330,133 @@ climate test_climate
 
 climate temperate_grassland_fertile
 {
-	texture					aristeia/data/textures/Promegrassfiori.tga
+	texture					aristeia/data/textures/grassland_fertile2.tga
 	spacing					0.5	
 	present_in_winter		false
 
-	ground_type grass_short
+	ground_type forest_dense
 	{
-		avg_height			0.75			
-		width				1.2				
-		density				60
+		avg_height			0.9			
+		width				2.0				
+		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type grass_long
+	ground_type  mud
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				70
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.9			
+		width				2.0				
+		density				50
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.25			
-		width				1.0				
-		density				30
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.0			
+		width				2.0				
+		density				60
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type forest_dense
+	ground_type grass_long
 	{
-		avg_height			0.75			
+		avg_height			1.0			
 		width				2.0				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type grass_short
+	{
+		avg_height			0.7			
+		width				2.0				
+		density				50
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 }
 
-
 climate temperate_grassland_infertile
 {
-	texture					aristeia/data/textures/Promegrassarida.tga
+	texture					aristeia/data/textures/infertile_grass.tga
 	spacing					0.5	
 	present_in_winter		false
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
+		avg_height			0.7			
+		width				1.8				
 		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
-		colour				0,0,0
-		correction			0.1
-	}
-
-	ground_type grass_long
-	{
-		avg_height			1.5			
-		width				1.0				
-		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v2				0.19			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.9			
+		width				1.2				
+		density				40
+		tex_v1				0.2			
+		tex_v2				0.39			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type  mud
+	{
+		avg_height			1.0			
+		width				1.8				
+		density				50
+		tex_v1				0.4			
+		tex_v2				0.59			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
+		avg_height			1.2			
 		width				2.0				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.6			
+		tex_v2				0.79			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type grass_long
+	{
+		avg_height			1.2			
+		width				2.0				
+		density				40
+		tex_v1				0.8			
+		tex_v2				0.99			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
@@ -429,54 +464,66 @@ climate temperate_grassland_infertile
 
 climate temperate_forest_open
 {
-	texture					aristeia/data/textures/Promegrassfiori.tga
+	texture					aristeia/data/textures/forest_open.tga
 	spacing					0.5	
 	present_in_winter		false
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
+		avg_height			1.0			
+		width				2.0				
 		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type  mud
+	{
+		avg_height			1.0			
+		width				2.0				
+		density				50
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type grass_long
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.2			
+		width				2.0				
+		density				60
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.2			
+		width				2.0				
+		density				40
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
+		avg_height			0.7			
 		width				2.0				
-		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		density				50
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
@@ -484,54 +531,66 @@ climate temperate_forest_open
 
 climate temperate_forest_deep
 {
-	texture					aristeia/data/textures/Promegrassfertile.tga
+	texture					aristeia/data/textures/deep_woods.tga
 	spacing					0.5	
 	present_in_winter		false
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
+		avg_height			0.8			
+		width				2.0				
 		density				40
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type mud
+	{
+		avg_height			0.9			
+		width				2.0				
+		density				50
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type grass_long
 	{
-		avg_height			1.5			
-		width				1.0				
+		avg_height			1.1			
+		width				2.0				
 		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.9			
+		width				2.0				
+		density				40
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
+		avg_height			1.1			
 		width				2.0				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
@@ -539,54 +598,66 @@ climate temperate_forest_deep
 
 climate highland
 {
-	texture					aristeia/data/textures/Promegrassfiori.tga
+	texture					aristeia/data/textures/highland.tga
 	spacing					0.5	
 	present_in_winter		false
 
-	ground_type grass_short
+	ground_type grass_long
 	{
-		avg_height			0.5			
-		width				1.2				
+		avg_height			1.1			
+		width				1.3				
 		density				40
 		tex_v1				0.0			
 		tex_v2				0.25			
-		falloff				2.0
+		falloff				0.3  ;;was 0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type grass_long
+	ground_type grass_short
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.7			
+		width				0.9				
+		density				40
+		tex_v1				0.26			
+		tex_v2				0.5			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
 
-	ground_type scrub_dense
+	ground_type  mud
 	{
-		avg_height			1.5			
+		avg_height			1.3			
 		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		density				40
+		tex_v1				0.26			
+		tex_v2				0.5			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
-		width				2.0				
+		avg_height			1.2			
+		width				1.2				
 		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		tex_v1				0.51			
+		tex_v2				0.75			
+		falloff				0.3  ;;was 0.5
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type scrub_dense 
+	{
+		avg_height			0.8			
+		width				1.5				
+		density				40
+		tex_v1				0.76			
+		tex_v2				0.99			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
@@ -594,54 +665,66 @@ climate highland
 
 climate alpine
 {
-	texture					aristeia/data/textures/Promegrassfiori2.tga
+	texture					aristeia/data/textures/alpine.tga
 	spacing					0.5	
 	present_in_winter		false
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
+		avg_height			0.7			
 		width				1.2				
-		density				40
+		density				30
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.3  ;;was 0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type grass_long
 	{
-		avg_height			1.5			
+		avg_height			0.6			
+		width				1.0				
+		density				40
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				0.3  ;;was 0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type  mud
+	{
+		avg_height			1.0			
 		width				1.0				
 		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			1.0			
+		width				1.4				
+		density				30
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
-		width				2.0				
-		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		avg_height			1.0			
+		width				1.0				
+		density				50
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.3  ;;was 0.5
 		colour				0,0,0
 		correction			0.1
 	}
@@ -649,54 +732,66 @@ climate alpine
 
 climate sub_arctic
 {
-	texture					aristeia/data/textures/#grass.tga
+	texture					aristeia/data/textures/subarctic.tga
 	spacing					0.5	
-	present_in_winter		false
+	present_in_winter		true
 
 	ground_type grass_short
 	{
-		avg_height			0.5			
-		width				1.2				
-		density				40
+		avg_height			0.7			
+		width				1.5				
+		density				35
 		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				2.0
+		tex_v2				0.18			
+		falloff				0.4
+		colour				0,0,0
+		correction			0.1
+	}
+
+	ground_type mud
+	{
+		avg_height			0.6			
+		width				2.0				
+		density				15
+		tex_v1				0.2			
+		tex_v2				0.38			
+		falloff				1.0
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type grass_long
 	{
-		avg_height			1.5			
-		width				1.0				
+		avg_height			0.8			
+		width				2.0				
 		density				50
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		tex_v1				0.4			
+		tex_v2				0.58			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type scrub_dense
 	{
-		avg_height			1.5			
-		width				1.0				
-		density				6
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.0
+		avg_height			0.8			
+		width				1.7				
+		density				40
+		tex_v1				0.6			
+		tex_v2				0.78			
+		falloff				0.4
 		colour				0,0,0
 		correction			0.1
 	}
 
 	ground_type forest_dense
 	{
-		avg_height			0.5			
-		width				2.0				
-		density				40
-		tex_v1				0.0			
-		tex_v2				0.25			
-		falloff				1.5
+		avg_height			0.7			
+		width				1.0				
+		density				50
+		tex_v1				0.8			
+		tex_v2				0.98			
+		falloff				0.5
 		colour				0,0,0
 		correction			0.1
 	}

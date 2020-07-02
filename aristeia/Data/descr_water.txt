@@ -1,6 +1,11 @@
 ;
 ;	descr_water_types.txt
 ;	---------------------
+;       
+;       Special edition water for Roma Surrectum II, by DVK901, April 26, 2008
+;       May only be used with explicit permission.
+;
+;
 ;
 ;	Defines the water surface and depth effects for the sea and rivers. The records are 
 ;	organised by:
@@ -32,70 +37,72 @@ sea default
 		layer 0										; maximum of 4 layers (0 to 3)
 		{
 			type				diffuse				; <diffuse, specular>
-			texture				data/terrain/battlefield/water/river/river02.tga
+			texture				data/terrain/battlefield/water/river/atlantic.tga
 			opacity				1.0					; <0.0 to 1.0>
-			scale				100.0	100.0		; <metres>
+			scale				40.0	40.0		; <metres>
 			offset				0.0		0.0			; <metres>
-			rotation			0.0					; <degrees>
-			scroll_speed		1.5					; <metres / second>
-			scroll_direction	0.0					; <degrees>
+			rotation			-10.0					; <degrees>  was set to '0'
+			scroll_speed			1.5					; <metres / second>
+			scroll_direction		-10.0					; <degrees>
 
 		}
 
 		layer 1										; maximum of 4 layers (0 to 3)
 		{
-			type				diffuse				; <diffuse, specular>
-			texture				data/terrain/battlefield/water/river/river02.tga
-			opacity				0.4					; <0.0 to 1.0>
+                        type				diffuse			; <diffuse, specular>
+			texture				data/terrain/battlefield/water/river/atlantic.tga
+			opacity				0.6					; <0.0 to 1.0>
 			scale				25.0	25.0		; <metres>
 			offset				0.0		0.0			; <metres>
-			rotation			-10.0				; <degrees>
-			scroll_speed		0.97				; <metres / second>
-			scroll_direction	-3.0				; <degrees>
+			rotation			0.0					; <degrees>
+			scroll_speed			0.97				; <metres / second>
+			scroll_direction		0.0					; <degrees>
 		}
 
 
 		layer 2										; maximum of 4 layers (0 to 3)
 		{
-			type				specular			; <diffuse, specular>
-			texture				data/terrain/battlefield/water/specular_01.tga
+			type				specular				; <diffuse, specular>
+			texture				data/terrain/battlefield/water/New_shader.tga   ;;ocean_under2.tga
+                        ;texture				data/terrain/battlefield/water/ocean_under.tga           ;;the game will use this second layer
 			opacity				1.0					; <0.0 to 1.0>
-			min_sharpness		7.0					; specular sharpness at noon
-			max_sharpness		25.0				; specular sharpness at dawn/dusk
-			scale				25.0	25.0		; <metres>
-			offset				0.0		0.0			; <metres>
-			rotation			0.0					; <degrees>
-			scroll_speed		0.97				; <metres / second>
-			scroll_direction	0.0					; <degrees>
+			min_sharpness			4.0					; specular sharpness at noon
+			max_sharpness			11.0				; specular sharpness at dawn/dusk
+			scale				10.0	10.0		; <metres>
+			offset				0.0	0.0			; <metres>
+			rotation			-10.0				; <degrees>
+			scroll_speed			0.97				; <metres / second>
+			scroll_direction		-30.0				; <degrees>
 		}
 
 		layer 3										; maximum of 4 layers (0 to 3)
 		{
 			type				specular			; <diffuse, specular>
-			texture				data/terrain/battlefield/water/specular_02_128.tga
+			texture				data/terrain/battlefield/water/New_shader_1.tga  ;;specular_01d.tga
+                        ;texture				data/terrain/battlefield/water/oceantest_shader1.tga
 			opacity				1.0					; <0.0 to 1.0>
-			min_sharpness		7.0					; specular sharpness at noon
-			max_sharpness		17.0				; specular sharpness at dawn/dusk
-			scale				30.0	30.0		; <metres>
-			offset				0.0		0.0			; <metres>
+			min_sharpness			4.0					; specular sharpness at noon
+			max_sharpness			11.0			; specular sharpness at dawn/dusk, was set to 17
+			scale				20.0	20.0		; <metres>
+			offset				0.0	0.0			; <metres>
 			rotation			2.0					; <degrees>
-			scroll_speed		1.2					; <metres / second>
-			scroll_direction	-90					; <degrees>
+			scroll_speed			1.2					; <metres / second>
+			scroll_direction		-10					; <degrees>
 		}
 
-		colour				185 195 99				; <r g b>
-		colour_factor		2.0						; rate to fade to colour with depth
-		min_alpha			0.0						; alpha at shoreline
-		max_alpha			1.0						; alpha at max water depth
-		max_depth			10.0					; maximum visible water depth
-		max_refraction		0.15					; **** depricated *****
+		colour			160 160 190				; <r g b>
+		colour_factor		4.0					; rate to fade to colour with depth
+		min_alpha		0.4					; alpha at shoreline
+		max_alpha		1.0					; alpha at max water depth
+		max_depth		10.0					; maximum visible water depth
+		max_refraction		0.3     ;;was  0.15					; **** depricated *****
 	}
 
 	shore
 	{
-		min_dist			130.0					; start of shore fade out
-		max_dist			380.0					; end of shore fade out
-		normal_factor		0.04					; refraction power
+		min_dist		150.0	;was 130				; start of shore fade out
+		max_dist		350.0	;was 380				; end of shore fade out
+		normal_factor		0.5   ;;was 0.1					; refraction power
 		
 		;											BREADTH
 		;											=======
@@ -103,8 +110,8 @@ sea default
 		;							wide		medium		narrow		verry_narrow
 		;						+---------------------------------------------------+
 		;			long		|	X			X			.			.			|
-		;	LENGTH	medium		|	X			X			X			.			|
-		;	======	short		|	.			X			X			X			|
+		;	LENGTH		medium		|	X			X			X			.			|
+		;	======		short		|	.			X			X			X			|
 		;			very_short	|	.			.			X			X			|
 		;						+----------------------------------------------------
 		;
@@ -405,71 +412,84 @@ sea default
 }
 
 ;--------------------------------------------------------------------------------------------------
-
+;---------------(you can create new rivers, but you cannot create a new sea. You can only use different textures.)
+;;test climate
 river default
 {
 	surface
 	{
 		layer 0
 		{
-			type				diffuse
-			texture				data/terrain/battlefield/water/river/river02.tga
-			opacity				1.0
-			scale				25.0	25.0
-			offset				0.0		0.0
-			rotation			0.0
-			scroll_speed		1.25
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/terrainbravilbase03.tga   ;;Medi_river_ground2.tga
+			opacity			0.7
+			scale			10.0	10.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		0.0
 			scroll_direction	0.0
-
 		}
 
 		layer 1
 		{
-			type				diffuse
-			texture				data/terrain/battlefield/water/river/river02.tga
-			opacity				0.4
-			scale				7.5		7.5
-			offset				0.0		0.0
-			rotation			-10.0
-			scroll_speed		0.96
-			scroll_direction	-3.0
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/desert_river4.tga
+			opacity			0.35
+			scale			80.0	80.0             ;;;was 25.0
+			offset			0.0	0.0
+			rotation		0.0
+			scroll_speed		1.10
+			scroll_direction	20.0  ;;-15.0
 		}
-
-
+		
 		layer 2
 		{
-			type				specular
-			texture				data/terrain/battlefield/water/specular_01.tga
-			opacity				1.0
-			min_sharpness		7.0
-			max_sharpness		25.0
-			scale				7.5		7.5
-			offset				0.0		0.0
-			rotation			0.0
-			scroll_speed		0.96
-			scroll_direction	0.0
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/medi_river_top_black.tga
+			opacity			0.15
+			scale			80.0	80.0             ;;;was 25.0
+			offset			0.0	0.0
+			rotation		0.0
+			scroll_speed		0.50
+			scroll_direction	-45.0
 		}
 
 		layer 3
 		{
-			type				specular
-			texture				data/terrain/battlefield/water/specular_02_128.tga
-			opacity				1.0
-			min_sharpness		7.0
-			max_sharpness		17.0
-			scale				10.6	10.6
-			offset				0.0		0.0
-			rotation			2.0
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader_5.tga   ;;specular_01med.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			30.0		30.0   ;;;was7.5
+			offset			0.0		0.0
+			rotation		-10.0    ;;was 0.0
+			scroll_speed		0.96
+			scroll_direction	0.0
+		}
+
+		layer 4
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader_4.tga  ;;specular_01med2.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			20.0	20.0
+			offset			0.0	0.0
+			rotation		2.0
 			scroll_speed		1.35
 			scroll_direction	6.0
 		}
 
-		colour				64 69 82
-		colour_factor		1.0
-		min_alpha			0.1
-		max_alpha			1.0
-		max_depth			4.0
-		max_refraction		0.15
+		colour			0 0 0	;;64 69 82
+		colour_factor		0.0
+		min_alpha		0.8
+		max_alpha		1.0
+		max_depth		9.0
+		max_refraction		0.2   ;;was 0.4
 	}
 
 	shore
@@ -477,6 +497,600 @@ river default
 		min_dist			50.0
 		max_dist			250.0
 		normal_factor		0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+;;perfect, this is a fast moving Alpine climate river using five textures. It has a stationary greenish\rocky bottom and three specular layers that criss-cross
+;;to give the impression of the water bouncing off the banks of the river and creating cross currents.
+river alpine
+{
+	surface
+	{
+		layer 0
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/river_rock_small2.tga  ;;stationary river bottom for shallow river.
+			opacity			1.0
+			scale			20.0		20.0     ;;;was 7.5
+			offset			0.0		0.0
+			rotation		-10.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+
+		}
+
+		layer 1
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/river_alpine.tga
+			opacity			0.4                                                            ;;this setting is lowered until water is crystal clear.
+			scale			20.0		20.0     ;;;was 7.5                            ;;which allows seeing the bottom. The purpose of this
+			offset			0.0		0.0                                            ;;texture is to provide a sort of 'shader' looking away
+			rotation		-10.0                                                          ;;from the light.
+			scroll_speed		3.75
+			scroll_direction	-30.0
+		}
+
+		layer 2
+		{
+			type				specular
+			texture				data/terrain/battlefield/water/specular_01b.tga
+			opacity			0.7
+                        min_sharpness		4.0
+			max_sharpness		11.0
+			scale			8.0	8.0             ;;;was 25.0
+			offset			0.0	0.0
+			rotation		2.0
+			scroll_speed		3.5
+			scroll_direction	-45.0
+		}
+
+		layer 3
+		{
+			type				specular
+			texture				data/terrain/battlefield/water/New_shader.tga
+                        ;texture				data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			10.0	10.0
+			offset			0.0	0.0
+			rotation		2.0
+			scroll_speed		3.8
+			scroll_direction	6.0
+		}
+		
+		layer 4                          ;;;I do not know what the limit is, but this is one layer beyond anything RTW Vanilla provided for.
+		{
+			type				specular
+			texture				data/terrain/battlefield/water/New_shader_1.tga
+                        texture				data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			10.0	10.0
+			offset			0.0	0.0
+			rotation		2.0
+			scroll_speed		3.8
+			scroll_direction	30.0
+		}
+
+		colour				0 0 0   ;;64 69 82
+		colour_factor			0.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			4.0
+		max_refraction			0.4
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+;;as good as it gets, in this climate there is 'grass' (reeds) in the water as well. It's murky, and has a stationary mud bottom.
+river swamp
+{
+	surface
+	{
+		layer 0
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/swamp_bottom.tga  ;;non-moving layer than subs as river bottom.
+			opacity			0.8
+			scale			5.0		5.0     ;;;was 7.5
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+
+		}
+
+		layer 1
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/desert_river.tga   ;;swamp_top.tga
+			opacity			0.5
+			scale			10.0		10.0     ;;;was 7.5
+			offset			0.0		0.0
+			rotation		-10.0
+			scroll_speed		0.65
+			scroll_direction	-30.0
+		}
+
+		layer 2
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			0.5
+			min_sharpness		4.0
+			max_sharpness		9.0
+			scale			30.0		30.0   ;;;was7.5
+			offset			0.0		0.0
+			rotation		-10.0    ;;was 0.0
+			scroll_speed		0.96
+			scroll_direction	0.0
+		}
+
+		layer 3
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			0.4
+			min_sharpness		4.0
+			max_sharpness		9.0
+			scale			30.0	30.0
+			offset			0.0	0.0
+			rotation		2.0
+			scroll_speed		1.35
+			scroll_direction	6.0
+		}
+
+		colour				0 0 0   ;;64 69 82
+		colour_factor			0.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			4.0
+		max_refraction			0.1
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+;;This forest river is crystal clear water that looks beautiful with a rocky\vegetation bottom.
+river fertile
+{
+	surface
+	{
+		layer 0
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/desert_river_ground3.tga
+			opacity				0.9
+			scale				10.0		10.0     ;;;was 7.5
+			offset				0.0		0.0
+			rotation			-10.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+
+		}
+
+		layer 1
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/desert_river.tga
+			opacity				0.6
+			scale				50.0	50.0             ;;;was 25.0
+			offset				0.0		0.0
+			rotation			0.0
+			scroll_speed		0.65
+			scroll_direction	-45.0
+		}
+
+		layer 2
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			30.0		30.0   ;;;was7.5
+			offset			0.0		0.0
+			rotation		-10.0    ;;was 0.0
+			scroll_speed		0.96
+			scroll_direction	0.0
+		}
+
+		layer 3
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med2.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			30.0	30.0
+			offset			0.0	0.0
+			rotation		2.0
+			scroll_speed		1.35
+			scroll_direction	6.0
+		}
+
+		colour				0 0 0  ;;64 69 82
+		colour_factor			0.0    ;;was 1.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			10.0
+		max_refraction			0.2  ;;was 0.15
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor		0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+;;This river has a rock bottom
+river forest
+{
+	surface
+	{
+		layer 0
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/fertile_river_ground.tga
+			opacity			0.9
+			scale			10.0	10.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+                layer 1
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/desert_river.tga
+			opacity			0.6
+			scale			50.0	50.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.50
+			scroll_direction	-35.0
+		}
+		
+		layer 2
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/river_alpine.tga
+			opacity			0.2                                                            ;;this setting is lowered until water is crystal clear.
+			scale			20.0		20.0                                           ;;which allows seeing the bottom. The purpose of this
+			offset			0.0		0.0                                            ;;texture is to provide a sort of 'shader' looking away
+			rotation		-10.0                                                          ;;from the light
+			scroll_speed		2.00
+			scroll_direction	-30.0
+		}
+
+		layer 3
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		11.0
+			scale			7.5		7.5
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		2.50
+			scroll_direction	0.30
+		}
+
+		layer 4
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader_1.tga
+                        ;texture			data/terrain/battlefield/water/oceantest_shader1.tga
+			opacity			1.0
+			min_sharpness		7.0
+			max_sharpness		17.0
+			scale			10.0	10.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.65
+			scroll_direction	6.0
+		}
+
+		colour				0 0 0   ;;64 69 82
+		colour_factor			0.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			3.0
+		max_refraction			0.4
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+
+river desert      ;;perfect
+{
+	surface
+	{
+		layer 0
+		{
+			type				diffuse
+			texture				data/terrain/battlefield/water/river/silotown_dirt01.tga  ;;stationary river bottom for shallow river.
+			opacity			1.0
+			scale			40.0		40.0     ;;;was 7.5
+			offset			0.0		0.0
+			rotation		-10.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+                layer 1
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/desert_river.tga
+			opacity			0.7
+			scale			200.0	200.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.00
+			scroll_direction	-35.0
+		}
+
+		layer 2
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med.tga
+                        ;texture			data/terrain/battlefield/water/specular_01e.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		8.0
+			scale			80.0		80.0
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		1.50
+			scroll_direction	0.30
+		}
+
+		layer 3
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/oceantest_shader1.tga
+                        ;texture			data/terrain/battlefield/water/specular_01e.tga
+			opacity			1.0
+			min_sharpness		4.0
+			max_sharpness		8.0
+			scale			80.0	80.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.20
+			scroll_direction	6.0
+		}
+
+		colour				0 0 0 ;;44 40 30
+		colour_factor			0.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			3.0
+		max_refraction			0.1
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			450.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+
+river infertile
+{
+	surface
+	{
+		layer 0
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/rock.tga
+			opacity			0.6
+			scale			20.0	20.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+                layer 1
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/infertile_river_top.tga
+			opacity			0.5
+			scale			180.0	180.0             ;;;was 25.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.30
+			scroll_direction	-35.0
+		}
+
+		layer 2
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader.tga
+                        ;texture			data/terrain/battlefield/water/specular_01e.tga
+			opacity			1.0
+			min_sharpness		6.0
+			max_sharpness		15.0
+			scale			25.0		25.0
+			offset			0.0		0.0
+			rotation		0.0
+			scroll_speed		1.40
+			scroll_direction	-30.0
+		}
+
+		layer 3
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/New_shader_1.tga
+                        ;texture			data/terrain/battlefield/water/specular_01e.tga
+			opacity			1.0
+			min_sharpness		7.0
+			max_sharpness		17.0
+			scale			10.0	10.0
+			offset			0.0		0.0
+			rotation		2.0
+			scroll_speed		1.50
+			scroll_direction	6.0
+		}
+
+		colour				44 40 30
+		colour_factor			0.0
+		min_alpha			0.8
+		max_alpha			1.0
+		max_depth			4.0
+		max_refraction			0.4
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+
+river winter_north          ;;this is a frozen ice\snow-covered river for a colder climate
+{
+	surface
+	{
+		layer 0
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/river02.tga  ;;river_forest.tga
+			opacity			0.7
+			scale			7.5	7.5
+			offset			0.0	0.0
+			rotation		-10.0
+			scroll_speed		0.05
+			scroll_direction	-30.0
+
+		}
+
+		layer 1
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/ice_winter_north.tga
+			opacity			1.0
+			scale			50.0	50.0
+			offset			0.0	0.0
+			rotation		0.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+		colour				0 0 0      ;;;;64 69 82
+		colour_factor			0.0
+		min_alpha			0.1
+		max_alpha			1.0
+		max_depth			4.0
+		max_refraction			0.3
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
+	}
+}
+
+;--------------------------------------------------------------------------------------------------
+
+river winter_med                   ;;this is a frozen ice-covered river
+{
+	surface
+	{
+		layer 0
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/river02.tga    ;;river_forest.tga
+			opacity			0.5
+			scale			20.0	20.0
+			offset			0.0	0.0
+			rotation		-10.0
+			scroll_speed		0.02
+			scroll_direction	-30.0
+
+		}
+
+		layer 1
+		{
+			type			diffuse
+			texture			data/terrain/battlefield/water/river/ice_med.tga
+			opacity			0.8
+                        scale			20.0	20.0
+			offset			0.0	0.0
+			rotation		1.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+		layer 2
+		{
+			type			specular
+			texture			data/terrain/battlefield/water/specular_01med.tga
+			opacity			1.0
+			min_sharpness		7.0
+			max_sharpness		17.0
+			scale			5.0	5.0
+			offset			0.0	0.0
+			rotation		0.0
+			scroll_speed		0.0
+			scroll_direction	0.0
+		}
+
+		colour				0 0 0      ;;;;64 69 82
+		colour_factor			0.0
+		min_alpha			0.9
+		max_alpha			1.0
+		max_depth			4.0
+		max_refraction			0.3
+	}
+
+	shore
+	{
+		min_dist			50.0
+		max_dist			250.0
+		normal_factor			0.1	
 	}
 }
 
@@ -492,12 +1106,12 @@ sea test_climate summer
 	{
 		layer 0
 		{
-			texture				data/terrain/battlefield/water/river/river02.tga
+			texture				data/terrain/battlefield/water/river/mediter_ocean1.tga
 		}
 
 		layer 1
 		{
-			texture				data/terrain/battlefield/water/river/river02.tga
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
 		}
 	}
 }
@@ -505,6 +1119,19 @@ sea test_climate summer
 sea test_climate winter
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean1.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 river test_climate summer
@@ -524,21 +1151,47 @@ river test_climate winter
 sea sandy_desert summer
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 sea sandy_desert winter
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 river sandy_desert summer
 {
-	parent	river default
+	parent	river desert
 }
 
 river sandy_desert winter
 {
-	parent	river default
+	parent	river desert
 }
 
 ;**************************************************************************************************
@@ -548,21 +1201,47 @@ river sandy_desert winter
 sea rocky_desert summer
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 sea rocky_desert winter
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 river rocky_desert summer
 {
-	parent	river default
+	parent	river desert
 }
 
 river rocky_desert winter
 {
-	parent	river default
+	parent	river desert
 }
 
 ;**************************************************************************************************
@@ -605,12 +1284,12 @@ sea temperate_grassland_fertile winter
 
 river temperate_grassland_fertile summer
 {
-	parent	river default
+	parent	river fertile
 }
 
 river temperate_grassland_fertile winter
 {
-	parent	river default
+	parent	river winter_med
 }
 
 ;**************************************************************************************************
@@ -629,12 +1308,12 @@ sea temperate_grassland_infertile winter
 
 river temperate_grassland_infertile summer
 {
-	parent	river default
+	parent	river infertile
 }
 
 river temperate_grassland_infertile winter
 {
-	parent	river default
+	parent	river winter_north
 }
 
 ;**************************************************************************************************
@@ -653,12 +1332,12 @@ sea temperate_forest_open winter
 
 river temperate_forest_open summer
 {
-	parent	river default
+	parent	river forest
 }
 
 river temperate_forest_open winter
 {
-	parent	river default
+	parent	river winter_north
 }
 
 ;**************************************************************************************************
@@ -677,12 +1356,12 @@ sea temperate_forest_deep winter
 
 river temperate_forest_deep summer
 {
-	parent	river default
+	parent	river forest
 }
 
 river temperate_forest_deep winter
 {
-	parent	river default
+	parent	river winter_north
 }
 
 ;**************************************************************************************************
@@ -701,12 +1380,12 @@ sea swamp winter
 
 river swamp summer
 {
-	parent	river default
+	parent	river swamp
 }
 
 river swamp winter
 {
-	parent	river default
+	parent	river winter_north
 }
 
 ;**************************************************************************************************
@@ -725,12 +1404,12 @@ sea highland winter
 
 river highland summer
 {
-	parent	river default
+	parent	river alpine
 }
 
 river highland winter
 {
-	parent	river default
+	parent	river winter_north
 }
 
 ;**************************************************************************************************
@@ -749,12 +1428,12 @@ sea alpine winter
 
 river alpine summer
 {
-	parent	river default
+	parent	river alpine
 }
 
 river alpine winter
 {
-	parent	river default
+	parent	river alpine
 }
 
 ;**************************************************************************************************
@@ -773,12 +1452,12 @@ sea sub_arctic winter
 
 river sub_arctic summer
 {
-	parent	river default
+	parent	river desert
 }
 
 river sub_arctic winter
 {
-	parent	river default
+	parent	river desert
 }
 
 ;**************************************************************************************************
@@ -812,20 +1491,46 @@ river sub_arctic winter
 sea semi_arid summer
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 sea semi_arid winter
 {
 	parent	sea default
+
+	surface
+	{
+		layer 0
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+
+		layer 1
+		{
+			texture				data/terrain/battlefield/water/river/mediter_ocean.tga
+		}
+	}
 }
 
 river semi_arid summer
 {
-	parent	river default
+	parent	river desert
 }
 
 river semi_arid winter
 {
-	parent	river default
+	parent	river desert
 }
 

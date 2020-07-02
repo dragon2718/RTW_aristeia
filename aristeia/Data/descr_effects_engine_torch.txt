@@ -52,7 +52,7 @@ effect siege_engine_torch_fire
 		emitter time
 		{
 			density			        40 	    ; how many particels per second
-			emitter_falloff_dist	100		; distance in meters to reduce emission over
+			emitter_falloff_dist	50		; distance in meters to reduce emission over
 			emitter_falloff_bias	0.5			
 		}
 
@@ -78,8 +78,8 @@ effect siege_engine_torch_light
 			
 		keyframe_radius
 		{
-				0.05, 	7.0
-				0.1, 	6.3
+				0.05, 	6.0
+				0.1, 	6.1
 				0.15, 	6.05				
 		}
 	}
